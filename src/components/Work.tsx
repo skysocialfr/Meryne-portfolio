@@ -10,7 +10,7 @@ import { workItems, type WorkCategory, type WorkItem } from "@/data/content";
 const CATEGORIES: ("All" | WorkCategory)[] = [
   "All",
   "Email & Newsletters",
-  "Social Media",
+  "Event organized & Social media",
 ];
 
 // Different aspect ratios make the grid feel editorial instead of templated.

@@ -118,7 +118,7 @@ export const experiences: Experience[] = [
   },
 ];
 
-export type WorkCategory = "Email & Newsletters" | "Social Media";
+export type WorkCategory = "Email & Newsletters" | "Event organized & Social media";
 
 export type WorkItem = {
   id: string;
@@ -188,7 +188,7 @@ export const workItems: WorkItem[] = [
   // ------ Social Media ------
   {
     id: "social-02",
-    category: "Social Media",
+    category: "Event organized & Social media",
     title: "Instagram carousel",
     subtitle: "View on Instagram",
     src: "/images/work/social/social-02.png",
@@ -199,7 +199,7 @@ export const workItems: WorkItem[] = [
   },
   {
     id: "video-techdays",
-    category: "Social Media",
+    category: "Event organized & Social media",
     title: "TECH_DAYS event video",
     subtitle: "Watch on LinkedIn",
     src: "/images/work/social/video-techdays.jpg",
@@ -210,7 +210,7 @@ export const workItems: WorkItem[] = [
   },
   {
     id: "video-sfa2025",
-    category: "Social Media",
+    category: "Event organized & Social media",
     title: "End-of-year party in Paris",
     subtitle: "Watch on Instagram",
     src: "/images/work/social/video-SFA2025.jpg",
