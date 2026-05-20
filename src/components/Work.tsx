@@ -109,7 +109,7 @@ function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
           src={item.src}
           alt={item.alt}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
+          className="h-full w-full object-cover object-top transition-transform duration-700 ease-out-expo group-hover:scale-105"
         />
         {/* Hover overlay */}
         <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-ink/70 via-ink/0 to-ink/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
