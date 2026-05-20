@@ -26,7 +26,7 @@ export const hero = {
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
-  portrait: "/images/hero/portrait.svg",
+  portrait: "/images/hero/portrait.jpg",
 };
 
 // Words that scroll horizontally across the page — the "movement" signature.
