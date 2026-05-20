@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background: theme("colors.paper");
   color: theme("colors.ink");
   font-family: theme("fontFamily.sans");

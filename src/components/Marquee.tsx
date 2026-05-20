@@ -8,7 +8,7 @@ export default function Marquee() {
   return (
     <section
       aria-hidden
-      className="relative border-y border-line bg-ink py-6 text-paper md:py-8"
+      className="relative overflow-hidden border-y border-line bg-ink py-6 text-paper md:py-8"
     >
       <div className="flex animate-marquee whitespace-nowrap">
         {[...marqueeKeywords, ...marqueeKeywords].map((word, i) => (
