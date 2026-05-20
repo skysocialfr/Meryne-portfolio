@@ -8,7 +8,7 @@ export const personal = {
   name: "Meryne Ndjeyi",
   role: "Marketing & Digital Communication",
   location: "Saint-Germain-en-Laye, France",
-  availability: "Open to relocation — V.I.E ready",
+  availability: "Open to relocation, V.I.E ready",
   email: "Meryne.ndjeyi@edu.iscparis.com",
   phone: "+33 6 69 70 80 46",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
@@ -18,11 +18,11 @@ export const personal = {
 
 export const hero = {
   // Eyebrow above the big title.
-  eyebrow: "Portfolio — 2026",
+  eyebrow: "Portfolio 2026",
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello — I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris, currently on a work-study program at Accenture. I design digital strategies and bring brands to life across social media, email marketing and events. Entrepreneurial, curious and driven by a genuine passion for sport, I'm now looking for a V.I.E to take on an ambitious international challenge.",
+    "Hello ! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris, currently on an apprenticeship program at Accenture France and Entrepreneur as a Social media manager & web developer. I design digital strategies and bring brands to life across social media, email marketing and events. Entrepreneurial, curious and driven by a genuine passion for sport, I'm now looking for a V.I.E to take on an ambitious international challenge.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -46,7 +46,7 @@ export const marqueeKeywords = [
 export const about = {
   heading: "Where creativity meets strategy.",
   body: [
-    "Curious, organised and driven, I love working where creativity meets strategy. Over the past two years I have built solid experience in digital marketing, communication and events — and learned the value of testing ideas, measuring them and improving fast.",
+    "Curious, organised and driven, I love working where creativity meets strategy. Over the past two years I have built solid experience in digital marketing, communication and events, and learned the value of testing ideas, measuring them and improving fast.",
     "Beyond work, sport has always shaped who I am: a French Athletics Champion in shot put, I also discovered climbing during my years at a military high school. Progression, confidence and team spirit are values I live by.",
   ],
   // Optional secondary photo (candid / action shot).
@@ -73,20 +73,20 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     company: "Accenture",
-    role: "Marketing & Events Manager — Apprenticeship",
+    role: "Marketing & Events Manager, Apprenticeship",
     period: "Aug 2024 — Present",
     location: "Paris, France",
     description:
-      "Manage digital communication and events for 8 sites across France and Morocco. Run social media (LinkedIn, Instagram), the monthly newsletter and email marketing via Mailjet. Lead influencer partnerships — including two-year collaborations with a Twitch creator and a Paralympic medalist. Organise sport & CSR activities (climbing, pilates, yoga, boxing, running) and company events, handling vendor negotiations and budgets from €50K to €100K.",
+      "Manage digital communication and events for 8 sites across France and Morocco. Run social media (LinkedIn, Instagram), the monthly newsletter and email marketing via Mailjet. Lead influencer partnerships, including two-year collaborations with a Twitch creator and a Paralympic medalist. Organise sport & CSR activities (climbing, pilates, yoga, boxing, running) and company events, handling vendor negotiations and budgets from €50K to €100K.",
     tags: ["Social", "Email", "Events", "Influencer", "Budget"],
   },
   {
     company: "Sky Social",
-    role: "Founder — Personal Project",
+    role: "Founder, Personal Project",
     period: "Feb 2025 — Present",
     location: "Remote",
     description:
-      "Personal project launched out of a love of challenge. Designed websites, communication and email campaigns for a handful of companies — applying digital strategy, content creation and branding in real conditions.",
+      "Personal project launched out of a love of challenge. Designed websites, communication and email campaigns for a handful of companies, applying digital strategy, content creation and branding in real conditions.",
     tags: ["Web", "Branding", "Strategy"],
   },
   {
@@ -113,7 +113,7 @@ export const experiences: Experience[] = [
     period: "Jun 2022 — Apr 2023",
     location: "Paris, France",
     description:
-      "Internship combining business development and community management for an early-stage startup — first hands-on contact with growth, content and customer relationships.",
+      "Internship combining business development and community management for an early-stage startup, my first hands-on contact with growth, content and customer relationships.",
     tags: ["Growth", "Community"],
   },
 ];
@@ -137,7 +137,7 @@ export const workItems: WorkItem[] = [
   {
     id: "email-01",
     category: "Email & Newsletters",
-    title: "Monthly newsletter — Accenture",
+    title: "Monthly newsletter for Accenture",
     subtitle: "Editorial design & copy",
     src: "/images/work/email/email-01.svg",
     alt: "Newsletter design preview",
@@ -147,7 +147,7 @@ export const workItems: WorkItem[] = [
     id: "email-02",
     category: "Email & Newsletters",
     title: "Event invitation campaign",
-    subtitle: "Mailjet — open rate +32%",
+    subtitle: "Mailjet, +32% open rate",
     src: "/images/work/email/email-02.svg",
     alt: "Email campaign preview",
     aspect: "square",
@@ -166,7 +166,7 @@ export const workItems: WorkItem[] = [
   {
     id: "social-01",
     category: "Social Media",
-    title: "LinkedIn carousel — sport & people",
+    title: "LinkedIn carousel on sport & people",
     subtitle: "Editorial system",
     src: "/images/work/social/social-01.svg",
     alt: "LinkedIn carousel preview",
@@ -204,7 +204,7 @@ export const workItems: WorkItem[] = [
   {
     id: "web-01",
     category: "Web",
-    title: "Sky Social — agency site",
+    title: "Sky Social agency site",
     subtitle: "sky-social.fr",
     src: "/images/work/web/web-01.svg",
     alt: "Sky Social website preview",
@@ -282,17 +282,17 @@ export const projects = [
   },
   {
     name: "Velmio CRM",
-    description: "CRM platform — go-to-market and brand support.",
+    description: "CRM platform with go-to-market and brand support.",
     url: "https://app.velmiocrm.com",
   },
   {
     name: "Veyra Studio",
-    description: "Creative studio — visual identity and content design.",
+    description: "Creative studio for visual identity and content design.",
     url: "https://veyrastudio.fr",
   },
   {
     name: "Bestievent",
-    description: "Event-tech project — making gatherings unforgettable.",
+    description: "Event-tech project making gatherings unforgettable.",
     url: "https://bestievent.com",
   },
 ];
@@ -300,5 +300,5 @@ export const projects = [
 export const contact = {
   heading: "Let's build something memorable.",
   sub:
-    "If you're hiring for a V.I.E in Digital Marketing & Communication — or just want to chat about brands, sport or climbing — I'd love to hear from you.",
+    "If you're hiring for a V.I.E in Digital Marketing & Communication, or just want to chat about brands, sport or climbing, I'd love to hear from you.",
 };

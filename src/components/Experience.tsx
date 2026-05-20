@@ -10,7 +10,7 @@ export default function Experience() {
             Experience
           </span>
           <h2 className="display mt-6 max-w-3xl text-fluid-h2">
-            Two years building, testing, shipping.
+            Three years of learning, creating, building.
           </h2>
         </Reveal>
 
