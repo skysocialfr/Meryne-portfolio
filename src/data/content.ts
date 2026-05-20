@@ -8,7 +8,7 @@ export const personal = {
   name: "Meryne Ndjeyi",
   role: "Marketing & Digital Communication",
   location: "Saint-Germain-en-Laye, France",
-  availability: "Open to relocation, V.I.E ready",
+  availability: "Open to work, V.I.E ready",
   email: "Meryne.ndjeyi@edu.iscparis.com",
   phone: "+33 6 69 70 80 46",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
