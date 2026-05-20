@@ -383,8 +383,8 @@ export const lifeOutsideWork = {
         "Team sport and movement are where I built my confidence and team spirit.",
     },
     {
-      src: "/images/life/travel.svg",
-      alt: "Travel memory",
+      src: "/images/life/musee.jpeg",
+      alt: "Meryne at a museum",
       label: "Travel",
       aspect: "tall",
       span: "col-span-2 md:col-span-2",
