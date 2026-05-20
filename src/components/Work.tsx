@@ -124,14 +124,29 @@ function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
         <span className="absolute left-3 top-3 rounded-full bg-paper/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-ink backdrop-blur">
           {item.category}
         </span>
-        {/* Play badge for linked video posts */}
-        {item.href && (
+        {/* Centered play badge for linked videos */}
+        {item.href && item.linkType !== "post" && (
           <span className="absolute inset-0 flex items-center justify-center">
             <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-paper/90 text-ink shadow-lg transition-transform duration-300 group-hover:scale-110">
               <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden>
                 <path d="M6 4l10 6-10 6V4z" fill="currentColor" />
               </svg>
             </span>
+          </span>
+        )}
+        {/* Corner arrow badge for linked posts */}
+        {item.href && item.linkType === "post" && (
+          <span className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-paper/90 text-ink shadow transition-transform duration-300 group-hover:scale-110">
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
+              <path
+                d="M3 11L11 3M5 3h6v6"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+              />
+            </svg>
           </span>
         )}
       </div>

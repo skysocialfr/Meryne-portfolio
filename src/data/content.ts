@@ -131,8 +131,10 @@ export type WorkItem = {
   // Aspect hint for the grid: "tall" | "wide" | "square"
   aspect?: "tall" | "wide" | "square";
   // If set, clicking the item opens this URL in a new tab (e.g. a social post)
-  // instead of the lightbox. A play badge is shown.
+  // instead of the lightbox.
   href?: string;
+  // Badge style for linked items: "video" shows a play button, "post" an arrow.
+  linkType?: "video" | "post";
 };
 
 export const workItems: WorkItem[] = [
@@ -178,11 +180,13 @@ export const workItems: WorkItem[] = [
   {
     id: "social-01",
     category: "Social Media",
-    title: "LinkedIn carousel on sport & people",
-    subtitle: "Editorial system",
+    title: "Instagram carousel",
+    subtitle: "View on Instagram",
     src: "/images/work/social/social-01.svg",
-    alt: "LinkedIn carousel preview",
+    alt: "Instagram carousel preview",
     aspect: "square",
+    href: "https://www.instagram.com/p/DPi18P0jTdx/",
+    linkType: "post",
   },
   {
     id: "social-02",
@@ -197,21 +201,23 @@ export const workItems: WorkItem[] = [
     id: "video-techdays",
     category: "Social Media",
     title: "TECH_DAYS event video",
-    subtitle: "Watch the post on social media",
+    subtitle: "Watch on LinkedIn",
     src: "/images/work/social/video-techdays.jpg",
     alt: "TECH_DAYS event video post",
     aspect: "tall",
-    href: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
+    href: "https://www.linkedin.com/posts/afd-technologies_techdays-afdtech-accenture-activity-7452298867443855360-7ieb",
+    linkType: "video",
   },
   {
     id: "video-sfa2025",
     category: "Social Media",
-    title: "SFA 2025 video",
-    subtitle: "Watch the post on social media",
+    title: "End-of-year party in Paris",
+    subtitle: "Watch the video",
     src: "/images/work/social/video-SFA2025.jpg",
-    alt: "SFA 2025 video post",
+    alt: "End-of-year party event video",
     aspect: "tall",
     href: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
+    linkType: "video",
   },
   {
     id: "social-03",
