@@ -35,7 +35,6 @@ export const marqueeKeywords = [
   "Email marketing",
   "Events",
   "Storytelling",
-  "Climbing",
   "Athletics",
   "Branding",
   "Content design",
