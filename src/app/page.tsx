@@ -7,6 +7,7 @@ import Work from "@/components/Work";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import LifeOutsideWork from "@/components/LifeOutsideWork";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Education />
         <Skills />
         <Projects />
+        <LifeOutsideWork />
         <Contact />
       </main>
       <Footer />

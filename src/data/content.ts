@@ -21,7 +21,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello ! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris, currently on an apprenticeship program at Accenture France and Entrepreneur as a Social media manager & web developer. I design digital strategies and bring brands to life across social media, email marketing and events. Entrepreneurial, curious and driven by a genuine passion for sport, I'm now looking for a V.I.E to take on an ambitious international challenge.",
+    "Hello ! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris, currently on an apprenticeship at Accenture France, and running Sky Social on the side as a social media & web project. I design digital strategies and bring brands to life across social media, email marketing and events. Entrepreneurial, curious and driven by a genuine passion for sport, I'm now looking for a V.I.E to take on an ambitious international challenge.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -286,6 +286,59 @@ export const projects = [
     url: "https://bestievent.com",
   },
 ];
+
+export type LifeImage = {
+  src: string;
+  alt: string;
+  label: string;
+  aspect: "tall" | "wide" | "square";
+  // Grid span classes (mobile / desktop). See LifeOutsideWork.tsx.
+  span: string;
+};
+
+export const lifeOutsideWork = {
+  heading: "Life outside work.",
+  intro:
+    "Sport built my mindset: discipline, progress and team spirit. Off the field, I recharge at the piano and on the road.",
+  // Replace each placeholder by dropping your photo at the same path.
+  images: [
+    {
+      src: "/images/life/sport-01.svg",
+      alt: "Meryne practising athletics",
+      label: "Athletics",
+      aspect: "wide",
+      span: "col-span-2 md:col-span-3",
+    },
+    {
+      src: "/images/life/piano.svg",
+      alt: "Meryne at the piano",
+      label: "Piano",
+      aspect: "wide",
+      span: "col-span-2 md:col-span-3",
+    },
+    {
+      src: "/images/life/sport-02.svg",
+      alt: "Sport moment",
+      label: "Climbing",
+      aspect: "tall",
+      span: "col-span-1 md:col-span-2",
+    },
+    {
+      src: "/images/life/sport-03.svg",
+      alt: "Sport moment",
+      label: "Sport",
+      aspect: "tall",
+      span: "col-span-1 md:col-span-2",
+    },
+    {
+      src: "/images/life/travel.svg",
+      alt: "Travel memory",
+      label: "Travel",
+      aspect: "tall",
+      span: "col-span-2 md:col-span-2",
+    },
+  ] as LifeImage[],
+};
 
 export const contact = {
   heading: "Let's build something memorable.",
