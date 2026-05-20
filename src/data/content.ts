@@ -153,7 +153,7 @@ export const workItems: WorkItem[] = [
     category: "Email & Newsletters",
     title: "Chess tournament announcement",
     subtitle: "Event mailing",
-    src: "/images/work/email/email-01.jpg",
+    src: "/images/work/email/email-01.png",
     alt: "Chess tournament mailing preview",
     aspect: "tall",
   },
