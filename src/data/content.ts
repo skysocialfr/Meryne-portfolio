@@ -118,7 +118,7 @@ export const experiences: Experience[] = [
   },
 ];
 
-export type WorkCategory = "Email & Newsletters" | "Social Media" | "Web";
+export type WorkCategory = "Email & Newsletters" | "Social Media";
 
 export type WorkItem = {
   id: string;
@@ -130,6 +130,9 @@ export type WorkItem = {
   alt: string;
   // Aspect hint for the grid: "tall" | "wide" | "square"
   aspect?: "tall" | "wide" | "square";
+  // If set, clicking the item opens this URL in a new tab (e.g. a social post)
+  // instead of the lightbox. A play badge is shown.
+  href?: string;
 };
 
 export const workItems: WorkItem[] = [
@@ -186,9 +189,29 @@ export const workItems: WorkItem[] = [
     category: "Social Media",
     title: "Instagram launch campaign",
     subtitle: "Concept, art direction, copy",
-    src: "/images/work/social/social-02.svg",
+    src: "/images/work/social/social-02.png",
     alt: "Instagram post preview",
     aspect: "tall",
+  },
+  {
+    id: "video-techdays",
+    category: "Social Media",
+    title: "TECH_DAYS event video",
+    subtitle: "Watch the post on social media",
+    src: "/images/work/social/video-techdays.jpg",
+    alt: "TECH_DAYS event video post",
+    aspect: "tall",
+    href: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
+  },
+  {
+    id: "video-sfa2025",
+    category: "Social Media",
+    title: "SFA 2025 video",
+    subtitle: "Watch the post on social media",
+    src: "/images/work/social/video-SFA2025.jpg",
+    alt: "SFA 2025 video post",
+    aspect: "tall",
+    href: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   },
   {
     id: "social-03",
@@ -206,35 +229,6 @@ export const workItems: WorkItem[] = [
     subtitle: "Templates & guidelines",
     src: "/images/work/social/social-04.svg",
     alt: "Visual system preview",
-    aspect: "square",
-  },
-
-  // ------ Web ------
-  {
-    id: "web-01",
-    category: "Web",
-    title: "Sky Social agency site",
-    subtitle: "sky-social.fr",
-    src: "/images/work/web/web-01.svg",
-    alt: "Sky Social website preview",
-    aspect: "wide",
-  },
-  {
-    id: "web-02",
-    category: "Web",
-    title: "Veyra Studio",
-    subtitle: "veyrastudio.fr",
-    src: "/images/work/web/web-02.svg",
-    alt: "Veyra Studio website preview",
-    aspect: "tall",
-  },
-  {
-    id: "web-03",
-    category: "Web",
-    title: "Bestievent",
-    subtitle: "bestievent.com",
-    src: "/images/work/web/web-03.svg",
-    alt: "Bestievent website preview",
     aspect: "square",
   },
 ];

@@ -11,7 +11,6 @@ const CATEGORIES: ("All" | WorkCategory)[] = [
   "All",
   "Email & Newsletters",
   "Social Media",
-  "Web",
 ];
 
 // Different aspect ratios make the grid feel editorial instead of templated.
@@ -87,44 +86,7 @@ export default function Work() {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <button
-                onClick={() => setOpen(item)}
-                aria-label={`Open ${item.title}`}
-                className="group block w-full text-left"
-              >
-                <div
-                  className={`relative overflow-hidden rounded-[2px] bg-line ${
-                    aspectClass[item.aspect ?? "square"]
-                  }`}
-                >
-                  <SafeImage
-                    src={item.src}
-                    alt={item.alt}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
-                  />
-                  {/* Hover overlay */}
-                  <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-ink/70 via-ink/0 to-ink/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    <div className="p-5 text-paper">
-                      <div className="font-display text-lg">{item.title}</div>
-                      {item.subtitle && (
-                        <div className="text-sm text-paper/70">
-                          {item.subtitle}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  {/* Category chip */}
-                  <span className="absolute left-3 top-3 rounded-full bg-paper/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-ink backdrop-blur">
-                    {item.category}
-                  </span>
-                </div>
-
-                <div className="mt-3 flex items-baseline justify-between gap-3">
-                  <span className="font-display text-base">{item.title}</span>
-                  <span className="text-xs text-muted">{item.subtitle}</span>
-                </div>
-              </button>
+              <WorkCard item={item} onOpen={() => setOpen(item)} />
             </motion.li>
           ))}
         </motion.ul>
@@ -132,5 +94,76 @@ export default function Work() {
 
       <Lightbox item={open} onClose={() => setOpen(null)} />
     </section>
+  );
+}
+
+function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
+  const inner = (
+    <>
+      <div
+        className={`relative overflow-hidden rounded-[2px] bg-line ${
+          aspectClass[item.aspect ?? "square"]
+        }`}
+      >
+        <SafeImage
+          src={item.src}
+          alt={item.alt}
+          loading="lazy"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
+        />
+        {/* Hover overlay */}
+        <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-ink/70 via-ink/0 to-ink/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+          <div className="p-5 text-paper">
+            <div className="font-display text-lg">{item.title}</div>
+            {item.subtitle && (
+              <div className="text-sm text-paper/70">{item.subtitle}</div>
+            )}
+          </div>
+        </div>
+        {/* Category chip */}
+        <span className="absolute left-3 top-3 rounded-full bg-paper/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-ink backdrop-blur">
+          {item.category}
+        </span>
+        {/* Play badge for linked video posts */}
+        {item.href && (
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-paper/90 text-ink shadow-lg transition-transform duration-300 group-hover:scale-110">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden>
+                <path d="M6 4l10 6-10 6V4z" fill="currentColor" />
+              </svg>
+            </span>
+          </span>
+        )}
+      </div>
+
+      <div className="mt-3 flex items-baseline justify-between gap-3">
+        <span className="font-display text-base">{item.title}</span>
+        <span className="text-xs text-muted">{item.subtitle}</span>
+      </div>
+    </>
+  );
+
+  if (item.href) {
+    return (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Watch ${item.title} on social media`}
+        className="group block w-full text-left"
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      onClick={onOpen}
+      aria-label={`Open ${item.title}`}
+      className="group block w-full text-left"
+    >
+      {inner}
+    </button>
   );
 }
