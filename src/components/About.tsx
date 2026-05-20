@@ -13,7 +13,7 @@ export default function About() {
               <SafeImage
                 src={about.image}
                 alt="Meryne Ndjeyi in motion"
-                className="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                className="h-full w-full object-cover transition-all duration-700 md:grayscale md:hover:grayscale-0"
               />
             </div>
           </Reveal>

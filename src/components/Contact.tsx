@@ -31,9 +31,9 @@ export default function Contact() {
         <Reveal delay={0.15}>
           <a
             href={`mailto:${personal.email}`}
-            className="mt-12 inline-flex items-baseline gap-3 font-display text-3xl tracking-tighter text-ember md:mt-16 md:text-5xl"
+            className="mt-12 inline-flex flex-wrap items-baseline gap-3 font-display text-2xl tracking-tighter text-ember sm:text-3xl md:mt-16 md:text-5xl"
           >
-            <span className="link-underline pb-1">{personal.email}</span>
+            <span className="link-underline break-all pb-1">{personal.email}</span>
             <svg
               width="32"
               height="32"
