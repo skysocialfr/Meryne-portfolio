@@ -52,7 +52,7 @@ export const about = {
   // Optional secondary photo (candid / action shot).
   // To replace: drop a 4:5 image at /public/images/about/portrait.jpg
   // then change this path to "/images/about/portrait.jpg".
-  image: "/images/about/portrait.svg",
+  image: "/images/about/portrait.jpeg",
   stats: [
     { value: "8", label: "Sites managed across FR & MA" },
     { value: "€100K", label: "Top event budget handled" },
