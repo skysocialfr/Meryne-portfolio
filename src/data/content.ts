@@ -333,9 +333,6 @@ export type LifeImage = {
   src: string;
   alt: string;
   label: string;
-  aspect: "tall" | "wide" | "square";
-  // Grid span classes (mobile / desktop). See LifeOutsideWork.tsx.
-  span: string;
   // Shown when the photo is opened full screen.
   description?: string;
 };
@@ -343,53 +340,50 @@ export type LifeImage = {
 export const lifeOutsideWork = {
   heading: "Life outside work.",
   intro:
-    "Sport built my mindset: discipline, progress and team spirit. Off the field, I recharge at the piano and on the road.",
-  // Replace each placeholder by dropping your photo at the same path.
+    "Outside work I stay curious and hands-on: sport, piano, painting, pottery and cultural escapes all keep me balanced and inspired.",
+  // Replace each photo by dropping a new one at the same path.
   images: [
     {
-      src: "/images/life/sport-01.svg",
-      alt: "Meryne practising athletics",
-      label: "Athletics",
-      aspect: "wide",
-      span: "col-span-2 md:col-span-3",
-      description:
-        "French Athletics Champion in shot put. Years of training taught me discipline, consistency and how to keep pushing past my limits.",
-    },
-    {
-      src: "/images/life/piano.svg",
-      alt: "Meryne at the piano",
+      src: "/images/life/piano.jpeg",
+      alt: "Meryne playing the piano",
       label: "Piano",
-      aspect: "wide",
-      span: "col-span-2 md:col-span-3",
       description:
-        "Piano is my reset button: a creative outlet, far from screens, that keeps me balanced.",
+        "I taught myself piano at six. It's still my favourite way to accompany my singing.",
     },
     {
-      src: "/images/life/sport-02.svg",
-      alt: "Sport moment",
-      label: "Training",
-      aspect: "tall",
-      span: "col-span-1 md:col-span-2",
+      src: "/images/life/sport.jpg",
+      alt: "Meryne training with her colleagues",
+      label: "Running",
       description:
-        "Staying active keeps my energy and focus sharp, week after week.",
+        "Training hard with my colleagues for the Enfant Sans Cancer race on 2 June in Paris, my very first race!",
     },
     {
-      src: "/images/life/sport-03.svg",
-      alt: "Sport moment",
-      label: "Sport",
-      aspect: "tall",
-      span: "col-span-1 md:col-span-2",
+      src: "/images/life/paint.jpeg",
+      alt: "One of Meryne's paintings",
+      label: "Painting",
       description:
-        "Team sport and movement are where I built my confidence and team spirit.",
+        "One of my paintings. I picked up painting a year ago as a hobby and haven't stopped since.",
+    },
+    {
+      src: "/images/life/pottery.jpeg",
+      alt: "A decorative tray made by hand",
+      label: "Pottery",
+      description:
+        "A decorative tray I made by hand. Crafts like this are real therapy for me.",
     },
     {
       src: "/images/life/musee.jpeg",
       alt: "Meryne at a museum",
-      label: "Travel",
-      aspect: "tall",
-      span: "col-span-2 md:col-span-2",
+      label: "Culture",
       description:
-        "Curious by nature, I love discovering new places, cultures and ideas, then bringing that perspective back into my work.",
+        "Cultural outings and museum visits keep me curious and feed my creativity.",
+    },
+    {
+      src: "/images/life/travel.jpg",
+      alt: "An elephant photographed in Thailand",
+      label: "Travel",
+      description:
+        "An elephant I photographed in Thailand, in a sanctuary that rescues mistreated elephants. We could only watch from afar, unless they chose to come to us.",
     },
   ] as LifeImage[],
 };
