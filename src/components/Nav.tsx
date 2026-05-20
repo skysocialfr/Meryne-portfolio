@@ -7,7 +7,8 @@ const links = [
   { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "#projects", label: "Projects" },
+  { href: "#life", label: "Life outside work" },
 ];
 
 export default function Nav() {
@@ -81,7 +82,7 @@ export default function Nav() {
       {/* Mobile sheet */}
       <div
         className={`overflow-hidden bg-paper transition-[max-height] duration-500 ease-out-expo md:hidden ${
-          open ? "max-h-96 border-b border-line" : "max-h-0"
+          open ? "max-h-[32rem] border-b border-line" : "max-h-0"
         }`}
       >
         <nav className="container-x flex flex-col gap-1 py-6">

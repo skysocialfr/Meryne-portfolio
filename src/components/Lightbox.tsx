@@ -4,10 +4,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import SafeImage from "./SafeImage";
-import type { WorkItem } from "@/data/content";
+
+export type LightboxItem = {
+  src: string;
+  alt: string;
+  title: string;
+  subtitle?: string;
+  category?: string;
+  description?: string;
+};
 
 type Props = {
-  item: WorkItem | null;
+  item: LightboxItem | null;
   onClose: () => void;
 };
 
@@ -31,11 +39,15 @@ export default function Lightbox({ item, onClose }: Props) {
 
   if (!mounted) return null;
 
+  const meta = item
+    ? [item.subtitle, item.category].filter(Boolean).join(" · ")
+    : "";
+
   return createPortal(
     <AnimatePresence>
       {item && (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/85 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-ink/85 px-4 py-16 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -47,7 +59,7 @@ export default function Lightbox({ item, onClose }: Props) {
           <button
             onClick={onClose}
             aria-label="Close"
-            className="absolute right-6 top-6 z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-paper text-ink transition-transform hover:rotate-90"
+            className="fixed right-6 top-6 z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-paper text-ink transition-transform hover:rotate-90"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>
               <path
@@ -60,7 +72,7 @@ export default function Lightbox({ item, onClose }: Props) {
           </button>
 
           <motion.figure
-            className="relative mx-4 max-h-[88vh] w-full max-w-5xl"
+            className="relative my-auto w-full max-w-4xl"
             initial={{ y: 24, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 24, opacity: 0 }}
@@ -70,13 +82,22 @@ export default function Lightbox({ item, onClose }: Props) {
             <SafeImage
               src={item.src}
               alt={item.alt}
-              className="max-h-[80vh] w-full rounded-[2px] object-contain"
+              className="mx-auto max-h-[68vh] w-auto max-w-full rounded-[2px] object-contain"
             />
-            <figcaption className="mt-4 flex flex-wrap items-baseline justify-between gap-2 text-paper">
-              <span className="font-display text-xl">{item.title}</span>
-              <span className="text-paper/60 text-sm">
-                {item.subtitle} · {item.category}
-              </span>
+            <figcaption className="mt-5 text-paper">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <span className="font-display text-xl md:text-2xl">
+                  {item.title}
+                </span>
+                {meta && (
+                  <span className="text-sm text-paper/60">{meta}</span>
+                )}
+              </div>
+              {item.description && (
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-paper/75 md:text-base">
+                  {item.description}
+                </p>
+              )}
             </figcaption>
           </motion.figure>
         </motion.div>

@@ -67,6 +67,8 @@ export type Experience = {
   location?: string;
   description: string;
   tags?: string[];
+  // Bullet points shown in the detail view when an experience is clicked.
+  highlights?: string[];
 };
 
 export const experiences: Experience[] = [
@@ -78,6 +80,13 @@ export const experiences: Experience[] = [
     description:
       "Manage digital communication and events for 8 sites across France and Morocco. Run social media (LinkedIn, Instagram), the monthly newsletter and email marketing via Mailjet. Lead influencer partnerships, including two-year collaborations with a Twitch creator and a Paralympic medalist. Organise sport & CSR activities (climbing, pilates, yoga, boxing, running) and company events, handling vendor negotiations and budgets from €50K to €100K.",
     tags: ["Social", "Email", "Events", "Influencer", "Budget"],
+    highlights: [
+      "Digital communication & events for 8 sites across France and Morocco",
+      "Social media (LinkedIn, Instagram), monthly newsletter and email marketing via Mailjet",
+      "Influencer partnerships, incl. two-year collaborations with a Twitch creator and a Paralympic medalist",
+      "Sport & CSR activities: climbing, pilates, yoga, boxing, running, plus company events",
+      "Vendor negotiations and budgets from €50K to €100K",
+    ],
   },
   {
     company: "Sky Social",
@@ -87,6 +96,11 @@ export const experiences: Experience[] = [
     description:
       "Personal project launched out of a love of challenge. Designed websites, communication and email campaigns for a handful of companies, applying digital strategy, content creation and branding in real conditions.",
     tags: ["Web", "Branding", "Strategy"],
+    highlights: [
+      "Websites, communication and email campaigns for several companies",
+      "Digital strategy, content creation and branding",
+      "Delivered end to end, in real-world conditions",
+    ],
   },
   {
     company: "Epana Official",
@@ -96,6 +110,11 @@ export const experiences: Experience[] = [
     description:
       "Built a ready-to-wear brand for tall women across three collections. Defined the brand identity, designed the collections, and led digital marketing & branding end-to-end.",
     tags: ["Brand", "Product", "E-commerce"],
+    highlights: [
+      "Ready-to-wear brand for tall women across three collections",
+      "Defined the brand identity and designed the collections",
+      "Led digital marketing & branding end to end",
+    ],
   },
   {
     company: "DpointGroup",
@@ -105,6 +124,12 @@ export const experiences: Experience[] = [
     description:
       "Six-month international experience in a Spanish-speaking environment. Designed digital communication strategies, organised client events, and analysed campaign performance.",
     tags: ["Events", "Analytics", "International"],
+    highlights: [
+      "Six-month international experience in a Spanish-speaking environment",
+      "Designed digital communication strategies",
+      "Organised client events",
+      "Analysed campaign performance",
+    ],
   },
   {
     company: "Bulleiit Startup",
@@ -114,6 +139,11 @@ export const experiences: Experience[] = [
     description:
       "Internship combining business development and community management for an early-stage startup, my first hands-on contact with growth, content and customer relationships.",
     tags: ["Growth", "Community"],
+    highlights: [
+      "Business development and community management",
+      "Early-stage startup environment",
+      "First hands-on contact with growth, content and customer relationships",
+    ],
   },
 ];
 
@@ -134,6 +164,8 @@ export type WorkItem = {
   href?: string;
   // Badge style for linked items: "video" shows a play button, "post" an arrow.
   linkType?: "video" | "post";
+  // A few lines shown under the title when the image is opened full screen.
+  description?: string;
 };
 
 export const workItems: WorkItem[] = [
@@ -146,6 +178,8 @@ export const workItems: WorkItem[] = [
     src: "/images/work/email/newsletter.png",
     alt: "Monthly newsletter preview",
     aspect: "tall",
+    description:
+      "The monthly newsletter sent to Accenture teams: a recap of last month's events and a preview of what's coming this month. Designed, written and sent via Mailjet.",
   },
   {
     id: "email-01",
@@ -155,6 +189,8 @@ export const workItems: WorkItem[] = [
     src: "/images/work/email/email-01.png",
     alt: "Chess tournament mailing preview",
     aspect: "tall",
+    description:
+      "Mailing announcing the upcoming chess tournament: concept, layout and copy, built to drive registrations.",
   },
   {
     id: "email-02",
@@ -164,6 +200,8 @@ export const workItems: WorkItem[] = [
     src: "/images/work/email/email-02.png",
     alt: "TECH_DAYS mailing preview",
     aspect: "tall",
+    description:
+      "Mailing announcing the 4th edition of TECH_DAYS, an internal AFD.TECH (Accenture) event. Editorial design and copywriting, sent via Mailjet.",
   },
   {
     id: "email-03",
@@ -173,6 +211,8 @@ export const workItems: WorkItem[] = [
     src: "/images/work/email/email-03.png",
     alt: "Valentine's shooting mailing preview",
     aspect: "tall",
+    description:
+      "For a Sky Social client, I organised a Valentine's Day event, a women's photo shoot, ran the social media strategy to drive sign-ups, and later built their website.",
   },
   {
     id: "email-04",
@@ -182,6 +222,8 @@ export const workItems: WorkItem[] = [
     src: "/images/work/email/email-04.png",
     alt: "Sports activities newsletter preview",
     aspect: "tall",
+    description:
+      "Newsletter announcing the sports activities coming up in June for Accenture colleagues: climbing, pilates, yoga, boxing and running.",
   },
 
   // ------ Social Media ------
@@ -294,6 +336,8 @@ export type LifeImage = {
   aspect: "tall" | "wide" | "square";
   // Grid span classes (mobile / desktop). See LifeOutsideWork.tsx.
   span: string;
+  // Shown when the photo is opened full screen.
+  description?: string;
 };
 
 export const lifeOutsideWork = {
@@ -308,6 +352,8 @@ export const lifeOutsideWork = {
       label: "Athletics",
       aspect: "wide",
       span: "col-span-2 md:col-span-3",
+      description:
+        "French Athletics Champion in shot put. Years of training taught me discipline, consistency and how to keep pushing past my limits.",
     },
     {
       src: "/images/life/piano.svg",
@@ -315,13 +361,17 @@ export const lifeOutsideWork = {
       label: "Piano",
       aspect: "wide",
       span: "col-span-2 md:col-span-3",
+      description:
+        "Piano is my reset button: a creative outlet, far from screens, that keeps me balanced.",
     },
     {
       src: "/images/life/sport-02.svg",
       alt: "Sport moment",
-      label: "Climbing",
+      label: "Training",
       aspect: "tall",
       span: "col-span-1 md:col-span-2",
+      description:
+        "Staying active keeps my energy and focus sharp, week after week.",
     },
     {
       src: "/images/life/sport-03.svg",
@@ -329,6 +379,8 @@ export const lifeOutsideWork = {
       label: "Sport",
       aspect: "tall",
       span: "col-span-1 md:col-span-2",
+      description:
+        "Team sport and movement are where I built my confidence and team spirit.",
     },
     {
       src: "/images/life/travel.svg",
@@ -336,6 +388,8 @@ export const lifeOutsideWork = {
       label: "Travel",
       aspect: "tall",
       span: "col-span-2 md:col-span-2",
+      description:
+        "Curious by nature, I love discovering new places, cultures and ideas, then bringing that perspective back into my work.",
     },
   ] as LifeImage[],
 };
