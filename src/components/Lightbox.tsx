@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import SafeImage from "./SafeImage";
 import type { WorkItem } from "@/data/content";
 
@@ -11,6 +12,10 @@ type Props = {
 };
 
 export default function Lightbox({ item, onClose }: Props) {
+  // Portal target only exists in the browser, so wait until mounted.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // Close on Escape and lock background scroll while open.
   useEffect(() => {
     if (!item) return;
@@ -24,7 +29,9 @@ export default function Lightbox({ item, onClose }: Props) {
     };
   }, [item, onClose]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {item && (
         <motion.div
@@ -74,6 +81,7 @@ export default function Lightbox({ item, onClose }: Props) {
           </motion.figure>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
