@@ -52,17 +52,14 @@ export default function Contact() {
           </a>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 border-t border-paper/15 pt-12 text-sm md:grid-cols-4 md:mt-24">
+        <div className="mt-16 grid gap-10 border-t border-paper/15 pt-12 text-sm md:grid-cols-3 md:mt-24">
           <Reveal>
-            <ContactLine label="Phone" value={personal.phone} href={`tel:${personal.phone.replace(/\s/g, "")}`} />
-          </Reveal>
-          <Reveal delay={0.05}>
             <ContactLine label="LinkedIn" value="meryne-ndjeyi" href={personal.linkedin} external />
           </Reveal>
-          <Reveal delay={0.1}>
+          <Reveal delay={0.05}>
             <ContactLine label="Location" value={personal.location} />
           </Reveal>
-          <Reveal delay={0.15}>
+          <Reveal delay={0.1}>
             <ContactLine label="Status" value={personal.availability} />
           </Reveal>
         </div>

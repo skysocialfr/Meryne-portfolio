@@ -9,8 +9,7 @@ export const personal = {
   role: "Marketing & Digital Communication",
   location: "Saint-Germain-en-Laye, France",
   availability: "Open to work, V.I.E ready",
-  email: "Meryne.ndjeyi@edu.iscparis.com",
-  phone: "+33 6 69 70 80 46",
+  email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   // Put your CV PDF here: /public/cv/meryne-ndjeyi-cv.pdf
   cvUrl: "/cv/meryne-ndjeyi-cv.pdf",
