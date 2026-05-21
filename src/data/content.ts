@@ -78,14 +78,16 @@ export const experiences: Experience[] = [
     period: "Aug 2024 — Present",
     location: "Paris, France",
     description:
-      "Manage digital communication and events for 8 sites across France and Morocco. Run social media (LinkedIn, Instagram), the monthly newsletter and email marketing via Mailjet. Lead influencer partnerships, including two-year collaborations with a Twitch creator and a Paralympic medalist. Organise sport & CSR activities (climbing, pilates, yoga, boxing, running) and company events, handling vendor negotiations and budgets from €50K to €100K.",
+      "I lead the communication of AFD.TECH (part of Accenture), a subsidiary the group recently integrated. Over two years, my role has been to guide its artistic direction from its own identity toward Accenture's, until it became fully part of the company. I run its social media (Instagram and LinkedIn), the monthly newsletter and email marketing via Mailjet, and I supervise video shoots. I also organise internal events end to end, from sourcing vendors to on-site logistics, communication strategy and social media coverage, including a gathering for 750 employees. On top of that, I design sport & CSR activities for our teams and lead influencer partnerships, handling budgets from €50K to €100K.",
     tags: ["Social", "Email", "Events", "Influencer", "Budget"],
     highlights: [
-      "Digital communication & events for 8 sites across France and Morocco",
-      "Social media (LinkedIn, Instagram), monthly newsletter and email marketing via Mailjet",
-      "Influencer partnerships, incl. two-year collaborations with a Twitch creator and a Paralympic medalist",
-      "Sport & CSR activities: climbing, pilates, yoga, boxing, running, plus company events",
-      "Vendor negotiations and budgets from €50K to €100K",
+      "Lead the communication of AFD.TECH (part of Accenture), a newly integrated subsidiary",
+      "Guided its artistic direction to align with Accenture's, until full integration",
+      "Run Instagram & LinkedIn, the monthly newsletter and email marketing via Mailjet",
+      "Supervise video shoots and shape the social media strategy to reach a wider audience",
+      "Organise events end to end (up to 750 employees): vendor sourcing, logistics, comms & social coverage",
+      "Design sport & CSR activities and drive sign-ups across teams",
+      "Lead influencer partnerships (Twitch creator, Paralympic medalist); budgets €50K–€100K",
     ],
   },
   {
@@ -94,12 +96,12 @@ export const experiences: Experience[] = [
     period: "Feb 2025 — Present",
     location: "Remote",
     description:
-      "Personal project launched out of a love of challenge. Designed websites, communication and email campaigns for a handful of companies, applying digital strategy, content creation and branding in real conditions.",
+      "A personal project launched out of a love of challenge: I design websites, communication and email campaigns for a handful of companies, applying digital strategy, content creation and branding in real conditions. For one client, for example, I organised their Valentine's Day event (a women's photo shoot), ran the social media strategy to drive sign-ups, and then built their website.",
     tags: ["Web", "Branding", "Strategy"],
     highlights: [
       "Websites, communication and email campaigns for several companies",
-      "Digital strategy, content creation and branding",
-      "Delivered end to end, in real-world conditions",
+      "Digital strategy, content creation and branding, delivered end to end",
+      "Example: organised a client's Valentine's event, ran its social strategy and built its website",
     ],
   },
   {
@@ -108,12 +110,14 @@ export const experiences: Experience[] = [
     period: "Dec 2023 — Jan 2025",
     location: "Paris, France",
     description:
-      "Built a ready-to-wear brand for tall women across three collections. Defined the brand identity, designed the collections, and led digital marketing & branding end-to-end.",
+      "Epana is a ready-to-wear brand I built for tall women, like me at 1m82. It became my final Bachelor project in the United States. I took it all the way from collection design and moodboards to the full go-to-market: market research, business plan and brand guidelines built with my team, and even an advertising campaign created for my Social Media Manager course.",
     tags: ["Brand", "Product", "E-commerce"],
     highlights: [
-      "Ready-to-wear brand for tall women across three collections",
-      "Defined the brand identity and designed the collections",
-      "Led digital marketing & branding end to end",
+      "Ready-to-wear brand for tall women (1m82, like me), my final Bachelor project in the US",
+      "Collection design and moodboards",
+      "Market research and business plan built with my team",
+      "Brand identity and guidelines",
+      "Advertising campaign created for my Social Media Manager course",
     ],
   },
   {
@@ -137,10 +141,11 @@ export const experiences: Experience[] = [
     period: "Jun 2022 — Apr 2023",
     location: "Paris, France",
     description:
-      "Internship combining business development and community management for an early-stage startup, my first hands-on contact with growth, content and customer relationships.",
-    tags: ["Growth", "Community"],
+      "Internship combining business development and community management for an early-stage startup, where I also ran the social media. It was my first hands-on contact with growth, content creation and customer relationships.",
+    tags: ["Growth", "Community", "Social"],
     highlights: [
       "Business development and community management",
+      "Ran the startup's social media",
       "Early-stage startup environment",
       "First hands-on contact with growth, content and customer relationships",
     ],
@@ -269,6 +274,14 @@ export const education = [
     field: "Marketing & Digital Communication",
     period: "2024 — 2026",
     location: "Paris, France",
+    courses: [
+      "Brand strategy",
+      "Digital communication & social media",
+      "Email marketing",
+      "Data analysis (GA4)",
+      "Event planning",
+      "Project management (Agile & Scrum)",
+    ],
   },
   {
     school: "University of California, Riverside",
@@ -276,6 +289,14 @@ export const education = [
     field: "Marketing track",
     period: "2023 — 2024",
     location: "California, USA",
+    courses: [
+      "Social media management",
+      "Marketing strategy",
+      "Market research",
+      "Business plan",
+      "Advertising campaign",
+      "Brand & collection design",
+    ],
   },
 ];
 

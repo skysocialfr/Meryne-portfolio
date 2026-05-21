@@ -24,6 +24,25 @@ export default function Education() {
                 </h3>
                 <p className="mt-3 text-ink/80">{edu.degree}</p>
                 <p className="text-ink/60">{edu.field}</p>
+
+                {edu.courses && (
+                  <div className="mt-6">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+                      Key courses
+                    </div>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {edu.courses.map((c) => (
+                        <li
+                          key={c}
+                          className="rounded-full border border-line px-3 py-1 text-xs text-ink/70 transition-colors group-hover:border-ink/30"
+                        >
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="mt-6 text-xs uppercase tracking-[0.18em] text-muted">
                   {edu.location}
                 </div>
