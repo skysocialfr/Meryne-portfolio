@@ -52,10 +52,6 @@ export default function Experience() {
                       <span className="text-paper/70">{exp.role}</span>
                     </header>
 
-                    <p className="mt-4 max-w-3xl leading-relaxed text-paper/75">
-                      {exp.description}
-                    </p>
-
                     <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
                       {exp.tags && (
                         <ul className="flex flex-wrap gap-2">
