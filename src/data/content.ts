@@ -348,6 +348,11 @@ export const projects = [
     description: "Event-tech project making gatherings unforgettable.",
     url: "https://bestievent.com",
   },
+  {
+    name: "Photopya",
+    description: "Photography web project.",
+    url: "https://photopya.vercel.app/",
+  },
 ];
 
 export type LifeImage = {
