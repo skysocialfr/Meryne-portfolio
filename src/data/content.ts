@@ -21,7 +21,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello ! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris, currently on an apprenticeship at Accenture France, and running Sky Social on the side as a social media & web project. I design digital strategies and bring brands to life across social media, email marketing and events. Entrepreneurial, curious and driven by a genuine passion for sport, I'm now looking for a V.I.E to take on an ambitious international challenge.",
+    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Organized, detail-driven and bilingual (French / English), I keep projects, clients and creative teams moving from pitch to delivery, with a real passion for luxury, craft and culture. I'm currently seeking a V.I.E Account Coordinator role in New York.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -30,23 +30,23 @@ export const hero = {
 
 // Words that scroll horizontally across the page — the "movement" signature.
 export const marqueeKeywords = [
+  "Account coordination",
+  "Client service",
   "Brand strategy",
-  "Social media",
-  "Email marketing",
-  "Events",
+  "Content & campaigns",
+  "Production",
+  "Editorial design",
+  "Luxury & lifestyle",
+  "Pitch decks",
   "Storytelling",
-  "Web design",
-  "Web development",
-  "Branding",
-  "Content design",
-  "Community",
+  "Bilingual FR / EN",
 ];
 
 export const about = {
-  heading: "Where creativity meets strategy.",
+  heading: "Coordination meets creativity.",
   body: [
-    "Curious, organised and driven, I love working where creativity meets strategy. Over the past two years I have built solid experience in digital marketing, communication and events, and learned the value of testing ideas, measuring them and improving fast.",
-    "Beyond work, sport has always shaped who I am: a French Athletics Champion in shot put, I also discovered climbing during my years at a military high school. Progression, confidence and team spirit are values I live by.",
+    "Organized, detail-driven and bilingual (French / English), I work where coordination meets creativity. Across studios, agencies and brands, I have learned to take projects from brief to delivery, keep clients confident with clear updates and bring teams along, with a real passion for luxury, craft and culture.",
+    "Outside work, sport, piano and painting keep me curious and balanced, three sides of the same instinct for craft, focus and progress.",
   ],
   // Optional secondary photo (candid / action shot).
   // To replace: drop a 4:5 image at /public/images/about/portrait.jpg
@@ -73,51 +73,52 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    company: "Sky Social",
+    role: "Founder, Digital studio serving brands",
+    period: "Feb 2025 — Present",
+    location: "Remote",
+    description:
+      "Sky Social is the digital studio I founded to serve brands, mostly freelancers and SMEs. I take projects from the first brief to delivery: understanding the client's need, scoping the work, then producing websites, content and campaigns alongside the right partners. It's the closest parallel I've had to working agency-side, where coordination, attention to detail and client communication make or break the result.",
+    tags: ["Client service", "Web", "Branding", "Production"],
+    highlights: [
+      "Client-service approach: understand the brief, scope the work, define deliverables",
+      "Websites, content and campaigns produced from brief to delivery",
+      "Example: organised a client's Valentine's Day event, ran its social strategy to drive sign-ups, then built its website",
+      "Coordinate creative partners (designers, photographers) and the production calendar",
+    ],
+  },
+  {
     company: "Accenture",
-    role: "Marketing & Events Manager, Apprenticeship",
+    role: "Marketing & Events Coordinator, Apprenticeship",
     period: "Aug 2024 — Present",
     location: "Paris, France",
     description:
-      "I lead the communication of AFD.TECH (part of Accenture), a subsidiary the group recently integrated. Over two years, my role has been to guide its artistic direction from its own identity toward Accenture's, until it became fully part of the company. I run its social media (Instagram and LinkedIn), the monthly newsletter and email marketing via Mailjet, and I supervise video shoots. I also organise internal events end to end, from sourcing vendors to on-site logistics, communication strategy and social media coverage, including a gathering for 750 employees. On top of that, I design sport & CSR activities for our teams and lead influencer partnerships, handling budgets from €50K to €100K.",
-    tags: ["Social", "Email", "Events", "Influencer", "Budget"],
+      "At Accenture, I coordinate communication, content and events for AFD.TECH (part of Accenture), a recently integrated subsidiary now serving 8 sites across France and Morocco. Over two years, I have taken 35+ events from concept to delivery, from sourcing vendors and handling on-site logistics to communication strategy and social media coverage, including a gathering of 750 employees. I also run its Instagram and LinkedIn, the monthly newsletter and email marketing via Mailjet, supervise video shoots and lead influencer partnerships, with budgets ranging from €50K to €100K.",
+    tags: ["Coordination", "Events", "Social", "Email", "Budget"],
     highlights: [
-      "Lead the communication of AFD.TECH (part of Accenture), a newly integrated subsidiary",
-      "Guided its artistic direction to align with Accenture's, until full integration",
+      "Coordinate communication, content and events for AFD.TECH (part of Accenture), across 8 sites in France and Morocco",
+      "35+ events from concept to delivery: vendor sourcing, logistics, comms strategy and social coverage",
+      "Largest event: a gathering of 750 employees",
       "Run Instagram & LinkedIn, the monthly newsletter and email marketing via Mailjet",
-      "Supervise video shoots and shape the social media strategy to reach a wider audience",
-      "Organise events end to end (up to 750 employees): vendor sourcing, logistics, comms & social coverage",
-      "Design sport & CSR activities and drive sign-ups across teams",
+      "Supervise video shoots; shape the social media strategy to grow audience",
       "Lead influencer partnerships (Twitch creator, Paralympic medalist); budgets €50K–€100K",
     ],
   },
   {
-    company: "Sky Social",
-    role: "Founder, Personal Project",
-    period: "Feb 2025 — Present",
-    location: "Remote",
-    description:
-      "A personal project launched out of a love of challenge: I design websites, communication and email campaigns for a handful of companies, applying digital strategy, content creation and branding in real conditions. For one client, for example, I organised their Valentine's Day event (a women's photo shoot), ran the social media strategy to drive sign-ups, and then built their website.",
-    tags: ["Web", "Branding", "Strategy"],
-    highlights: [
-      "Websites, communication and email campaigns for several companies",
-      "Digital strategy, content creation and branding, delivered end to end",
-      "Example: organised a client's Valentine's event, ran its social strategy and built its website",
-    ],
-  },
-  {
     company: "Epana Official",
-    role: "Founder & Brand Manager",
+    role: "Founder, Premium Concept",
     period: "Dec 2023 — Jan 2025",
     location: "Paris, France",
     description:
-      "Epana is a ready-to-wear brand I built for tall women, like me at 1m82. It became my final Bachelor project in the United States. I took it all the way from collection design and moodboards to the full go-to-market: market research, business plan and brand guidelines built with my team, and even an advertising campaign created for my Social Media Manager course.",
-    tags: ["Brand", "Product", "E-commerce"],
+      "Epana is a premium ready-to-wear concept for tall women that I developed end to end during my Bachelor in the United States. I led the business plan and brand strategy, defined the brand identity and negotiated with suppliers, co-designed the collections with my designer and built the brand website. The project was selected for ISC Paris's startup incubator, and is currently paused while I focus on my studies and experience, with plans to relaunch.",
+    tags: ["Brand", "Concept", "Strategy"],
     highlights: [
-      "Ready-to-wear brand for tall women (1m82, like me), my final Bachelor project in the US",
-      "Collection design and moodboards",
-      "Market research and business plan built with my team",
-      "Brand identity and guidelines",
-      "Advertising campaign created for my Social Media Manager course",
+      "Premium ready-to-wear concept for tall women, developed end to end",
+      "Business plan and brand strategy",
+      "Brand identity and supplier negotiations",
+      "Collections co-designed with my designer; built the brand website",
+      "Selected for ISC Paris's startup incubator",
+      "Currently paused to focus on studies and experience, with plans to relaunch",
     ],
   },
   {
@@ -152,7 +153,10 @@ export const experiences: Experience[] = [
   },
 ];
 
-export type WorkCategory = "Email & Newsletters" | "Event organized & Social media";
+export type WorkCategory =
+  | "Email & Newsletters"
+  | "Event organized & Social media"
+  | "Pitch & Campaign Decks";
 
 export type WorkItem = {
   id: string;
@@ -302,14 +306,17 @@ export const education = [
 
 export const skills = {
   tools: [
+    "Microsoft Office Suite",
+    "Keynote",
+    "PowerPoint",
+    "Notion",
+    "Mailjet",
     "Meta Business Suite",
     "Google Ads",
     "Google Analytics (GA4)",
-    "Mailjet",
     "Canva",
     "Adobe Suite",
     "WordPress",
-    "Notion",
   ],
   expertise: [
     "Marketing strategy & branding",
@@ -417,5 +424,5 @@ export const lifeOutsideWork = {
 export const contact = {
   heading: "Let's build something memorable.",
   sub:
-    "If you're hiring for a V.I.E in Digital Marketing & Communication, or just want to chat about brands, sport or climbing, I'd love to hear from you.",
+    "If you're hiring for a V.I.E Account Coordinator in a creative agency, or just want to chat about brands, craft or culture, I'd love to hear from you.",
 };

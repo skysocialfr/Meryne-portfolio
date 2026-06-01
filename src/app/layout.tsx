@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 
-// Display font — Bricolage Grotesque gives a modern editorial feel with
-// just enough character to avoid the generic AI-template look.
-const display = Bricolage_Grotesque({
+// Display font — Fraunces, a refined editorial serif. Big type IS the design.
+const display = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-// Body font — Inter, clean and highly legible on every screen size.
+// Body font — Inter, a clean grotesque sans, highly legible everywhere.
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -20,13 +20,13 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Meryne Ndjeyi — Marketing & Digital Communication",
+  title: "Meryne Ndjeyi — Account Coordinator, V.I.E ready",
   description:
-    "Portfolio of Meryne Ndjeyi — Master's student in Marketing & Digital Communication at ISC Paris. Building brands at the crossroads of strategy, content and events.",
+    "Portfolio of Meryne Ndjeyi — organized, detail-driven and bilingual coordinator with a passion for luxury and creativity. Seeking a V.I.E Account Coordinator role in New York.",
   openGraph: {
-    title: "Meryne Ndjeyi — Marketing & Digital Communication",
+    title: "Meryne Ndjeyi — Account Coordinator, V.I.E ready",
     description:
-      "Portfolio of Meryne Ndjeyi — strategy, social, email marketing and events.",
+      "Portfolio of Meryne Ndjeyi — coordination, client service and production for creative agencies and luxury brands.",
     type: "website",
   },
 };

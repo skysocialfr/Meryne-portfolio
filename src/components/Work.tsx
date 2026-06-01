@@ -7,10 +7,16 @@ import Lightbox from "./Lightbox";
 import SafeImage from "./SafeImage";
 import { workItems, type WorkCategory, type WorkItem } from "@/data/content";
 
-const CATEGORIES: ("All" | WorkCategory)[] = [
-  "All",
+// Display order for categories. Only categories with at least one item
+// actually show up as a filter tab.
+const CATEGORY_ORDER: WorkCategory[] = [
   "Email & Newsletters",
   "Event organized & Social media",
+  "Pitch & Campaign Decks",
+];
+const CATEGORIES: ("All" | WorkCategory)[] = [
+  "All",
+  ...CATEGORY_ORDER.filter((c) => workItems.some((i) => i.category === c)),
 ];
 
 // Different aspect ratios make the grid feel editorial instead of templated.

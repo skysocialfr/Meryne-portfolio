@@ -7,14 +7,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Warm off-white "paper" background, deep ink foreground, and a
-        // vibrant ember accent that nods to HAPIK's red without copying it.
-        paper: "#F6F2EC",
+        // Editorial luxury palette: near-black ink on warm off-white,
+        // with a single restrained champagne accent (kept under the
+        // existing "ember" key to avoid touching every component).
+        paper: "#FAF9F6",
         ink: "#0E0E0E",
         graphite: "#1A1A1A",
         muted: "#6B6B6B",
-        ember: "#FF3D2E",
-        emberDark: "#D9301F",
+        ember: "#C2A878",
+        emberDark: "#A4895E",
         chalk: "#FFFFFF",
         line: "#E5E0D7",
       },
