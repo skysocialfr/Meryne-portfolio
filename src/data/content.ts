@@ -21,7 +21,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Organized, detail-driven and bilingual (French / English), I keep projects, clients and creative teams moving from pitch to delivery, with a real passion for luxury, craft and culture. I'm currently seeking a V.I.E role abroad, in account coordination, marketing or communication.",
+    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Organized, detail-driven and bilingual (French / English), I keep projects, clients and creative teams moving from pitch to delivery, with a real passion for brands, craft and culture. I'm currently seeking a V.I.E role abroad, in account coordination, marketing or communication.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -36,7 +36,6 @@ export const marqueeKeywords = [
   "Content & campaigns",
   "Production",
   "Editorial design",
-  "Luxury & lifestyle",
   "Pitch decks",
   "Storytelling",
   "Bilingual FR / EN",
@@ -45,7 +44,7 @@ export const marqueeKeywords = [
 export const about = {
   heading: "Coordination meets creativity.",
   body: [
-    "Organized, detail-driven and bilingual (French / English), I work where coordination meets creativity. Across studios, agencies and brands, I have learned to take projects from brief to delivery, keep clients confident with clear updates and bring teams along, with a real passion for luxury, craft and culture.",
+    "Organized, detail-driven and bilingual (French / English), I work where coordination meets creativity. Across studios, agencies and brands, I have learned to take projects from brief to delivery, keep clients confident with clear updates and bring teams along, driven by a real passion for brands, craft and culture.",
     "Outside work, sport, piano and painting keep me curious and balanced, three sides of the same instinct for craft, focus and progress.",
   ],
   // Optional secondary photo (candid / action shot).

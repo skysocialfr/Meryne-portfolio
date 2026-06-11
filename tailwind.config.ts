@@ -7,15 +7,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Editorial luxury palette: near-black ink on warm off-white,
-        // with a single restrained champagne accent (kept under the
-        // existing "ember" key to avoid touching every component).
-        paper: "#FAF9F6",
+        // Warm off-white "paper" background, deep ink foreground,
+        // and a vibrant ember accent kept restrained across the site.
+        paper: "#F6F2EC",
         ink: "#0E0E0E",
         graphite: "#1A1A1A",
         muted: "#6B6B6B",
-        ember: "#C2A878",
-        emberDark: "#A4895E",
+        ember: "#FF3D2E",
+        emberDark: "#D9301F",
         chalk: "#FFFFFF",
         line: "#E5E0D7",
       },
