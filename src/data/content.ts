@@ -21,7 +21,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Organized, detail-driven and bilingual (French / English), I keep projects, clients and creative teams moving from pitch to delivery, with a real passion for luxury, craft and culture. I'm currently seeking a V.I.E Account Coordinator role in New York.",
+    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Organized, detail-driven and bilingual (French / English), I keep projects, clients and creative teams moving from pitch to delivery, with a real passion for luxury, craft and culture. I'm currently seeking a V.I.E role abroad, in account coordination, marketing or communication.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -424,5 +424,5 @@ export const lifeOutsideWork = {
 export const contact = {
   heading: "Let's build something memorable.",
   sub:
-    "If you're hiring for a V.I.E Account Coordinator in a creative agency, or just want to chat about brands, craft or culture, I'd love to hear from you.",
+    "If you're hiring for a V.I.E in account coordination, marketing or communication, or just want to chat about brands, craft or culture, I'd love to hear from you.",
 };
