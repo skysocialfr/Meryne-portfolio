@@ -20,13 +20,13 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Meryne Ndjeyi — Marketing, Communication & Account Coordination",
+  title: "Meryne Ndjeyi — Event Communication, Marketing & Account Coordination",
   description:
-    "Portfolio of Meryne Ndjeyi — organized, detail-driven and bilingual coordinator with a passion for brands, craft and culture. Seeking a V.I.E role abroad in account coordination, marketing or communication.",
+    "Portfolio of Meryne Ndjeyi — organized, detail-driven and bilingual coordinator bringing brands to life through events and the communication around them. Seeking a V.I.E role abroad in event communication, marketing or account coordination.",
   openGraph: {
-    title: "Meryne Ndjeyi — Marketing, Communication & Account Coordination",
+    title: "Meryne Ndjeyi — Event Communication & Account Coordination",
     description:
-      "Portfolio of Meryne Ndjeyi — coordination, client service and production for brands and creative teams.",
+      "Portfolio of Meryne Ndjeyi — events from concept to delivery, content, social and editorial communication for brands and creative teams.",
     type: "website",
   },
 };
