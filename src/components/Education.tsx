@@ -12,7 +12,7 @@ export default function Education() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:mt-20 md:grid-cols-2 md:gap-8">
+        <div className="mt-14 grid gap-6 md:mt-20 md:grid-cols-3 md:gap-6">
           {education.map((edu, i) => (
             <Reveal key={edu.school} delay={i * 0.08}>
               <article className="group relative h-full overflow-hidden rounded-[2px] border border-line bg-chalk p-8 transition-colors duration-500 hover:border-ink md:p-10">

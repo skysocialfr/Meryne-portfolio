@@ -273,18 +273,32 @@ export const workItems: WorkItem[] = [
 
 export const education = [
   {
+    school: "ISCOM Paris",
+    degree: "MBA",
+    field: "Digital Communication, Social Media & Community Management",
+    period: "2026 — 2027",
+    location: "Paris, France",
+    courses: [
+      "Content management & editorial strategy",
+      "Social media & community management",
+      "Influence marketing & social listening",
+      "Social ads, traffic & digital performance",
+      "Audio & video production",
+      "CRM, UX/UI & retention",
+    ],
+  },
+  {
     school: "ISC Paris",
     degree: "Master's Degree (Grande École)",
     field: "Marketing & Digital Communication",
     period: "2024 — 2026",
     location: "Paris, France",
     courses: [
-      "Brand strategy",
-      "Digital communication & social media",
-      "Email marketing",
-      "Data analysis (GA4)",
-      "Event planning",
-      "Project management (Agile & Scrum)",
+      "Advanced Digital Marketing",
+      "Social Media Strategy",
+      "Influence Marketing",
+      "Online & offline media planning",
+      "Internal & external communication strategy",
     ],
   },
   {
@@ -294,12 +308,12 @@ export const education = [
     period: "2023 — 2024",
     location: "California, USA",
     courses: [
-      "Social media management",
-      "Marketing strategy",
-      "Market research",
-      "Business plan",
-      "Advertising campaign",
-      "Brand & collection design",
+      "Digital Marketing (SEO, SEM)",
+      "Social Media Marketing (Meta Ads)",
+      "International Marketing",
+      "Video production for social media",
+      "Project & process management",
+      "Introduction to WordPress",
     ],
   },
 ];
