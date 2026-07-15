@@ -6,9 +6,9 @@
 
 export const personal = {
   name: "Meryne Ndjeyi",
-  role: "Marketing & Digital Communication",
+  role: "Social Media & Content",
   location: "Saint-Germain-en-Laye, France",
-  availability: "Open to work, V.I.E ready",
+  availability: "Open to work, alternance from Sept 2026",
   email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   // Put your CV PDF here: /public/cv/meryne-ndjeyi-cv.pdf
@@ -21,7 +21,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Organized, detail-driven and bilingual (French / English), I bring brands to life through events and the communication around them, from concept and production to social, email and storytelling. I'm currently seeking a V.I.E role abroad in event communication, marketing or account coordination.",
+    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Curious, creative and bilingual (French / English), I build brand presence on social media, from editorial strategy and content production to community, trend watch and performance. I'm currently looking for an alternance as a Social Media Manager, starting September 2026.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -30,22 +30,22 @@ export const hero = {
 
 // Words that scroll horizontally across the page — the "movement" signature.
 export const marqueeKeywords = [
-  "Event coordination",
-  "Event production",
-  "Brand activations",
-  "Communication strategy",
-  "Account coordination",
-  "Content & campaigns",
-  "Social media",
-  "Pitch decks",
-  "Storytelling",
+  "Social media strategy",
+  "Editorial calendar",
+  "Content creation",
+  "Community management",
+  "Trend watch",
+  "Brand storytelling",
+  "Copywriting",
+  "Performance analysis",
+  "Client relationship",
   "Bilingual FR / EN",
 ];
 
 export const about = {
-  heading: "Bringing brands to life through events.",
+  heading: "Turning brands into stories on social.",
   body: [
-    "Organized, detail-driven and bilingual (French / English), I love taking events from the very first brief to delivery, then telling their story across social, email and editorial. Across studios, agencies and brands, I have learned to coordinate suppliers, manage timelines and budgets, and keep clients and creative teams aligned through every milestone.",
+    "Curious, creative and bilingual (French / English), I love the craft of social media: reading a brief, shaping an editorial line, producing content, animating a community, then reading the numbers to sharpen the next round. I stay in constant watch on formats, trends and cultural moments to keep brands relevant.",
     "Outside work, sport, piano and painting keep me curious and balanced, three sides of the same instinct for craft, focus and progress.",
   ],
   // Optional secondary photo (candid / action shot).
@@ -74,34 +74,34 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     company: "Sky Social",
-    role: "Founder, Digital studio serving brands",
+    role: "Founder, Social & Digital studio",
     period: "Feb 2025 — Present",
     location: "Remote",
     description:
-      "Sky Social is the digital studio I founded to serve brands, mostly freelancers and SMEs. I take projects from the first brief to delivery: understanding the client's need, scoping the work, then producing websites, content and campaigns alongside the right partners. It's the closest parallel I've had to working agency-side, where coordination, attention to detail and client communication make or break the result.",
-    tags: ["Client service", "Web", "Branding", "Production"],
+      "Sky Social is the studio I founded to help brands, mostly freelancers and SMEs, grow on social media and online. I take projects from the first brief to delivery: understanding the client's need, shaping the editorial line, producing content and campaigns, and building or updating their website when needed. It's my closest parallel to agency work, where editorial thinking, creativity and client relationship make or break the result.",
+    tags: ["Social", "Content", "Client service", "Web"],
     highlights: [
       "Client-service approach: understand the brief, scope the work, define deliverables",
-      "Websites, content and campaigns produced from brief to delivery",
-      "Example: organised a client's Valentine's Day event, ran its social strategy to drive sign-ups, then built its website",
+      "Social media strategy, content production and campaigns for several brands",
+      "Example: organised a client's Valentine's Day event, ran the social strategy to drive sign-ups, then built the website",
       "Coordinate creative partners (designers, photographers) and the production calendar",
     ],
   },
   {
     company: "Accenture",
-    role: "Marketing & Events Coordinator, Apprenticeship",
+    role: "Social Media & Communication, Apprenticeship",
     period: "Aug 2024 — Present",
     location: "Paris, France",
     description:
-      "At Accenture, I coordinate communication, content and events for AFD.TECH (part of Accenture), a recently integrated subsidiary now serving 8 sites across France and Morocco. Over two years, I have taken 35+ events from concept to delivery, from sourcing vendors and handling on-site logistics to communication strategy and social media coverage, including a gathering of 750 employees. I also run its Instagram and LinkedIn, the monthly newsletter and email marketing via Mailjet, supervise video shoots and lead influencer partnerships, with budgets ranging from €50K to €100K.",
-    tags: ["Coordination", "Events", "Social", "Email", "Budget"],
+      "At Accenture, I run the social media (Instagram and LinkedIn) of AFD.TECH (part of Accenture), a recently integrated subsidiary. I own the editorial calendar, produce and supervise content (posts, videos, campaigns), keep a constant watch on trends and formats, and read performance to sharpen the next round. On top of that, I write and send the monthly newsletter and email campaigns via Mailjet, lead influencer partnerships, and coordinate internal events end to end, including a gathering of 750 employees.",
+    tags: ["Social", "Content", "Editorial", "Influencer", "Events"],
     highlights: [
-      "Coordinate communication, content and events for AFD.TECH (part of Accenture), across 8 sites in France and Morocco",
-      "35+ events from concept to delivery: vendor sourcing, logistics, comms strategy and social coverage",
-      "Largest event: a gathering of 750 employees",
-      "Run Instagram & LinkedIn, the monthly newsletter and email marketing via Mailjet",
-      "Supervise video shoots; shape the social media strategy to grow audience",
-      "Lead influencer partnerships (Twitch creator, Paralympic medalist); budgets €50K–€100K",
+      "Run Instagram & LinkedIn for AFD.TECH (part of Accenture), across 8 sites in France and Morocco",
+      "Own the editorial calendar; produce and supervise content (posts, videos, campaigns)",
+      "Constant trend watch; read performance to sharpen the next round",
+      "Write and send the monthly newsletter and email campaigns via Mailjet",
+      "Lead influencer partnerships (Twitch creator, Paralympic medalist)",
+      "Coordinate 35+ events end to end; largest gathering: 750 employees; budgets €50K–€100K",
     ],
   },
   {
@@ -138,17 +138,17 @@ export const experiences: Experience[] = [
   },
   {
     company: "Bulleiit Startup",
-    role: "Business Developer & Community Manager",
+    role: "Community Manager & Business Developer",
     period: "Jun 2022 — Apr 2023",
     location: "Paris, France",
     description:
-      "Internship combining business development and community management for an early-stage startup, where I also ran the social media. It was my first hands-on contact with growth, content creation and customer relationships.",
-    tags: ["Growth", "Community", "Social"],
+      "Internship focused on community management and social media for an early-stage startup, with a business development side. It was my first hands-on contact with animating a community, producing content and growing an audience day after day.",
+    tags: ["Community", "Social", "Content", "Growth"],
     highlights: [
-      "Business development and community management",
-      "Ran the startup's social media",
+      "Community management and social media for the startup",
+      "Content production and daily audience growth",
+      "Client and prospect relationships (business development)",
       "Early-stage startup environment",
-      "First hands-on contact with growth, content and customer relationships",
     ],
   },
 ];
@@ -319,12 +319,14 @@ export const skills = {
     "WordPress",
   ],
   expertise: [
-    "Marketing strategy & branding",
-    "Digital communication & social media",
+    "Social media strategy & editorial calendar",
+    "Content creation & production",
+    "Community management & client relationship",
+    "Trend watch & digital innovation",
+    "Performance analysis (GA4, native insights)",
+    "Copywriting & brand storytelling",
     "Email marketing",
     "Event planning",
-    "Data analysis",
-    "Project management (Agile, Scrum)",
   ],
   languages: [
     { name: "French", level: "Native" },
@@ -424,5 +426,5 @@ export const lifeOutsideWork = {
 export const contact = {
   heading: "Let's build something memorable.",
   sub:
-    "If you're hiring for a V.I.E in event communication, marketing or account coordination, or just want to chat about brands, events or culture, I'd love to hear from you.",
+    "If you're hiring an alternance Social Media Manager, or just want to chat about brands, content or trends, I'd love to hear from you.",
 };

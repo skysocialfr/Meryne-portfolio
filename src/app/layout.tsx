@@ -20,13 +20,13 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Meryne Ndjeyi — Event Communication, Marketing & Account Coordination",
+  title: "Meryne Ndjeyi — Social Media Manager, alternance ready",
   description:
-    "Portfolio of Meryne Ndjeyi — organized, detail-driven and bilingual coordinator bringing brands to life through events and the communication around them. Seeking a V.I.E role abroad in event communication, marketing or account coordination.",
+    "Portfolio of Meryne Ndjeyi — curious, creative and bilingual, building brand presence on social from editorial strategy and content to community, trend watch and performance. Looking for an alternance as a Social Media Manager, starting September 2026.",
   openGraph: {
-    title: "Meryne Ndjeyi — Event Communication & Account Coordination",
+    title: "Meryne Ndjeyi — Social Media Manager, alternance ready",
     description:
-      "Portfolio of Meryne Ndjeyi — events from concept to delivery, content, social and editorial communication for brands and creative teams.",
+      "Portfolio of Meryne Ndjeyi — social media, editorial strategy, content and community for brands and creative teams.",
     type: "website",
   },
 };
