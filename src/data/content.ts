@@ -407,13 +407,17 @@ export type CaseMedia =
       kind: "image";
       src: string;
       alt: string;
+      // "landscape" (16:9) media take the full gallery width; default is a 4:5 portrait.
+      orientation?: "portrait" | "landscape";
       placeholder?: boolean;
     }
   | {
       kind: "video";
-      // Still image shown before playing (a frame from the video).
-      poster: string;
+      // Still image shown before playing (a frame from the video). Optional
+      // for an MP4 file: its first frame is used when left out.
+      poster?: string;
       alt: string;
+      orientation?: "portrait" | "landscape";
       // Either a link to the video on Instagram / LinkedIn / YouTube…
       href?: string;
       // …or an MP4 file in /public/videos (keep it under 10 MB).
@@ -457,18 +461,20 @@ export const international = {
       cover: {
         kind: "image",
         src: "/images/international/cdc/cover.jpg",
-        alt: "Caisse des Dépôts et Consignations event",
-        placeholder: true,
+        alt: "Panel of three speakers on stage at the Caisse des Dépôts et Consignations event",
       },
       gallery: [
-        { kind: "image", src: "/images/international/cdc/photo-01.jpg", alt: "CDC event photo 1", placeholder: true },
-        { kind: "image", src: "/images/international/cdc/photo-02.jpg", alt: "CDC event photo 2", placeholder: true },
+        {
+          kind: "image",
+          src: "/images/international/cdc/photo-01.jpg",
+          alt: "Speaker at the lectern during the Caisse des Dépôts et Consignations event",
+          orientation: "landscape",
+        },
         {
           kind: "video",
-          poster: "/images/international/cdc/video-poster.jpg",
-          alt: "CDC event video",
-          href: "",
-          placeholder: true,
+          file: "/videos/cdc-event.mp4",
+          alt: "Video captured at the Caisse des Dépôts et Consignations event",
+          orientation: "landscape",
         },
       ],
       placeholder: true,

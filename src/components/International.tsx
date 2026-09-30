@@ -100,7 +100,12 @@ function ProjectChapter({
         {/* Gallery — swipe on mobile, 2-column grid from tablet up */}
         <ul className="snap-row md:col-span-7 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0">
           {gallery.map((m, i) => (
-            <li key={i} className="w-[80vw] shrink-0 snap-start md:w-auto">
+            <li
+              key={i}
+              className={`shrink-0 snap-start md:w-auto ${
+                m.orientation === "landscape" ? "w-[88vw] md:col-span-2" : "w-[80vw]"
+              }`}
+            >
               <Reveal delay={i * 0.05}>
                 <MediaTile media={m} title={project.title} onOpen={onOpen} />
               </Reveal>
@@ -123,11 +128,22 @@ function MediaTile({
   onOpen: (item: LightboxItem) => void;
   large?: boolean;
 }) {
-  const aspect = large ? "aspect-[4/3] md:aspect-video" : "aspect-[4/5]";
-  const sizes = large ? "(min-width: 1440px) 1312px, 100vw" : "(min-width: 768px) 30vw, 80vw";
+  const landscape = media.orientation === "landscape";
+  const aspect = large
+    ? "aspect-[4/3] md:aspect-video"
+    : landscape
+      ? "aspect-video"
+      : "aspect-[4/5]";
+  const sizes = large
+    ? "(min-width: 1440px) 1312px, 100vw"
+    : landscape
+      ? "(min-width: 768px) 55vw, 88vw"
+      : "(min-width: 768px) 30vw, 80vw";
   const spec = large
     ? "2400 × 1350 px (16:9) · JPG — mobile crops to 4:3"
-    : "1600 × 2000 px · JPG";
+    : landscape
+      ? "2400 × 1350 px (16:9) · JPG"
+      : "1600 × 2000 px · JPG";
 
   if (media.kind === "video") {
     // Self-hosted MP4: play inline.
@@ -136,12 +152,13 @@ function MediaTile({
         <video
           controls
           playsInline
-          preload="none"
+          // Without a poster, load just enough to show the first frame.
+          preload={media.poster ? "none" : "metadata"}
           poster={media.poster}
           className={`${aspect} w-full bg-ink object-cover`}
           aria-label={media.alt}
         >
-          <source src={media.file} type="video/mp4" />
+          <source src={media.poster ? media.file : `${media.file}#t=0.1`} type="video/mp4" />
         </video>
       );
     }
