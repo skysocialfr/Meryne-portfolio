@@ -6,13 +6,13 @@
 
 export const personal = {
   name: "Meryne Ndjeyi",
-  role: "Social media & contenu",
-  location: "Saint-Germain-en-Laye, France",
+  role: "Social Media & Content Creator",
+  location: "Paris, France",
   // Short status line (hero badge, contact "Status", footer).
   availability: "Disponible · Stage de 6 mois dès janvier 2027",
   // Full sentence version, reused in page metadata.
   availabilityLong:
-    "Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
+    "Je recherche un stage de six mois à partir de janvier 2027.",
   email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   // To update the CV, overwrite /public/cv/meryne-ndjeyi-cv.pdf with the new
@@ -25,11 +25,11 @@ export const personal = {
 
 // Page title and meta description (browser tab, Google, Open Graph, Twitter).
 export const seo = {
-  title: "Meryne Ndjeyi — Social Media Manager, stage de 6 mois dès janvier 2027",
+  title: "Meryne Ndjeyi — Social Media & Content Creator, stage de 6 mois dès janvier 2027",
   description:
-    "Portfolio de Meryne Ndjeyi — curieuse, créative et bilingue, je construis la présence des marques sur les réseaux sociaux, de la stratégie éditoriale et du contenu à la communauté, la veille et la performance. Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
+    "Portfolio de Meryne Ndjeyi, Social Media & Content Creator : réseaux sociaux, vidéo et événementiel, bilingue français / anglais. Diplômée du Master Marketing & Communication Digitale de l'ISC Paris, je recherche un stage de six mois à partir de janvier 2027.",
   shareDescription:
-    "Réseaux sociaux, stratégie éditoriale, contenu et communauté. Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
+    "Réseaux sociaux, vidéo et événementiel. Je recherche un stage de six mois à partir de janvier 2027.",
 };
 
 // Page sections, in order. Drives the navigation, the section numbers
@@ -73,7 +73,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Le marketing,", "en mouvement."],
   lead:
-    "Bonjour ! Je suis Meryne, étudiante en Master Marketing & Communication Digitale à l'ISC Paris. Curieuse, créative et bilingue (français / anglais), je construis la présence des marques sur les réseaux sociaux, de la stratégie éditoriale et la production de contenu à la communauté, la veille et la performance. Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
+    "Bonjour ! Je suis Meryne, diplômée du Master Marketing & Communication Digitale de l'ISC Paris. Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH (part of Accenture), de la ligne éditoriale à l'analyse des performances, en plus d'une cinquantaine d'événements par an. En parallèle, je crée du contenu photo et vidéo pour des marques et des institutions, en France et à l'international. Je recherche un stage de six mois à partir de janvier 2027.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -104,10 +104,10 @@ export const about = {
   // then change this path to "/images/about/portrait.jpg".
   image: "/images/about/portrait.jpeg",
   stats: [
-    { value: "8", label: "Sites gérés en France et au Maroc" },
-    { value: "100 K€", label: "Plus gros budget événementiel géré" },
-    { value: "2 ans", label: "De partenariats influenceurs pilotés" },
-    { value: "3", label: "Marques et produits lancés" },
+    { value: "50+", label: "Événements corporate pilotés par an" },
+    { value: "8", label: "Sites couverts en France et au Maroc" },
+    { value: "2 ans", label: "À gérer les réseaux d'AFD.TECH" },
+    { value: "3", label: "Pays : France, Espagne, Gabon" },
   ],
 };
 
@@ -125,66 +125,45 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     company: "Sky Social",
-    role: "Fondatrice, studio social media & digital",
+    role: "Fondatrice, agence digitale",
     period: "Févr. 2025 — Aujourd'hui",
-    location: "À distance",
+    location: "France & Gabon",
     description:
-      "Sky Social est le studio que j'ai fondé pour aider les marques, surtout des indépendants et des PME, à se développer sur les réseaux sociaux et en ligne. Je mène les projets du premier brief à la livraison : comprendre le besoin du client, construire la ligne éditoriale, produire contenus et campagnes, et créer ou refondre son site quand il le faut. C'est ce qui se rapproche le plus du travail en agence, où la réflexion éditoriale, la créativité et la relation client font toute la différence.",
-    tags: ["Social media", "Contenu", "Relation client", "Web"],
+      "Sky Social est l'agence digitale que j'ai fondée. Je gère les comptes Instagram, TikTok et LinkedIn de clients, du planning éditorial à l'analyse : scripts, tournages, montage, programmation et analytics. Au Gabon, j'assure la communication et la captation d'événements pour la Caisse des Dépôts et Consignations, les comptes rendus parlementaires de sénateurs et des événements privés.",
+    tags: ["Social media", "Vidéo", "Contenu", "International"],
     highlights: [
-      "Approche orientée client : comprendre le brief, cadrer le projet, définir les livrables",
-      "Stratégie social media, production de contenu et campagnes pour plusieurs marques",
-      "Exemple : organisation de l'événement Saint-Valentin d'une cliente, stratégie social media pour générer des inscriptions, puis création de son site",
-      "Coordination des partenaires créatifs (designers, photographes) et du calendrier de production",
+      "Gestion des comptes Instagram, TikTok et LinkedIn de clients : planning éditorial, scripts, tournages, montage, programmation et analytics",
+      "Gabon : communication et captation d'événements pour la Caisse des Dépôts et Consignations, comptes rendus parlementaires de sénateurs et événements privés",
     ],
   },
   {
     company: "Accenture",
-    role: "Social media & communication, alternance",
-    period: "Août 2024 — Aujourd'hui",
+    role: "Chargée de communication & événementiel, alternance",
+    period: "Août 2024 — Sept. 2026",
     location: "Paris, France",
     description:
-      "Chez Accenture, je gère les réseaux sociaux (Instagram et LinkedIn) d'AFD.TECH (part of Accenture), une filiale récemment intégrée. Je pilote le calendrier éditorial, je produis et supervise les contenus (posts, vidéos, campagnes), je fais une veille constante sur les tendances et les formats, et j'analyse la performance pour affiner la suite. Je rédige et envoie aussi la newsletter mensuelle et les campagnes emailing via Mailjet, je pilote les partenariats influenceurs et je coordonne les événements internes de bout en bout, dont un rassemblement de 750 collaborateurs.",
-    tags: ["Social media", "Contenu", "Éditorial", "Influence", "Événementiel"],
+      "Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH (part of Accenture) sur LinkedIn et Instagram, de la ligne éditoriale à l'analyse des performances : concepts, rédaction, tournages et montage. En parallèle, j'ai piloté plus de 50 événements corporate par an, internes et externes, de la prise de brief à la livraison, et assuré la communication événementielle sur 8 sites en France et au Maroc.",
+    tags: ["Social media", "Contenu", "Vidéo", "Événementiel", "Emailing"],
     highlights: [
-      "Gestion d'Instagram et LinkedIn pour AFD.TECH (part of Accenture), sur 8 sites en France et au Maroc",
-      "Pilotage du calendrier éditorial ; production et supervision des contenus (posts, vidéos, campagnes)",
-      "Veille constante ; analyse de la performance pour affiner la suite",
-      "Rédaction et envoi de la newsletter mensuelle et des campagnes emailing via Mailjet",
-      "Pilotage de partenariats influenceurs (créateur Twitch, médaillé paralympique)",
-      "Coordination de plus de 35 événements de bout en bout ; plus grand rassemblement : 750 collaborateurs ; budgets de 50 K€ à 100 K€",
-    ],
-  },
-  {
-    company: "Epana Official",
-    role: "Fondatrice, concept premium",
-    period: "Déc. 2023 — Janv. 2025",
-    location: "Paris, France",
-    description:
-      "Epana est un concept de prêt-à-porter premium pour les femmes grandes, que j'ai développé de bout en bout pendant mon Bachelor aux États-Unis. J'ai mené le business plan et la stratégie de marque, défini l'identité de la marque et négocié avec les fournisseurs, co-créé les collections avec ma designer et construit le site de la marque. Le projet a été sélectionné par l'incubateur de startups de l'ISC Paris ; il est aujourd'hui en pause pendant que je me concentre sur mes études et mon expérience, avec l'envie de le relancer.",
-    tags: ["Marque", "Concept", "Stratégie"],
-    highlights: [
-      "Concept de prêt-à-porter premium pour les femmes grandes, développé de bout en bout",
-      "Business plan et stratégie de marque",
-      "Identité de marque et négociations fournisseurs",
-      "Collections co-créées avec ma designer ; création du site de la marque",
-      "Sélectionné par l'incubateur de startups de l'ISC Paris",
-      "En pause pour me concentrer sur mes études et mon expérience, avec l'envie de le relancer",
+      "Gestion des réseaux sociaux d'AFD.TECH (LinkedIn, Instagram) : ligne éditoriale, concepts, rédaction, tournages et montage",
+      "Pilotage de plus de 50 événements corporate par an (internes et externes), de la prise de brief à la livraison : invitations, inscriptions, logistique",
+      "Production photo et vidéo en support avec notre vidéaste",
+      "Analyse des performances et reporting mensuel",
+      "Communication événementielle : réseaux sociaux, newsletter et emailing sur 8 sites (France, Maroc)",
     ],
   },
   {
     company: "DpointGroup",
-    role: "Assistante communication digitale & événementiel",
+    role: "Chargée de projet événementiel & développement commercial",
     period: "Janv. 2023 — Juin 2023",
     location: "Barcelone, Espagne",
     description:
-      "Expérience internationale de six mois dans un environnement hispanophone. Conception de stratégies de communication digitale, organisation d'événements clients et analyse de la performance des campagnes.",
-    tags: ["Événementiel", "Analyse", "International"],
+      "Six mois à Barcelone, en environnement hispanophone. J'ai prospecté des clients pour leur proposer la gestion de leurs événements, du pitch à la proposition commerciale, puis organisé ces événements de bout en bout, du brief à la coordination sur place, en assurant aussi la communication digitale et les réseaux sociaux.",
+    tags: ["Événementiel", "Développement commercial", "International"],
     highlights: [
-      "Expérience internationale de six mois dans un environnement hispanophone",
-      "Conception de stratégies de communication digitale",
-      "Organisation d'événements clients",
-      "Analyse de la performance des campagnes",
+      "Prospection de clients pour leur proposer la gestion de leurs événements, du pitch à la proposition commerciale",
+      "Organisation d'événements clients de bout en bout, du brief à la coordination sur place",
+      "Communication digitale et réseaux sociaux en environnement hispanophone",
     ],
   },
   {
@@ -489,6 +468,7 @@ export const education = [
       "Marketing d'influence",
       "Media planning online & offline",
       "Stratégie de communication interne & externe",
+      "Stratégies d'influence, relations presse & partenariats",
     ],
   },
   {
@@ -498,11 +478,12 @@ export const education = [
     period: "2023 — 2024",
     location: "Californie, États-Unis",
     courses: [
-      "Marketing digital (SEO, SEA)",
-      "Social media marketing (Meta Ads)",
+      "Marketing digital (SEO, SEM)",
+      "Fondamentaux du management",
       "Marketing international",
-      "Production vidéo pour les réseaux sociaux",
       "Gestion de projet & de processus",
+      "Social media marketing (Facebook Ads, Instagram Ads)",
+      "Production vidéo pour les réseaux sociaux",
       "Initiation à WordPress",
     ],
   },
@@ -510,26 +491,24 @@ export const education = [
 
 export const skills = {
   tools: [
-    "Suite Microsoft Office",
-    "Keynote",
-    "PowerPoint",
-    "Notion",
-    "Mailjet",
-    "Meta Business Suite",
-    "Google Ads",
-    "Google Analytics (GA4)",
+    "Meta",
+    "Google Analytics",
+    "DaVinci Resolve",
+    "CapCut",
     "Canva",
-    "Adobe Suite",
+    "Mailjet",
     "WordPress",
+    "Notion",
+    "Teams, Zoom",
   ],
   expertise: [
-    "Stratégie social media & calendrier éditorial",
-    "Création & production de contenu",
-    "Community management & relation client",
-    "Veille tendances & innovation digitale",
-    "Analyse de performance (GA4, statistiques natives)",
-    "Copywriting & storytelling de marque",
-    "Emailing",
+    "Ligne éditoriale & création de contenu",
+    "Community management",
+    "Veille tendances & formats",
+    "Création photo & vidéo",
+    "Montage vidéo",
+    "Analyse de performance & reporting",
+    "Newsletter & emailing",
     "Organisation d'événements",
   ],
   languages: [
@@ -628,5 +607,5 @@ export const lifeOutsideWork = {
 
 export const contact = {
   sub:
-    "Vous recherchez une stagiaire Social Media Manager pour six mois à partir de janvier 2027, ou vous voulez simplement parler marques, contenus ou tendances ? Écrivez-moi.",
+    "Vous recherchez une stagiaire en social media et création de contenu pour six mois à partir de janvier 2027, ou vous voulez simplement parler marques, contenus ou tendances ? Écrivez-moi.",
 };
