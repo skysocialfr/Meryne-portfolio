@@ -15,8 +15,12 @@ export const personal = {
     "Looking for a six-month internship as a Social Media Manager, starting January 2027.",
   email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
-  // Put your CV PDF here: /public/cv/meryne-ndjeyi-cv.pdf
+  // To update the CV, overwrite /public/cv/meryne-ndjeyi-cv.pdf with the new
+  // PDF (same filename). Vercel revalidates files in /public on every
+  // deploy, so visitors get the new version right away.
   cvUrl: "/cv/meryne-ndjeyi-cv.pdf",
+  // Filename the visitor's browser saves the download as.
+  cvDownloadName: "Meryne-Ndjeyi-CV.pdf",
 };
 
 // Page title and meta description (browser tab, Google, Open Graph, Twitter).

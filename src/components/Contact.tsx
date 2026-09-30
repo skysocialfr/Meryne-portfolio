@@ -26,8 +26,14 @@ export default function Contact() {
           </a>
         </Reveal>
 
-        <div className="mt-stack-xl grid gap-stack-md border-t border-paper/15 pt-stack-md md:grid-cols-3">
+        <div className="mt-stack-xl grid gap-stack-md border-t border-paper/15 pt-stack-md sm:grid-cols-2 lg:grid-cols-4">
           <ContactLine label="LinkedIn" value="meryne-ndjeyi" href={personal.linkedin} external />
+          <ContactLine
+            label="CV"
+            value="Download (PDF) ↓"
+            href={personal.cvUrl}
+            download={personal.cvDownloadName}
+          />
           <ContactLine label="Location" value={personal.location} />
           <ContactLine label="Status" value={personal.availability} />
         </div>
@@ -41,11 +47,13 @@ function ContactLine({
   value,
   href,
   external,
+  download,
 }: {
   label: string;
   value: string;
   href?: string;
   external?: boolean;
+  download?: string;
 }) {
   const content = (
     <>
@@ -59,6 +67,7 @@ function ContactLine({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
+      download={download}
       className="block transition-colors duration-fast hover:text-accent"
     >
       {content}

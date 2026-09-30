@@ -87,7 +87,7 @@ export default function Hero() {
               </a>
               <a
                 href={personal.cvUrl}
-                download
+                download={personal.cvDownloadName}
                 className="btn-ghost"
                 aria-label="Download CV (PDF)"
               >
