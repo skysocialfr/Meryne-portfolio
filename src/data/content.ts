@@ -73,7 +73,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Le marketing,", "en mouvement."],
   lead:
-    "Bonjour ! Je suis Meryne, diplômée du Master Marketing & Communication Digitale de l'ISC Paris. Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH (part of Accenture), de la ligne éditoriale à l'analyse des performances, en plus d'une cinquantaine d'événements par an. En parallèle, je crée du contenu photo et vidéo pour des marques et des institutions, en France et à l'international. Je recherche un stage de six mois à partir de janvier 2027.",
+    "Bonjour ! Je suis Meryne, diplômée du Master Marketing & Communication Digitale de l'ISC Paris. Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH part of Accenture, de la ligne éditoriale à l'analyse des performances, en plus d'une cinquantaine d'événements par an. En parallèle, je crée du contenu photo et vidéo pour des institutions, en France et à l'international. Je recherche un stage de six mois à partir de janvier 2027.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -142,7 +142,7 @@ export const experiences: Experience[] = [
     period: "Août 2024 — Sept. 2026",
     location: "Paris, France",
     description:
-      "Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH (part of Accenture) sur LinkedIn et Instagram, de la ligne éditoriale à l'analyse des performances : concepts, rédaction, tournages et montage. En parallèle, j'ai piloté plus de 50 événements corporate par an, internes et externes, de la prise de brief à la livraison, et assuré la communication événementielle sur 8 sites en France et au Maroc.",
+      "Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH part of Accenture sur LinkedIn et Instagram, de la ligne éditoriale à l'analyse des performances : concepts, rédaction, tournages et montage. En parallèle, j'ai piloté plus de 50 événements corporate par an, internes et externes, de la prise de brief à la livraison, et assuré la communication événementielle sur 8 sites en France et au Maroc.",
     tags: ["Social media", "Contenu", "Vidéo", "Événementiel", "Emailing"],
     highlights: [
       "Gestion des réseaux sociaux d'AFD.TECH (LinkedIn, Instagram) : ligne éditoriale, concepts, rédaction, tournages et montage",
