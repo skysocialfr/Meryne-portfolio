@@ -71,7 +71,7 @@ export const hero = {
   // Eyebrow above the big title.
   eyebrow: "Portfolio 2026",
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
-  title: ["Le marketing,", "en mouvement."],
+  title: ["Des contenus", "qui engagent."],
   lead:
     "Bonjour ! Je suis Meryne, diplômée du Master Marketing & Communication Digitale de l'ISC Paris. Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH part of Accenture, de la ligne éditoriale à l'analyse des performances, en plus d'une cinquantaine d'événements par an. En parallèle, je crée du contenu photo et vidéo pour des institutions, en France et à l'international. Je recherche un stage de six mois à partir de janvier 2027.",
   // Image shown on the right of the hero on desktop.
