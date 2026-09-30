@@ -58,7 +58,6 @@ the International section if it stays **under 10 MB** (H.264).
 
 | Project | Files |
 | --- | --- |
-| On-site portrait | `behind-the-scenes.jpg` (3:4) |
 | CDC — Funel | `cdc/cover.jpg` (16:9), `cdc/photo-01.jpg` (16:9), `public/videos/cdc-event.mp4` |
 | Compte rendu parlementaire | `senate/cover.jpg` (16:9), `senate/photo-01.jpg` (16:9) |
 | FEG × UDB | `feg/cover.jpg` (3:2) |

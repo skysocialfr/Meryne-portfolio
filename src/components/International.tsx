@@ -24,39 +24,22 @@ export default function International() {
       <div className="container-x">
         <SectionHeading id="international" intro={international.context} />
 
-        {/* On-the-ground portrait + key facts */}
-        <div className="mt-stack-lg grid gap-stack-lg md:grid-cols-12 md:gap-grid">
-          <Reveal className="md:col-span-5">
-            <figure>
-              <Media
-                src={international.portrait.src}
-                alt={international.portrait.alt}
-                sizes="(min-width: 768px) 40vw, 100vw"
-                className="aspect-[3/4]"
-                spec="1800 × 2400 px (3:4) · JPG"
-              />
-              <figcaption className="label mt-3 text-ink/60">
-                {international.portrait.caption}
-              </figcaption>
-            </figure>
-          </Reveal>
-
-          <Reveal delay={0.1} className="md:col-span-6 md:col-start-7 md:self-end">
-            <dl className="grid grid-cols-2 border-t-2 border-ink">
-              {international.facts.map((f, i) => (
-                <div
-                  key={f.label}
-                  className={`border-b border-ink/15 py-5 ${
-                    i % 2 === 1 ? "border-l pl-4" : "pr-4"
-                  }`}
-                >
-                  <dt className="label text-ink/60">{f.label}</dt>
-                  <dd className="mt-1 font-display text-lg font-semibold">{f.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
-        </div>
+        {/* Key facts */}
+        <Reveal delay={0.1}>
+          <dl className="mt-stack-lg grid grid-cols-2 border-t-2 border-ink md:grid-cols-4">
+            {international.facts.map((f, i) => (
+              <div
+                key={f.label}
+                className={`border-b border-ink/15 py-5 ${i % 2 === 1 ? "border-l pl-4" : "pr-4"} ${
+                  i > 0 ? "md:border-l md:pl-4" : ""
+                }`}
+              >
+                <dt className="label text-ink/60">{f.label}</dt>
+                <dd className="mt-1 font-display text-lg font-semibold">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </Reveal>
 
         <div className="mt-stack-xl space-y-section">
           {projects.map((p, i) => (
