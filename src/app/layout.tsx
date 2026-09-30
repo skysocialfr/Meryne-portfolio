@@ -1,13 +1,23 @@
-import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Instrument_Serif, Inter } from "next/font/google";
+import { personal, seo } from "@/data/content";
 import "./globals.css";
 
-// Display font — Bricolage Grotesque, modern editorial sans with
-// enough character to avoid the generic AI-template feel.
+// Display font — Bricolage Grotesque, used heavy and tight for the large,
+// high-contrast titles.
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700", "800"],
+  axes: ["opsz"],
+  display: "swap",
+});
+
+// Italic serif for the contrasting accent word in titles.
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: "400",
+  style: "italic",
   display: "swap",
 });
 
@@ -15,19 +25,37 @@ const display = Bricolage_Grotesque({
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#F4EFE6",
+};
+
+// Absolute base URL so Open Graph / Twitter image links resolve when shared.
+// Vercel sets VERCEL_PROJECT_PRODUCTION_URL automatically; NEXT_PUBLIC_SITE_URL
+// can override it once a custom domain is attached.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "Meryne Ndjeyi — Social Media Manager, alternance ready",
-  description:
-    "Portfolio of Meryne Ndjeyi — curious, creative and bilingual, building brand presence on social from editorial strategy and content to community, trend watch and performance. Looking for an alternance as a Social Media Manager, starting September 2026.",
+  metadataBase: new URL(siteUrl),
+  title: seo.title,
+  description: seo.description,
   openGraph: {
-    title: "Meryne Ndjeyi — Social Media Manager, alternance ready",
-    description:
-      "Portfolio of Meryne Ndjeyi — social media, editorial strategy, content and community for brands and creative teams.",
+    title: seo.title,
+    description: seo.shareDescription,
     type: "website",
+    locale: "fr_FR",
+    siteName: personal.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.shareDescription,
   },
 };
 
@@ -37,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+    <html lang="fr" className={`${display.variable} ${serif.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   );

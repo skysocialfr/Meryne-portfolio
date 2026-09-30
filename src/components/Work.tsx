@@ -1,101 +1,114 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
-import Reveal from "./Reveal";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Lightbox from "./Lightbox";
-import SafeImage from "./SafeImage";
-import { workItems, type WorkCategory, type WorkItem } from "@/data/content";
+import Media from "./Media";
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
+import {
+  workCategories,
+  workItems,
+  workNote,
+  type WorkCategory,
+  type WorkItem,
+} from "@/data/content";
+import { visible } from "@/lib/placeholders";
+import { DURATION, EASE_OUT } from "@/lib/motion";
 
-// Display order for categories. Only categories with at least one item
-// actually show up as a filter tab.
-const CATEGORY_ORDER: WorkCategory[] = [
-  "Email & Newsletters",
-  "Event organized & Social media",
-  "Pitch & Campaign Decks",
-];
-const CATEGORIES: ("All" | WorkCategory)[] = [
-  "All",
-  ...CATEGORY_ORDER.filter((c) => workItems.some((i) => i.category === c)),
+const items = visible(workItems);
+
+// Only categories with at least one visible item show up as a filter tab.
+const CATEGORIES: ("Tout" | WorkCategory)[] = [
+  "Tout",
+  ...workCategories.filter((c) => items.some((i) => i.category === c)),
 ];
 
-// Different aspect ratios make the grid feel editorial instead of templated.
+// Large formats: one column on mobile, two from tablet up. Wide items
+// (video thumbnails) take the full row.
 const aspectClass: Record<NonNullable<WorkItem["aspect"]>, string> = {
-  tall: "aspect-[3/4]",
-  wide: "aspect-[16/10]",
+  tall: "aspect-[4/5]",
+  wide: "aspect-video",
   square: "aspect-square",
 };
 
+const specFor: Record<NonNullable<WorkItem["aspect"]>, string> = {
+  tall: "1600 × 2000 px · JPG",
+  wide: "1920 × 1080 px · JPG",
+  square: "1600 × 1600 px · JPG",
+};
+
 export default function Work() {
-  const [active, setActive] = useState<(typeof CATEGORIES)[number]>("All");
+  const [active, setActive] = useState<(typeof CATEGORIES)[number]>("Tout");
   const [open, setOpen] = useState<WorkItem | null>(null);
+  const reduce = useReducedMotion();
 
   const filtered = useMemo(
-    () => (active === "All" ? workItems : workItems.filter((w) => w.category === active)),
+    () => (active === "Tout" ? items : items.filter((w) => w.category === active)),
     [active]
   );
 
   return (
-    <section id="work" className="relative py-24 md:py-36">
+    <section id="work" className="section">
       <div className="container-x">
-        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <Reveal>
-            <span className="eyebrow">Selected work</span>
-            <h2 className="display mt-6 max-w-3xl text-fluid-h2">
-              A glimpse at what I build, day to day.
-            </h2>
-          </Reveal>
+        <SectionHeading id="work" />
 
-          {/* Category filter */}
-          <Reveal delay={0.1}>
-            <div
-              role="tablist"
-              aria-label="Filter work by category"
-              className="flex flex-wrap gap-2"
-            >
-              {CATEGORIES.map((c) => {
-                const isActive = active === c;
-                return (
-                  <button
-                    key={c}
-                    role="tab"
-                    aria-selected={isActive}
-                    onClick={() => setActive(c)}
-                    className={`rounded-full border px-4 py-2 text-sm transition-colors duration-300 ${
-                      isActive
-                        ? "border-ink bg-ink text-paper"
-                        : "border-ink/20 text-ink/70 hover:border-ink hover:text-ink"
-                    }`}
-                  >
-                    {c}
-                  </button>
-                );
-              })}
-            </div>
-          </Reveal>
+        {/* Category filter — swipeable on mobile */}
+        <div
+          role="tablist"
+          aria-label="Filtrer les projets par catégorie"
+          className="snap-row mt-stack-lg md:mx-0 md:flex-wrap md:px-0"
+        >
+          {CATEGORIES.map((c) => {
+            const isActive = active === c;
+            const count = c === "Tout" ? items.length : items.filter((i) => i.category === c).length;
+            return (
+              <button
+                key={c}
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActive(c)}
+                className={`flex min-h-[2.75rem] shrink-0 snap-start items-center gap-2 border px-4 text-small transition-colors duration-fast ${
+                  isActive
+                    ? "border-ink bg-ink text-paper"
+                    : "border-ink/20 text-ink/80 hover:border-ink hover:text-ink"
+                }`}
+              >
+                {c}
+                <span className={isActive ? "text-accent" : "text-ink/50"}>{count}</span>
+              </button>
+            );
+          })}
         </div>
 
-        {/* Masonry-ish grid */}
-        <motion.ul
-          layout
-          className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-20 md:gap-6 lg:grid-cols-3"
-        >
-          {filtered.map((item, i) => (
-            <motion.li
-              key={item.id}
-              layout
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.04,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              <WorkCard item={item} onOpen={() => setOpen(item)} />
-            </motion.li>
-          ))}
+        <motion.ul layout className="mt-stack-lg grid grid-flow-dense grid-cols-1 gap-x-grid gap-y-stack-lg md:grid-cols-2">
+          <AnimatePresence mode="popLayout" initial={false}>
+            {filtered.map((item, i) => (
+              <motion.li
+                key={item.id}
+                layout
+                initial={{ opacity: 0, y: reduce ? 0 : 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: DURATION.slow, ease: EASE_OUT }}
+                className={item.aspect === "wide" ? "md:col-span-2" : ""}
+              >
+                <WorkCard item={item} index={i} onOpen={() => setOpen(item)} />
+              </motion.li>
+            ))}
+          </AnimatePresence>
         </motion.ul>
+
+        {/* Photo & video work that can't all be published */}
+        <Reveal className="mt-stack-xl grid gap-stack-md border-t-2 border-ink pt-stack-md md:grid-cols-12 md:gap-grid">
+          <h3 className="heading text-h3 md:col-span-4">
+            <span className="serif-accent text-accent">{workNote.title}</span>
+          </h3>
+          <p className="text-lead leading-relaxed text-ink/80 md:col-span-7 md:col-start-6">
+            {workNote.body}
+          </p>
+        </Reveal>
       </div>
 
       <Lightbox item={open} onClose={() => setOpen(null)} />
@@ -103,46 +116,41 @@ export default function Work() {
   );
 }
 
-function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
+function WorkCard({
+  item,
+  index,
+  onOpen,
+}: {
+  item: WorkItem;
+  index: number;
+  onOpen: () => void;
+}) {
+  const aspect = item.aspect ?? "tall";
   const inner = (
     <>
-      <div
-        className={`relative overflow-hidden rounded-[2px] bg-line ${
-          aspectClass[item.aspect ?? "square"]
-        }`}
-      >
-        <SafeImage
+      <div className="relative">
+        <Media
           src={item.src}
           alt={item.alt}
-          loading="lazy"
-          className="h-full w-full object-cover object-top transition-transform duration-700 ease-out-expo group-hover:scale-105"
+          placeholder={item.placeholder}
+          spec={specFor[aspect]}
+          sizes={aspect === "wide" ? "(min-width: 1440px) 1312px, 100vw" : "(min-width: 768px) 50vw, 100vw"}
+          className={aspectClass[aspect]}
+          imgClassName="object-top transition-transform duration-slow ease-out-expo group-hover:scale-[1.03]"
         />
-        {/* Hover overlay */}
-        <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-ink/70 via-ink/0 to-ink/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <div className="p-5 text-paper">
-            <div className="font-display text-lg">{item.title}</div>
-            {item.subtitle && (
-              <div className="text-sm text-paper/70">{item.subtitle}</div>
-            )}
-          </div>
-        </div>
-        {/* Category chip */}
-        <span className="absolute left-3 top-3 rounded-full bg-paper/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-ink backdrop-blur">
-          {item.category}
-        </span>
-        {/* Centered play badge for linked videos */}
-        {item.href && item.linkType !== "post" && (
+        {/* Play badge for linked videos */}
+        {item.href && item.linkType === "video" && (
           <span className="absolute inset-0 flex items-center justify-center">
-            <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-paper/90 text-ink shadow-lg transition-transform duration-300 group-hover:scale-110">
-              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden>
+            <span className="inline-flex h-16 w-16 items-center justify-center bg-accent text-paper transition-transform duration-base ease-out-expo group-hover:scale-110 md:h-20 md:w-20">
+              <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden>
                 <path d="M6 4l10 6-10 6V4z" fill="currentColor" />
               </svg>
             </span>
           </span>
         )}
-        {/* Corner arrow badge for linked posts */}
+        {/* Corner arrow for linked posts */}
         {item.href && item.linkType === "post" && (
-          <span className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-paper/90 text-ink shadow transition-transform duration-300 group-hover:scale-110">
+          <span className="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center bg-paper text-ink transition-colors duration-fast group-hover:bg-accent group-hover:text-paper">
             <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
               <path
                 d="M3 11L11 3M5 3h6v6"
@@ -157,9 +165,16 @@ function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
         )}
       </div>
 
-      <div className="mt-3 flex items-baseline justify-between gap-3">
-        <span className="font-display text-base">{item.title}</span>
-        <span className="text-xs text-muted">{item.subtitle}</span>
+      <div className="mt-4 grid grid-cols-[auto_1fr] gap-x-4 border-t border-ink/15 pt-3">
+        <span className="label pt-1.5 text-accent">{String(index + 1).padStart(2, "0")}</span>
+        <div>
+          <h3 className="heading text-h3 transition-colors duration-fast group-hover:text-accent">
+            {item.title}
+          </h3>
+          <p className="mt-1 text-small text-ink/70">
+            {[item.subtitle, item.category].filter(Boolean).join(" · ")}
+          </p>
+        </div>
       </div>
     </>
   );
@@ -170,7 +185,7 @@ function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Watch ${item.title} on social media`}
+        aria-label={`${item.title} (nouvel onglet)`}
         className="group block w-full text-left"
       >
         {inner}
@@ -179,11 +194,7 @@ function WorkCard({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
   }
 
   return (
-    <button
-      onClick={onOpen}
-      aria-label={`Open ${item.title}`}
-      className="group block w-full text-left"
-    >
+    <button onClick={onOpen} aria-label={`Agrandir : ${item.title}`} className="group block w-full text-left">
       {inner}
     </button>
   );

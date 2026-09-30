@@ -3,7 +3,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 
 /**
- * Thin progress bar that fills as the page scrolls — a subtle dynamic cue.
+ * Thin accent bar that fills as the page scrolls.
  */
 export default function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -17,7 +17,7 @@ export default function ScrollProgress() {
     <motion.div
       aria-hidden
       style={{ scaleX }}
-      className="fixed inset-x-0 top-0 z-[60] h-[3px] origin-left bg-ember"
+      className="fixed inset-x-0 top-0 z-[60] h-0.5 origin-left bg-accent"
     />
   );
 }

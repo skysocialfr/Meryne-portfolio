@@ -6,18 +6,15 @@ import { marqueeKeywords } from "@/data/content";
  */
 export default function Marquee() {
   return (
-    <section
-      aria-hidden
-      className="relative overflow-hidden border-y border-line bg-ink py-6 text-paper md:py-8"
-    >
-      <div className="flex animate-marquee whitespace-nowrap">
+    <section aria-hidden className="relative overflow-hidden bg-ink py-5 text-paper md:py-7">
+      <div className="flex w-max animate-marquee whitespace-nowrap">
         {[...marqueeKeywords, ...marqueeKeywords].map((word, i) => (
           <span
             key={i}
-            className="mx-8 inline-flex items-center gap-8 font-display text-3xl font-medium tracking-tight md:text-5xl"
+            className="mx-6 inline-flex items-center gap-12 font-display text-h3 font-bold tracking-heading md:mx-8"
           >
             {word}
-            <span className="inline-block h-2 w-2 rounded-full bg-ember" />
+            <span className="inline-block h-2.5 w-2.5 bg-accent" />
           </span>
         ))}
       </div>
