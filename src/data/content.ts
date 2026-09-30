@@ -8,11 +8,24 @@ export const personal = {
   name: "Meryne Ndjeyi",
   role: "Social Media & Content",
   location: "Saint-Germain-en-Laye, France",
-  availability: "Open to work, alternance from Sept 2026",
+  // Short status line (hero badge, contact "Status", footer).
+  availability: "Open to work · 6-month internship from Jan 2027",
+  // Full sentence version, reused in page metadata.
+  availabilityLong:
+    "Looking for a six-month internship as a Social Media Manager, starting January 2027.",
   email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   // Put your CV PDF here: /public/cv/meryne-ndjeyi-cv.pdf
   cvUrl: "/cv/meryne-ndjeyi-cv.pdf",
+};
+
+// Page title and meta description (browser tab, Google, Open Graph, Twitter).
+export const seo = {
+  title: "Meryne Ndjeyi — Social Media Manager, 6-month internship from Jan 2027",
+  description:
+    "Portfolio of Meryne Ndjeyi — curious, creative and bilingual, building brand presence on social from editorial strategy and content to community, trend watch and performance. Looking for a six-month internship as a Social Media Manager, starting January 2027.",
+  shareDescription:
+    "Social media, editorial strategy, content and community. Looking for a six-month Social Media Manager internship from January 2027.",
 };
 
 export const hero = {
@@ -21,7 +34,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Marketing,", "in motion."],
   lead:
-    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Curious, creative and bilingual (French / English), I build brand presence on social media, from editorial strategy and content production to community, trend watch and performance. I'm currently looking for an alternance as a Social Media Manager, starting September 2026.",
+    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Curious, creative and bilingual (French / English), I build brand presence on social media, from editorial strategy and content production to community, trend watch and performance. I'm currently looking for a six-month internship as a Social Media Manager, starting January 2027.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -440,5 +453,5 @@ export const lifeOutsideWork = {
 export const contact = {
   heading: "Let's build something memorable.",
   sub:
-    "If you're hiring an alternance Social Media Manager, or just want to chat about brands, content or trends, I'd love to hear from you.",
+    "If you're hiring a Social Media Manager intern for six months from January 2027, or just want to chat about brands, content or trends, I'd love to hear from you.",
 };

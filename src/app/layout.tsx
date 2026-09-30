@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { personal, seo } from "@/data/content";
 import "./globals.css";
 
 // Display font — Bricolage Grotesque, modern editorial sans with
@@ -19,15 +20,30 @@ const sans = Inter({
   display: "swap",
 });
 
+// Absolute base URL so Open Graph / Twitter image links resolve when shared.
+// Vercel sets VERCEL_PROJECT_PRODUCTION_URL automatically; NEXT_PUBLIC_SITE_URL
+// can override it once a custom domain is attached.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "Meryne Ndjeyi — Social Media Manager, alternance ready",
-  description:
-    "Portfolio of Meryne Ndjeyi — curious, creative and bilingual, building brand presence on social from editorial strategy and content to community, trend watch and performance. Looking for an alternance as a Social Media Manager, starting September 2026.",
+  metadataBase: new URL(siteUrl),
+  title: seo.title,
+  description: seo.description,
   openGraph: {
-    title: "Meryne Ndjeyi — Social Media Manager, alternance ready",
-    description:
-      "Portfolio of Meryne Ndjeyi — social media, editorial strategy, content and community for brands and creative teams.",
+    title: seo.title,
+    description: seo.shareDescription,
     type: "website",
+    locale: "en_US",
+    siteName: personal.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.shareDescription,
   },
 };
 
