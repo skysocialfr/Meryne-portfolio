@@ -77,7 +77,7 @@ function PlaceholderBox({
       }}
     >
       <span className="label self-start bg-accent px-2 py-1 text-paper">
-        Placeholder
+        À remplacer
       </span>
       <span className="space-y-1">
         <span className="block font-display text-lg font-bold leading-tight">

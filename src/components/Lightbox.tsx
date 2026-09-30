@@ -60,7 +60,7 @@ export default function Lightbox({ item, onClose }: Props) {
         >
           <button
             onClick={onClose}
-            aria-label="Close"
+            aria-label="Fermer"
             className="fixed right-4 top-4 z-10 inline-flex h-12 w-12 items-center justify-center bg-paper text-ink transition-colors duration-fast hover:bg-accent hover:text-paper"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>

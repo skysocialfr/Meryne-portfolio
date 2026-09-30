@@ -57,16 +57,16 @@ export default function Nav() {
         <a
           href="#top"
           className="group flex items-center gap-3 font-display text-lg font-bold tracking-heading"
-          aria-label="Back to top"
+          aria-label="Retour en haut de page"
         >
           <span className="inline-flex h-9 w-9 items-center justify-center bg-ink text-small text-paper transition-colors duration-fast group-hover:bg-accent">
             MN
           </span>
-          <span className="hidden sm:inline">{personal.name}</span>
+          <span className="hidden whitespace-nowrap sm:inline">{personal.name}</span>
         </a>
 
         {/* Desktop nav */}
-        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Navigation principale" className="hidden items-center gap-6 xl:flex">
           {links.map((l) => {
             const isActive = active === l.id;
             return (
@@ -74,7 +74,7 @@ export default function Nav() {
                 key={l.id}
                 href={`#${l.id}`}
                 aria-current={isActive ? "location" : undefined}
-                className={`group relative flex items-baseline gap-1.5 py-2 text-small transition-colors duration-fast ${
+                className={`group relative flex items-baseline gap-1.5 whitespace-nowrap py-2 text-small transition-colors duration-fast ${
                   isActive ? "text-ink" : "text-ink/60 hover:text-ink"
                 }`}
               >
@@ -89,18 +89,18 @@ export default function Nav() {
               </a>
             );
           })}
-          <a href="#contact" className="btn-primary">
-            Get in touch
+          <a href="#contact" className="btn-primary whitespace-nowrap">
+            Me contacter
           </a>
         </nav>
 
         {/* Mobile toggle */}
         <button
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((o) => !o)}
-          className="relative -mr-2 h-11 w-11 lg:hidden"
+          className="relative -mr-2 h-11 w-11 xl:hidden"
         >
           <span
             className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 bg-ink transition-transform duration-fast ${
@@ -118,11 +118,11 @@ export default function Nav() {
       {/* Mobile menu — full screen, big numbered links */}
       <div
         id="mobile-menu"
-        className={`fixed inset-x-0 bottom-0 top-nav overflow-y-auto bg-paper transition-[opacity,visibility] duration-base ease-out-expo lg:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-nav overflow-y-auto bg-paper transition-[opacity,visibility] duration-base ease-out-expo xl:hidden ${
           open ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
-        <nav aria-label="Mobile" className="container-x flex flex-col py-stack-md">
+        <nav aria-label="Navigation mobile" className="container-x flex flex-col py-stack-md">
           {links.map((l) => {
             const isActive = active === l.id;
             return (
@@ -145,7 +145,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="btn-primary mt-stack-md self-start"
           >
-            Get in touch
+            Me contacter
           </a>
           <p className="label mt-stack-md text-ink/60">{personal.availability}</p>
         </nav>

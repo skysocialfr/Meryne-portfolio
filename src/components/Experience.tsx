@@ -21,7 +21,7 @@ export default function Experience() {
             <Reveal key={exp.company} delay={i * 0.05} as="li">
               <button
                 onClick={() => setOpen(exp)}
-                aria-label={`View details for ${exp.company}`}
+                aria-label={`Voir le détail : ${exp.company}`}
                 className="group block w-full border-t border-paper/15 py-stack-md text-left md:py-stack-lg"
               >
                 <div className="grid gap-4 md:grid-cols-12 md:gap-grid">
@@ -56,7 +56,7 @@ export default function Experience() {
                         </ul>
                       )}
                       <span className="inline-flex items-center gap-2 text-small text-paper/70 transition-colors duration-fast group-hover:text-accent">
-                        View details
+                        Voir le détail
                         <Arrow />
                       </span>
                     </div>
@@ -112,7 +112,7 @@ function ExperienceModal({
         >
           <button
             onClick={onClose}
-            aria-label="Close"
+            aria-label="Fermer"
             className="fixed right-4 top-4 z-10 inline-flex h-12 w-12 items-center justify-center bg-paper text-ink transition-colors duration-fast hover:bg-accent hover:text-paper"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>

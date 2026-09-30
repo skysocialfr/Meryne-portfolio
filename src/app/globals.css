@@ -25,7 +25,7 @@
   --nav-h: 4rem;
 
   /* Type scale — fluid, mobile first */
-  --fs-display: clamp(3.5rem, 18vw, 13.5rem); /* hero */
+  --fs-display: clamp(2.75rem, 13vw, 12.5rem); /* hero — sized so each line stays on one line */
   --fs-h1: clamp(2.75rem, 12vw, 9rem); /* section titles */
   --fs-h2: clamp(2rem, 6.5vw, 5rem);
   --fs-h3: clamp(1.5rem, 3.4vw, 2.75rem);

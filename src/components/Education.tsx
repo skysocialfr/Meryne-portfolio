@@ -19,7 +19,7 @@ export default function Education() {
 
                 {edu.courses && (
                   <div className="mt-6">
-                    <div className="label text-ink/60">Key courses</div>
+                    <div className="label text-ink/60">Cours clés</div>
                     <ul className="mt-3 flex flex-wrap gap-2">
                       {edu.courses.map((c) => (
                         <li

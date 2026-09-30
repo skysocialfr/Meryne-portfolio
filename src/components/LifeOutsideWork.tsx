@@ -29,7 +29,7 @@ export default function LifeOutsideWork() {
                       description: img.description,
                     })
                   }
-                  aria-label={`Open ${img.label}`}
+                  aria-label={`Agrandir : ${img.label}`}
                   className="group block w-full text-left"
                 >
                   <Media

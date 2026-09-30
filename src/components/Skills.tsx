@@ -10,14 +10,14 @@ export default function Skills() {
 
         <div className="mt-stack-xl grid gap-stack-lg md:grid-cols-3 md:gap-grid">
           <Reveal>
-            <SkillColumn title="Tools" items={skills.tools} />
+            <SkillColumn title="Outils" items={skills.tools} />
           </Reveal>
           <Reveal delay={0.06}>
             <SkillColumn title="Expertise" items={skills.expertise} />
           </Reveal>
           <Reveal delay={0.12}>
             <div>
-              <h3 className="label text-ink/60">Languages</h3>
+              <h3 className="label text-ink/60">Langues</h3>
               <ul className="mt-5 border-t border-ink/15">
                 {skills.languages.map((l) => (
                   <li

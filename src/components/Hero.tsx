@@ -37,7 +37,7 @@ export default function Hero() {
             const isLast = i === hero.title.length - 1;
             const words = line.split(" ");
             return (
-              <span key={i} className="block overflow-hidden pb-[0.06em]">
+              <span key={i} className="block overflow-hidden whitespace-nowrap pb-[0.06em]">
                 <motion.span
                   className="block"
                   initial={{ y: reduce ? 0 : "105%" }}
@@ -66,14 +66,14 @@ export default function Hero() {
           >
             <Media
               src={hero.portrait}
-              alt="Portrait of Meryne Ndjeyi"
+              alt="Portrait de Meryne Ndjeyi"
               sizes="(min-width: 768px) 40vw, 100vw"
               priority
               className="aspect-[4/5]"
               spec="1600 × 2000 px · JPG"
             />
             <span className="label absolute -bottom-4 left-4 bg-accent px-3 py-2 text-paper">
-              Since 2022
+              Depuis 2022
             </span>
           </motion.div>
 
@@ -82,19 +82,19 @@ export default function Hero() {
 
             <div className="mt-stack-md flex flex-wrap gap-3">
               <a href="#work" className="btn-primary">
-                View my work
+                Voir mes projets
                 <Arrow />
               </a>
               <a
                 href={personal.cvUrl}
                 download={personal.cvDownloadName}
                 className="btn-ghost"
-                aria-label="Download CV (PDF)"
+                aria-label="Télécharger le CV (PDF)"
               >
-                Download CV
+                Télécharger le CV
               </a>
               <a href="#contact" className="btn-ghost">
-                Contact me
+                Me contacter
               </a>
             </div>
           </motion.div>

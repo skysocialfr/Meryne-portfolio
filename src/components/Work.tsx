@@ -12,8 +12,8 @@ import { DURATION, EASE_OUT } from "@/lib/motion";
 const items = visible(workItems);
 
 // Only categories with at least one visible item show up as a filter tab.
-const CATEGORIES: ("All" | WorkCategory)[] = [
-  "All",
+const CATEGORIES: ("Tout" | WorkCategory)[] = [
+  "Tout",
   ...workCategories.filter((c) => items.some((i) => i.category === c)),
 ];
 
@@ -32,12 +32,12 @@ const specFor: Record<NonNullable<WorkItem["aspect"]>, string> = {
 };
 
 export default function Work() {
-  const [active, setActive] = useState<(typeof CATEGORIES)[number]>("All");
+  const [active, setActive] = useState<(typeof CATEGORIES)[number]>("Tout");
   const [open, setOpen] = useState<WorkItem | null>(null);
   const reduce = useReducedMotion();
 
   const filtered = useMemo(
-    () => (active === "All" ? items : items.filter((w) => w.category === active)),
+    () => (active === "Tout" ? items : items.filter((w) => w.category === active)),
     [active]
   );
 
@@ -49,12 +49,12 @@ export default function Work() {
         {/* Category filter — swipeable on mobile */}
         <div
           role="tablist"
-          aria-label="Filter work by category"
+          aria-label="Filtrer les projets par catégorie"
           className="snap-row mt-stack-lg md:mx-0 md:flex-wrap md:px-0"
         >
           {CATEGORIES.map((c) => {
             const isActive = active === c;
-            const count = c === "All" ? items.length : items.filter((i) => i.category === c).length;
+            const count = c === "Tout" ? items.length : items.filter((i) => i.category === c).length;
             return (
               <button
                 key={c}
@@ -168,7 +168,7 @@ function WorkCard({
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${item.title} (opens in a new tab)`}
+        aria-label={`${item.title} (nouvel onglet)`}
         className="group block w-full text-left"
       >
         {inner}
@@ -177,7 +177,7 @@ function WorkCard({
   }
 
   return (
-    <button onClick={onOpen} aria-label={`Open ${item.title}`} className="group block w-full text-left">
+    <button onClick={onOpen} aria-label={`Agrandir : ${item.title}`} className="group block w-full text-left">
       {inner}
     </button>
   );

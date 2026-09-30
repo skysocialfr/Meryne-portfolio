@@ -6,13 +6,13 @@
 
 export const personal = {
   name: "Meryne Ndjeyi",
-  role: "Social Media & Content",
+  role: "Social media & contenu",
   location: "Saint-Germain-en-Laye, France",
   // Short status line (hero badge, contact "Status", footer).
-  availability: "Open to work · 6-month internship from Jan 2027",
+  availability: "Disponible · Stage de 6 mois dès janvier 2027",
   // Full sentence version, reused in page metadata.
   availabilityLong:
-    "Looking for a six-month internship as a Social Media Manager, starting January 2027.",
+    "Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
   email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   // To update the CV, overwrite /public/cv/meryne-ndjeyi-cv.pdf with the new
@@ -25,11 +25,11 @@ export const personal = {
 
 // Page title and meta description (browser tab, Google, Open Graph, Twitter).
 export const seo = {
-  title: "Meryne Ndjeyi — Social Media Manager, 6-month internship from Jan 2027",
+  title: "Meryne Ndjeyi — Social Media Manager, stage de 6 mois dès janvier 2027",
   description:
-    "Portfolio of Meryne Ndjeyi — curious, creative and bilingual, building brand presence on social from editorial strategy and content to community, trend watch and performance. Looking for a six-month internship as a Social Media Manager, starting January 2027.",
+    "Portfolio de Meryne Ndjeyi — curieuse, créative et bilingue, je construis la présence des marques sur les réseaux sociaux, de la stratégie éditoriale et du contenu à la communauté, la veille et la performance. Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
   shareDescription:
-    "Social media, editorial strategy, content and community. Looking for a six-month Social Media Manager internship from January 2027.",
+    "Réseaux sociaux, stratégie éditoriale, contenu et communauté. Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
 };
 
 // Page sections, in order. Drives the navigation, the section numbers
@@ -56,24 +56,24 @@ export type Section = {
 };
 
 export const sections: Section[] = [
-  { id: "about", label: "About", title: "Turning brands into *stories* on social.", nav: true },
-  { id: "work", label: "Selected work", title: "A glimpse at what I build, *day to day.*", nav: true },
-  { id: "international", label: "International", title: "Sky Social, on the ground in *Gabon.*", nav: true },
-  { id: "experience", label: "Experience", title: "Three years of learning, creating, *building.*", nav: true },
-  { id: "education", label: "Education", title: "Built between Paris and *California.*" },
-  { id: "skills", label: "Skills", title: "A toolkit, sharpened in *real conditions.*" },
-  { id: "projects", label: "Live projects", title: "Out in the *wild.*", nav: true },
-  { id: "life", label: "Life outside work", title: "Life outside *work.*", nav: true },
-  { id: "contact", label: "Contact", title: "Let's build something *memorable.*" },
+  { id: "about", label: "À propos", title: "Faire des marques des *histoires* à suivre.", nav: true },
+  { id: "work", label: "Projets", title: "Un aperçu de ce que je crée, *au quotidien.*", nav: true },
+  { id: "international", label: "International", title: "Sky Social, sur le terrain au *Gabon.*", nav: true },
+  { id: "experience", label: "Expérience", title: "Trois ans à apprendre, créer, *construire.*", nav: true },
+  { id: "education", label: "Formation", title: "Entre Paris et la *Californie.*" },
+  { id: "skills", label: "Compétences", title: "Des outils affûtés en *conditions réelles.*" },
+  { id: "projects", label: "Projets en ligne", title: "Lancés dans le *grand bain.*", nav: true },
+  { id: "life", label: "Hors travail", title: "En dehors du *travail.*", nav: true },
+  { id: "contact", label: "Contact", title: "Créons quelque chose de *mémorable.*" },
 ];
 
 export const hero = {
   // Eyebrow above the big title.
   eyebrow: "Portfolio 2026",
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
-  title: ["Marketing,", "in motion."],
+  title: ["Le marketing,", "en mouvement."],
   lead:
-    "Hello! I'm Meryne, a Master's student in Marketing & Digital Communication at ISC Paris. Curious, creative and bilingual (French / English), I build brand presence on social media, from editorial strategy and content production to community, trend watch and performance. I'm currently looking for a six-month internship as a Social Media Manager, starting January 2027.",
+    "Bonjour ! Je suis Meryne, étudiante en Master Marketing & Communication Digitale à l'ISC Paris. Curieuse, créative et bilingue (français / anglais), je construis la présence des marques sur les réseaux sociaux, de la stratégie éditoriale et la production de contenu à la communauté, la veille et la performance. Je recherche un stage de six mois en tant que Social Media Manager, à partir de janvier 2027.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -82,32 +82,32 @@ export const hero = {
 
 // Words that scroll horizontally across the page — the "movement" signature.
 export const marqueeKeywords = [
-  "Social media strategy",
-  "Editorial calendar",
-  "Content creation",
+  "Stratégie social media",
+  "Calendrier éditorial",
+  "Création de contenu",
   "Community management",
-  "Trend watch",
-  "Brand storytelling",
+  "Veille tendances",
+  "Storytelling de marque",
   "Copywriting",
-  "Performance analysis",
-  "Client relationship",
-  "Bilingual FR / EN",
+  "Analyse de performance",
+  "Relation client",
+  "Bilingue FR / EN",
 ];
 
 export const about = {
   body: [
-    "Curious, creative and bilingual (French / English), I love the craft of social media: reading a brief, shaping an editorial line, producing content, animating a community, then reading the numbers to sharpen the next round. I stay in constant watch on formats, trends and cultural moments to keep brands relevant.",
-    "Outside work, sport, piano and painting keep me curious and balanced, three sides of the same instinct for craft, focus and progress.",
+    "Curieuse, créative et bilingue (français / anglais), j'aime le métier du social media : décrypter un brief, construire une ligne éditoriale, produire du contenu, animer une communauté, puis lire les chiffres pour affiner la suite. Je fais une veille constante sur les formats, les tendances et les moments culturels pour garder les marques pertinentes.",
+    "En dehors du travail, le sport, le piano et la peinture me gardent curieuse et équilibrée : trois facettes d'un même goût pour le travail bien fait, la concentration et la progression.",
   ],
   // Optional secondary photo (candid / action shot).
   // To replace: drop a 4:5 image at /public/images/about/portrait.jpg
   // then change this path to "/images/about/portrait.jpg".
   image: "/images/about/portrait.jpeg",
   stats: [
-    { value: "8", label: "Sites managed across FR & MA" },
-    { value: "€100K", label: "Top event budget handled" },
-    { value: "2 yrs", label: "Influencer partnerships led" },
-    { value: "3", label: "Brands & products launched" },
+    { value: "8", label: "Sites gérés en France et au Maroc" },
+    { value: "100 K€", label: "Plus gros budget événementiel géré" },
+    { value: "2 ans", label: "De partenariats influenceurs pilotés" },
+    { value: "3", label: "Marques et produits lancés" },
   ],
 };
 
@@ -125,90 +125,90 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     company: "Sky Social",
-    role: "Founder, Social & Digital studio",
-    period: "Feb 2025 — Present",
-    location: "Remote",
+    role: "Fondatrice, studio social media & digital",
+    period: "Févr. 2025 — Aujourd'hui",
+    location: "À distance",
     description:
-      "Sky Social is the studio I founded to help brands, mostly freelancers and SMEs, grow on social media and online. I take projects from the first brief to delivery: understanding the client's need, shaping the editorial line, producing content and campaigns, and building or updating their website when needed. It's my closest parallel to agency work, where editorial thinking, creativity and client relationship make or break the result.",
-    tags: ["Social", "Content", "Client service", "Web"],
+      "Sky Social est le studio que j'ai fondé pour aider les marques, surtout des indépendants et des PME, à se développer sur les réseaux sociaux et en ligne. Je mène les projets du premier brief à la livraison : comprendre le besoin du client, construire la ligne éditoriale, produire contenus et campagnes, et créer ou refondre son site quand il le faut. C'est ce qui se rapproche le plus du travail en agence, où la réflexion éditoriale, la créativité et la relation client font toute la différence.",
+    tags: ["Social media", "Contenu", "Relation client", "Web"],
     highlights: [
-      "Client-service approach: understand the brief, scope the work, define deliverables",
-      "Social media strategy, content production and campaigns for several brands",
-      "Example: organised a client's Valentine's Day event, ran the social strategy to drive sign-ups, then built the website",
-      "Coordinate creative partners (designers, photographers) and the production calendar",
+      "Approche orientée client : comprendre le brief, cadrer le projet, définir les livrables",
+      "Stratégie social media, production de contenu et campagnes pour plusieurs marques",
+      "Exemple : organisation de l'événement Saint-Valentin d'une cliente, stratégie social media pour générer des inscriptions, puis création de son site",
+      "Coordination des partenaires créatifs (designers, photographes) et du calendrier de production",
     ],
   },
   {
     company: "Accenture",
-    role: "Social Media & Communication, Apprenticeship",
-    period: "Aug 2024 — Present",
+    role: "Social media & communication, alternance",
+    period: "Août 2024 — Aujourd'hui",
     location: "Paris, France",
     description:
-      "At Accenture, I run the social media (Instagram and LinkedIn) of AFD.TECH (part of Accenture), a recently integrated subsidiary. I own the editorial calendar, produce and supervise content (posts, videos, campaigns), keep a constant watch on trends and formats, and read performance to sharpen the next round. On top of that, I write and send the monthly newsletter and email campaigns via Mailjet, lead influencer partnerships, and coordinate internal events end to end, including a gathering of 750 employees.",
-    tags: ["Social", "Content", "Editorial", "Influencer", "Events"],
+      "Chez Accenture, je gère les réseaux sociaux (Instagram et LinkedIn) d'AFD.TECH (part of Accenture), une filiale récemment intégrée. Je pilote le calendrier éditorial, je produis et supervise les contenus (posts, vidéos, campagnes), je fais une veille constante sur les tendances et les formats, et j'analyse la performance pour affiner la suite. Je rédige et envoie aussi la newsletter mensuelle et les campagnes emailing via Mailjet, je pilote les partenariats influenceurs et je coordonne les événements internes de bout en bout, dont un rassemblement de 750 collaborateurs.",
+    tags: ["Social media", "Contenu", "Éditorial", "Influence", "Événementiel"],
     highlights: [
-      "Run Instagram & LinkedIn for AFD.TECH (part of Accenture), across 8 sites in France and Morocco",
-      "Own the editorial calendar; produce and supervise content (posts, videos, campaigns)",
-      "Constant trend watch; read performance to sharpen the next round",
-      "Write and send the monthly newsletter and email campaigns via Mailjet",
-      "Lead influencer partnerships (Twitch creator, Paralympic medalist)",
-      "Coordinate 35+ events end to end; largest gathering: 750 employees; budgets €50K–€100K",
+      "Gestion d'Instagram et LinkedIn pour AFD.TECH (part of Accenture), sur 8 sites en France et au Maroc",
+      "Pilotage du calendrier éditorial ; production et supervision des contenus (posts, vidéos, campagnes)",
+      "Veille constante ; analyse de la performance pour affiner la suite",
+      "Rédaction et envoi de la newsletter mensuelle et des campagnes emailing via Mailjet",
+      "Pilotage de partenariats influenceurs (créateur Twitch, médaillé paralympique)",
+      "Coordination de plus de 35 événements de bout en bout ; plus grand rassemblement : 750 collaborateurs ; budgets de 50 K€ à 100 K€",
     ],
   },
   {
     company: "Epana Official",
-    role: "Founder, Premium Concept",
-    period: "Dec 2023 — Jan 2025",
+    role: "Fondatrice, concept premium",
+    period: "Déc. 2023 — Janv. 2025",
     location: "Paris, France",
     description:
-      "Epana is a premium ready-to-wear concept for tall women that I developed end to end during my Bachelor in the United States. I led the business plan and brand strategy, defined the brand identity and negotiated with suppliers, co-designed the collections with my designer and built the brand website. The project was selected for ISC Paris's startup incubator, and is currently paused while I focus on my studies and experience, with plans to relaunch.",
-    tags: ["Brand", "Concept", "Strategy"],
+      "Epana est un concept de prêt-à-porter premium pour les femmes grandes, que j'ai développé de bout en bout pendant mon Bachelor aux États-Unis. J'ai mené le business plan et la stratégie de marque, défini l'identité de la marque et négocié avec les fournisseurs, co-créé les collections avec ma designer et construit le site de la marque. Le projet a été sélectionné par l'incubateur de startups de l'ISC Paris ; il est aujourd'hui en pause pendant que je me concentre sur mes études et mon expérience, avec l'envie de le relancer.",
+    tags: ["Marque", "Concept", "Stratégie"],
     highlights: [
-      "Premium ready-to-wear concept for tall women, developed end to end",
-      "Business plan and brand strategy",
-      "Brand identity and supplier negotiations",
-      "Collections co-designed with my designer; built the brand website",
-      "Selected for ISC Paris's startup incubator",
-      "Currently paused to focus on studies and experience, with plans to relaunch",
+      "Concept de prêt-à-porter premium pour les femmes grandes, développé de bout en bout",
+      "Business plan et stratégie de marque",
+      "Identité de marque et négociations fournisseurs",
+      "Collections co-créées avec ma designer ; création du site de la marque",
+      "Sélectionné par l'incubateur de startups de l'ISC Paris",
+      "En pause pour me concentrer sur mes études et mon expérience, avec l'envie de le relancer",
     ],
   },
   {
     company: "DpointGroup",
-    role: "Digital Communication & Events Assistant",
-    period: "Jan 2023 — Jun 2023",
-    location: "Barcelona, Spain",
+    role: "Assistante communication digitale & événementiel",
+    period: "Janv. 2023 — Juin 2023",
+    location: "Barcelone, Espagne",
     description:
-      "Six-month international experience in a Spanish-speaking environment. Designed digital communication strategies, organised client events, and analysed campaign performance.",
-    tags: ["Events", "Analytics", "International"],
+      "Expérience internationale de six mois dans un environnement hispanophone. Conception de stratégies de communication digitale, organisation d'événements clients et analyse de la performance des campagnes.",
+    tags: ["Événementiel", "Analyse", "International"],
     highlights: [
-      "Six-month international experience in a Spanish-speaking environment",
-      "Designed digital communication strategies",
-      "Organised client events",
-      "Analysed campaign performance",
+      "Expérience internationale de six mois dans un environnement hispanophone",
+      "Conception de stratégies de communication digitale",
+      "Organisation d'événements clients",
+      "Analyse de la performance des campagnes",
     ],
   },
   {
     company: "Bulleiit Startup",
-    role: "Community Manager & Business Developer",
-    period: "Jun 2022 — Apr 2023",
+    role: "Community manager & business developer",
+    period: "Juin 2022 — Avr. 2023",
     location: "Paris, France",
     description:
-      "Internship focused on community management and social media for an early-stage startup, with a business development side. It was my first hands-on contact with animating a community, producing content and growing an audience day after day.",
-    tags: ["Community", "Social", "Content", "Growth"],
+      "Stage centré sur le community management et les réseaux sociaux d'une jeune startup, avec un volet développement commercial. Mon premier contact concret avec l'animation d'une communauté, la production de contenu et la croissance d'une audience, jour après jour.",
+    tags: ["Communauté", "Social media", "Contenu", "Croissance"],
     highlights: [
-      "Community management and social media for the startup",
-      "Content production and daily audience growth",
-      "Client and prospect relationships (business development)",
-      "Early-stage startup environment",
+      "Community management et réseaux sociaux de la startup",
+      "Production de contenu et croissance quotidienne de l'audience",
+      "Relation clients et prospects (développement commercial)",
+      "Environnement de startup en phase de lancement",
     ],
   },
 ];
 
 export type WorkCategory =
-  | "Email & Newsletters"
-  | "Event organized & Social media"
-  | "Photo & Video"
-  | "Pitch & Campaign Decks";
+  | "Emailing & newsletters"
+  | "Événements & réseaux sociaux"
+  | "Photo & vidéo"
+  | "Pitchs & présentations";
 
 export type WorkItem = {
   id: string;
@@ -233,10 +233,10 @@ export type WorkItem = {
 
 // Order of the filter tabs in Selected work.
 export const workCategories: WorkCategory[] = [
-  "Event organized & Social media",
-  "Photo & Video",
-  "Email & Newsletters",
-  "Pitch & Campaign Decks",
+  "Événements & réseaux sociaux",
+  "Photo & vidéo",
+  "Emailing & newsletters",
+  "Pitchs & présentations",
 ];
 
 // Display order = order in "All": social & video first, then Photo & Video,
@@ -245,33 +245,33 @@ export const workItems: WorkItem[] = [
   // ------ Social media & event videos ------
   {
     id: "video-techdays",
-    category: "Event organized & Social media",
-    title: "TECH_DAYS event video",
-    subtitle: "Watch on LinkedIn",
+    category: "Événements & réseaux sociaux",
+    title: "Vidéo de l'événement TECH_DAYS",
+    subtitle: "Voir sur LinkedIn",
     src: "/images/work/social/video-techdays.jpg",
-    alt: "TECH_DAYS event video post",
+    alt: "Publication vidéo de l'événement TECH_DAYS",
     aspect: "wide",
     href: "https://www.linkedin.com/posts/afd-technologies_techdays-afdtech-accenture-activity-7452298867443855360-7ieb",
     linkType: "video",
   },
   {
     id: "video-sfa2025",
-    category: "Event organized & Social media",
-    title: "End-of-year party in Paris",
-    subtitle: "Watch on Instagram",
+    category: "Événements & réseaux sociaux",
+    title: "Soirée de fin d'année à Paris",
+    subtitle: "Voir sur Instagram",
     src: "/images/work/social/video-SFA2025.jpg",
-    alt: "End-of-year party event video",
+    alt: "Vidéo de la soirée de fin d'année",
     aspect: "wide",
     href: "https://www.instagram.com/reel/DSUn2JKEom2/",
     linkType: "video",
   },
   {
     id: "social-02",
-    category: "Event organized & Social media",
-    title: "Instagram carousel",
-    subtitle: "View on Instagram",
+    category: "Événements & réseaux sociaux",
+    title: "Carrousel Instagram",
+    subtitle: "Voir sur Instagram",
     src: "/images/work/social/social-02.png",
-    alt: "Instagram carousel preview",
+    alt: "Aperçu du carrousel Instagram",
     aspect: "tall",
     href: "https://www.instagram.com/p/DPi18P0jTdx/",
     linkType: "post",
@@ -280,25 +280,25 @@ export const workItems: WorkItem[] = [
   // ------ Photo & Video (placeholders — replace with your shoots & videos) ------
   {
     id: "photo-shoot-01",
-    category: "Photo & Video",
-    title: "[Placeholder] Photo shoot title",
-    subtitle: "Art direction & shooting",
+    category: "Photo & vidéo",
+    title: "[À compléter] Titre du shooting",
+    subtitle: "Direction artistique & shooting",
     // Drop a 4:5 photo (1600 × 2000 px) at this path, then remove `placeholder`.
     src: "/images/work/photo/shoot-01.jpg",
-    alt: "Photo from a shoot directed by Meryne",
+    alt: "Photo d'un shooting dirigé par Meryne",
     aspect: "tall",
     description:
-      "[Placeholder] Two lines on the shoot: brand or client, the brief, your role (concept, styling, shooting, editing) and where the photos were used.",
+      "[À compléter] Deux lignes sur le shooting : marque ou client, le brief, ton rôle (concept, stylisme, prise de vue, retouche) et l'utilisation des photos.",
     placeholder: true,
   },
   {
     id: "facecam-01",
-    category: "Photo & Video",
-    title: "[Placeholder] Face-to-camera video",
-    subtitle: "Watch on Instagram",
+    category: "Photo & vidéo",
+    title: "[À compléter] Vidéo face caméra",
+    subtitle: "Voir sur Instagram",
     // Thumbnail: a 4:5 still from the video (1600 × 2000 px).
     src: "/images/work/video/facecam-01.jpg",
-    alt: "Meryne speaking to camera",
+    alt: "Meryne face caméra",
     aspect: "tall",
     // Paste the Instagram reel URL here.
     href: "",
@@ -307,23 +307,23 @@ export const workItems: WorkItem[] = [
   },
   {
     id: "photo-shoot-02",
-    category: "Photo & Video",
-    title: "[Placeholder] Photo shoot title",
-    subtitle: "Art direction & shooting",
+    category: "Photo & vidéo",
+    title: "[À compléter] Titre du shooting",
+    subtitle: "Direction artistique & shooting",
     src: "/images/work/photo/shoot-02.jpg",
-    alt: "Photo from a shoot directed by Meryne",
+    alt: "Photo d'un shooting dirigé par Meryne",
     aspect: "tall",
     description:
-      "[Placeholder] Two lines on the shoot: brand or client, the brief, your role and where the photos were used.",
+      "[À compléter] Deux lignes sur le shooting : marque ou client, le brief, ton rôle et l'utilisation des photos.",
     placeholder: true,
   },
   {
     id: "facecam-02",
-    category: "Photo & Video",
-    title: "[Placeholder] Face-to-camera video",
-    subtitle: "Watch on LinkedIn",
+    category: "Photo & vidéo",
+    title: "[À compléter] Vidéo face caméra",
+    subtitle: "Voir sur LinkedIn",
     src: "/images/work/video/facecam-02.jpg",
-    alt: "Meryne speaking to camera",
+    alt: "Meryne face caméra",
     aspect: "tall",
     // Paste the LinkedIn post URL here.
     href: "",
@@ -334,36 +334,36 @@ export const workItems: WorkItem[] = [
   // ------ Email & Newsletters ------
   {
     id: "newsletter",
-    category: "Email & Newsletters",
-    title: "Monthly newsletter",
-    subtitle: "Events recap & what's coming",
+    category: "Emailing & newsletters",
+    title: "Newsletter mensuelle",
+    subtitle: "Récap des événements & à venir",
     src: "/images/work/email/newsletter.png",
-    alt: "Monthly newsletter preview",
+    alt: "Aperçu de la newsletter mensuelle",
     aspect: "tall",
     description:
-      "The monthly newsletter sent to Accenture teams: a recap of last month's events and a preview of what's coming this month. Designed, written and sent via Mailjet.",
+      "La newsletter mensuelle envoyée aux équipes d'Accenture : le récap des événements du mois passé et un aperçu de ceux à venir. Conçue, rédigée et envoyée via Mailjet.",
   },
   {
     id: "email-01",
-    category: "Email & Newsletters",
-    title: "Chess tournament announcement",
-    subtitle: "Event mailing",
+    category: "Emailing & newsletters",
+    title: "Annonce du tournoi d'échecs",
+    subtitle: "Mailing événementiel",
     src: "/images/work/email/email-01.png",
-    alt: "Chess tournament mailing preview",
+    alt: "Aperçu du mailing du tournoi d'échecs",
     aspect: "tall",
     description:
-      "Mailing announcing the upcoming chess tournament: concept, layout and copy, built to drive registrations.",
+      "Mailing annonçant le prochain tournoi d'échecs : concept, mise en page et rédaction, pensés pour générer des inscriptions.",
   },
   {
     id: "email-02",
-    category: "Email & Newsletters",
-    title: "TECH_DAYS event announcement",
-    subtitle: "Event mailing",
+    category: "Emailing & newsletters",
+    title: "Annonce de l'événement TECH_DAYS",
+    subtitle: "Mailing événementiel",
     src: "/images/work/email/email-02.png",
-    alt: "TECH_DAYS mailing preview",
+    alt: "Aperçu du mailing TECH_DAYS",
     aspect: "tall",
     description:
-      "Mailing announcing the 4th edition of TECH_DAYS, an internal AFD.TECH (Accenture) event. Editorial design and copywriting, sent via Mailjet.",
+      "Mailing annonçant la 4e édition des TECH_DAYS, un événement interne d'AFD.TECH (Accenture). Design éditorial et rédaction, envoyé via Mailjet.",
   },
 ];
 
@@ -372,31 +372,31 @@ export const workItems: WorkItem[] = [
 export const archivedWorkItems: WorkItem[] = [
   {
     id: "email-03",
-    category: "Email & Newsletters",
-    title: "Valentine's shooting event",
-    subtitle: "Sky Social client",
+    category: "Emailing & newsletters",
+    title: "Shooting de la Saint-Valentin",
+    subtitle: "Cliente Sky Social",
     src: "/images/work/email/email-03.png",
-    alt: "Valentine's shooting mailing preview",
+    alt: "Aperçu du mailing du shooting de la Saint-Valentin",
     aspect: "tall",
     description:
-      "For a Sky Social client, I organised a Valentine's Day event, a women's photo shoot, ran the social media strategy to drive sign-ups, and later built their website.",
+      "Pour une cliente de Sky Social, j'ai organisé un événement de Saint-Valentin, un shooting photo entre femmes, mené la stratégie social media pour générer des inscriptions, puis créé son site.",
   },
   {
     id: "email-04",
-    category: "Email & Newsletters",
-    title: "Sports activities newsletter",
-    subtitle: "June lineup, Accenture",
+    category: "Emailing & newsletters",
+    title: "Newsletter des activités sportives",
+    subtitle: "Programme de juin, Accenture",
     src: "/images/work/email/email-04.png",
-    alt: "Sports activities newsletter preview",
+    alt: "Aperçu de la newsletter des activités sportives",
     aspect: "tall",
     description:
-      "Newsletter announcing the sports activities coming up in June for Accenture colleagues: climbing, pilates, yoga, boxing and running.",
+      "Newsletter annonçant les activités sportives de juin pour les collaborateurs d'Accenture : escalade, pilates, yoga, boxe et course à pied.",
   },
 ];
 
 // ---------------------------------------------------------------------------
 // International — Sky Social in Gabon, presented as a case study.
-// Everything marked [Placeholder] / `placeholder: true` is waiting for your
+// Everything marked [À compléter] / `placeholder: true` is waiting for your
 // real text and media. Placeholders show locally and on Vercel previews but
 // are hidden on the production site (see src/lib/placeholders.ts): replace
 // the content, then delete the `placeholder: true` line.
@@ -439,73 +439,71 @@ export type InternationalProject = {
 
 export const international = {
   context:
-    "[Placeholder] Two or three sentences of context: since when Sky Social has been working in Gabon, for what kind of clients (public institutions, elected officials, private clients), and what you handle on site, from event communication to photo and video coverage and social media recaps.",
+    "Avec Sky Social, j'accompagne au Gabon des institutions, des élus et des clients privés dans la communication et la captation de leurs événements. Sur place, je couvre les prises de parole, les panels et l'ambiance en photo et en vidéo.",
   // On-the-ground portrait shown next to the key facts.
   portrait: {
     src: "/images/international/behind-the-scenes.jpg",
-    alt: "Meryne setting up a handheld gimbal camera before an event in Gabon",
-    caption: "Behind the scenes, on site in Gabon.",
+    alt: "Meryne prépare sa caméra stabilisée avant un événement au Gabon",
+    caption: "Dans les coulisses, sur le terrain au Gabon.",
   },
   facts: [
     { label: "Studio", value: "Sky Social" },
-    { label: "Country", value: "Gabon" },
-    { label: "Since", value: "[Placeholder] 2025" },
-    { label: "Role", value: "[Placeholder] Founder, content & coverage" },
+    { label: "Pays", value: "Gabon" },
+    { label: "Période", value: "Août — sept. 2026" },
+    { label: "Rôle", value: "Fondatrice, communication & captation" },
   ],
   projects: [
     {
       id: "cdc",
       client: "Caisse des Dépôts et Consignations",
-      title: "Event communication & coverage",
+      title: "Communication & captation d'événement",
       summary:
-        "[Placeholder] The brief, the events covered, your role before, during and after each event (communication plan, on-site photo and video capture, editing, publication) and one result if you have it.",
+        "Du 2 au 4 septembre 2026, la Caisse des Dépôts et Consignations a organisé un événement consacré à un enjeu clé pour le pays : inciter les citoyens à épargner davantage et leur montrer comment s'y prendre, dans un contexte bancaire difficile. En présence du vice-président et de représentants du Maroc, j'ai assuré la communication et la captation de l'événement.",
       deliverables: [
-        "[Placeholder] Event communication plan",
-        "[Placeholder] Photo & video coverage on site",
-        "[Placeholder] Social media recap content",
+        "Communication autour de l'événement",
+        "Captation photo des panels et des prises de parole",
+        "Captation vidéo",
       ],
       cover: {
         kind: "image",
         src: "/images/international/cdc/cover.jpg",
-        alt: "Panel of three speakers on stage at the Caisse des Dépôts et Consignations event",
+        alt: "Trois intervenants en panel sur scène, à l'événement de la Caisse des Dépôts et Consignations",
       },
       gallery: [
         {
           kind: "image",
           src: "/images/international/cdc/photo-01.jpg",
-          alt: "Speaker at the lectern during the Caisse des Dépôts et Consignations event",
+          alt: "Un intervenant au pupitre pendant l'événement de la Caisse des Dépôts et Consignations",
           orientation: "landscape",
         },
         {
           kind: "video",
           file: "/videos/cdc-event.mp4",
-          alt: "Video captured at the Caisse des Dépôts et Consignations event",
+          alt: "Vidéo tournée à l'événement de la Caisse des Dépôts et Consignations",
           orientation: "landscape",
         },
       ],
-      placeholder: true,
     },
     {
       id: "senate",
-      client: "Senators",
-      title: "Parliamentary reports",
+      client: "Sénateurs",
+      title: "Compte rendu parlementaire",
       summary:
-        "[Placeholder] What these reports are, who they were for, how you captured and turned parliamentary work into content (photo, video, written recap) and where it was published.",
+        "Le 19 août 2026, des sénateurs ont rendu compte de leurs échanges avec les ministres lors de leur rendez-vous au Sénat. Ce compte rendu parlementaire s'adressait aux représentants de chaque quartier et aux maires, chargés ensuite de transmettre l'information. J'en ai assuré la captation photo et vidéo.",
       deliverables: [
-        "[Placeholder] Coverage of parliamentary sessions",
-        "[Placeholder] Written & video reports",
-        "[Placeholder] Publication on the senators' channels",
+        "Captation photo de la séance et du public",
+        "Captation vidéo",
       ],
       cover: {
         kind: "image",
         src: "/images/international/senate/cover.jpg",
-        alt: "Senators at the head table during a parliamentary report meeting",
+        alt: "Des sénateurs à la tribune pendant le compte rendu parlementaire",
       },
       gallery: [
         {
           kind: "image",
           src: "/images/international/senate/photo-01.jpg",
-          alt: "Audience listening during the parliamentary report meeting",
+          alt: "Le public écoute le compte rendu parlementaire",
           orientation: "landscape",
         },
         {
@@ -514,60 +512,54 @@ export const international = {
           // `placeholder`.
           kind: "video",
           poster: "/images/international/senate/video-poster.jpg",
-          alt: "Parliamentary report video",
+          alt: "Vidéo du compte rendu parlementaire",
           href: "",
           orientation: "landscape",
           placeholder: true,
         },
       ],
-      placeholder: true,
     },
     {
-      id: "feg",
-      client: "FEG",
-      title: "[Placeholder] Event title",
+      id: "feg-udb",
+      client: "FEG × UDB",
+      title: "Panel « Projet de société et conjoncture économique »",
       summary:
-        "[Placeholder] What the event was, who organised it, what you covered on site (panels, speakers, audience) and what you delivered afterwards.",
-      deliverables: [
-        "[Placeholder] Photo coverage of the panels",
-        "[Placeholder] Video capture",
-        "[Placeholder] Social media recap content",
-      ],
+        "Événement organisé conjointement par la FEG et l'Union Démocratique des Bâtisseurs (UDB), autour d'un panel consacré au projet de société du Président et à la conjoncture économique. J'ai couvert les prises de parole et l'ambiance de la salle en photo.",
+      deliverables: ["Captation photo du panel et du public"],
       cover: {
         kind: "image",
         src: "/images/international/feg/cover.jpg",
-        alt: "Panel of speakers on stage in front of a large audience",
+        alt: "Panel d'intervenants sur scène devant le public, à l'événement FEG × UDB",
       },
       gallery: [
-        { kind: "image", src: "/images/international/feg/photo-01.jpg", alt: "FEG event photo 1", placeholder: true },
-        { kind: "image", src: "/images/international/feg/photo-02.jpg", alt: "FEG event photo 2", placeholder: true },
+        { kind: "image", src: "/images/international/feg/photo-01.jpg", alt: "Photo de l'événement FEG × UDB", placeholder: true },
+        { kind: "image", src: "/images/international/feg/photo-02.jpg", alt: "Photo de l'événement FEG × UDB", placeholder: true },
       ],
-      placeholder: true,
     },
     {
       id: "private-events",
-      client: "Private clients",
-      title: "Private events",
+      client: "Clients privés",
+      title: "Événements privés",
       summary:
-        "[Placeholder] The kind of private events (weddings, celebrations, brand evenings…), what you delivered and how the content was used afterwards.",
+        "[À compléter] Le type d'événements privés (mariages, anniversaires, soirées de marque…), ce que tu as livré et comment les contenus ont été utilisés ensuite.",
       deliverables: [
-        "[Placeholder] Photo & video capture",
-        "[Placeholder] Same-day social media content",
-        "[Placeholder] Edited aftermovie",
+        "[À compléter] Captation photo & vidéo",
+        "[À compléter] Contenus réseaux sociaux le jour même",
+        "[À compléter] Aftermovie monté",
       ],
       cover: {
         kind: "image",
         src: "/images/international/private-events/cover.jpg",
-        alt: "Private event in Gabon",
+        alt: "Événement privé au Gabon",
         placeholder: true,
       },
       gallery: [
-        { kind: "image", src: "/images/international/private-events/photo-01.jpg", alt: "Private event photo 1", placeholder: true },
-        { kind: "image", src: "/images/international/private-events/photo-02.jpg", alt: "Private event photo 2", placeholder: true },
+        { kind: "image", src: "/images/international/private-events/photo-01.jpg", alt: "Photo d'un événement privé", placeholder: true },
+        { kind: "image", src: "/images/international/private-events/photo-02.jpg", alt: "Photo d'un événement privé", placeholder: true },
         {
           kind: "video",
           poster: "/images/international/private-events/video-poster.jpg",
-          alt: "Private event video",
+          alt: "Vidéo d'un événement privé",
           href: "",
           placeholder: true,
         },
@@ -581,52 +573,52 @@ export const education = [
   {
     school: "ISCOM Paris",
     degree: "MBA",
-    field: "Digital Communication, Social Media & Community Management",
+    field: "Communication digitale, social media & community management",
     period: "2026 — 2027",
     location: "Paris, France",
     courses: [
-      "Content management & editorial strategy",
+      "Social media content management & stratégie éditoriale",
       "Social media & community management",
-      "Influence marketing & social listening",
-      "Social ads, traffic & digital performance",
-      "Audio & video production",
-      "CRM, UX/UI & retention",
+      "Marketing d'influence & social listening",
+      "Social ads, trafic & performance digitale",
+      "Production audio & vidéo",
+      "CRM, UX/UI & fidélisation",
     ],
   },
   {
     school: "ISC Paris",
-    degree: "Master's Degree (Grande École)",
-    field: "Marketing & Digital Communication",
+    degree: "Master (Programme Grande École)",
+    field: "Marketing & communication digitale",
     period: "2024 — 2026",
     location: "Paris, France",
     courses: [
-      "Advanced Digital Marketing",
-      "Social Media Strategy",
-      "Influence Marketing",
-      "Online & offline media planning",
-      "Internal & external communication strategy",
+      "Marketing digital avancé",
+      "Stratégie social media",
+      "Marketing d'influence",
+      "Media planning online & offline",
+      "Stratégie de communication interne & externe",
     ],
   },
   {
     school: "University of California, Riverside",
-    degree: "Bachelor in International Management",
-    field: "Marketing track",
+    degree: "Bachelor en management international",
+    field: "Parcours marketing",
     period: "2023 — 2024",
-    location: "California, USA",
+    location: "Californie, États-Unis",
     courses: [
-      "Digital Marketing (SEO, SEM)",
-      "Social Media Marketing (Meta Ads)",
-      "International Marketing",
-      "Video production for social media",
-      "Project & process management",
-      "Introduction to WordPress",
+      "Marketing digital (SEO, SEA)",
+      "Social media marketing (Meta Ads)",
+      "Marketing international",
+      "Production vidéo pour les réseaux sociaux",
+      "Gestion de projet & de processus",
+      "Initiation à WordPress",
     ],
   },
 ];
 
 export const skills = {
   tools: [
-    "Microsoft Office Suite",
+    "Suite Microsoft Office",
     "Keynote",
     "PowerPoint",
     "Notion",
@@ -639,47 +631,47 @@ export const skills = {
     "WordPress",
   ],
   expertise: [
-    "Social media strategy & editorial calendar",
-    "Content creation & production",
-    "Community management & client relationship",
-    "Trend watch & digital innovation",
-    "Performance analysis (GA4, native insights)",
-    "Copywriting & brand storytelling",
-    "Email marketing",
-    "Event planning",
+    "Stratégie social media & calendrier éditorial",
+    "Création & production de contenu",
+    "Community management & relation client",
+    "Veille tendances & innovation digitale",
+    "Analyse de performance (GA4, statistiques natives)",
+    "Copywriting & storytelling de marque",
+    "Emailing",
+    "Organisation d'événements",
   ],
   languages: [
-    { name: "French", level: "Native" },
-    { name: "English", level: "C1" },
-    { name: "Spanish", level: "Beginner" },
-    { name: "Korean", level: "A1" },
+    { name: "Français", level: "Langue maternelle" },
+    { name: "Anglais", level: "C1" },
+    { name: "Espagnol", level: "Notions" },
+    { name: "Coréen", level: "A1" },
   ],
 };
 
 export const projects = [
   {
     name: "Sky Social",
-    description: "Digital strategy & web design for ambitious brands.",
+    description: "Stratégie digitale & web design pour les marques ambitieuses.",
     url: "https://sky-social.fr",
   },
   {
     name: "Velmio CRM",
-    description: "CRM platform with go-to-market and brand support.",
+    description: "Plateforme CRM, avec accompagnement go-to-market et marque.",
     url: "https://app.velmiocrm.com",
   },
   {
     name: "Veyra Studio",
-    description: "Creative studio for visual identity and content design.",
+    description: "Studio créatif d'identité visuelle et de design de contenu.",
     url: "https://veyrastudio.fr",
   },
   {
     name: "Bestievent",
-    description: "Event-tech project making gatherings unforgettable.",
+    description: "Projet event-tech pour rendre chaque rassemblement inoubliable.",
     url: "https://bestievent.com",
   },
   {
     name: "Photopya",
-    description: "Photography web project.",
+    description: "Projet web autour de la photographie.",
     url: "https://photopya.vercel.app/",
   },
 ];
@@ -694,55 +686,55 @@ export type LifeImage = {
 
 export const lifeOutsideWork = {
   intro:
-    "Outside work I stay curious and hands-on: sport, piano, painting, pottery and cultural escapes all keep me balanced and inspired.",
+    "En dehors du travail, je reste curieuse et manuelle : le sport, le piano, la peinture, la poterie et les sorties culturelles m'équilibrent et m'inspirent.",
   // Replace each photo by dropping a new one at the same path.
   images: [
     {
       src: "/images/life/piano.jpeg",
-      alt: "Meryne playing the piano",
+      alt: "Meryne joue du piano",
       label: "Piano",
       description:
-        "I taught myself piano at six. It's still my favourite way to accompany my singing.",
+        "J'ai appris le piano seule à six ans. C'est toujours ma façon préférée d'accompagner ma voix.",
     },
     {
       src: "/images/life/sport.jpg",
-      alt: "Meryne training with her colleagues",
-      label: "Running",
+      alt: "Meryne à l'entraînement avec ses collègues",
+      label: "Course à pied",
       description:
-        "Training hard with my colleagues for the Enfant Sans Cancer race on 2 June in Paris, my very first race!",
+        "Entraînement intensif avec mes collègues pour la course Enfant Sans Cancer du 2 juin à Paris, ma toute première course !",
     },
     {
       src: "/images/life/paint.jpeg",
-      alt: "One of Meryne's paintings",
-      label: "Painting",
+      alt: "Une peinture de Meryne",
+      label: "Peinture",
       description:
-        "One of my paintings. I picked up painting a year ago as a hobby and haven't stopped since.",
+        "Une de mes peintures. J'ai commencé la peinture il y a un an, en loisir, et je ne me suis plus arrêtée.",
     },
     {
       src: "/images/life/pottery.jpeg",
-      alt: "A decorative tray made by hand",
-      label: "Pottery",
+      alt: "Un vide-poche décoratif fait main",
+      label: "Poterie",
       description:
-        "A decorative tray I made by hand. Crafts like this are real therapy for me.",
+        "Un vide-poche décoratif fait de mes mains. Ce genre d'activité manuelle est une vraie thérapie pour moi.",
     },
     {
       src: "/images/life/musee.jpeg",
-      alt: "Meryne at a museum",
+      alt: "Meryne au musée",
       label: "Culture",
       description:
-        "Cultural outings and museum visits keep me curious and feed my creativity.",
+        "Les sorties culturelles et les musées entretiennent ma curiosité et nourrissent ma créativité.",
     },
     {
       src: "/images/life/travel.jpg",
-      alt: "An elephant photographed in Thailand",
-      label: "Travel",
+      alt: "Un éléphant photographié en Thaïlande",
+      label: "Voyage",
       description:
-        "An elephant I photographed in Thailand, in a sanctuary that rescues mistreated elephants. We could only watch from afar, unless they chose to come to us.",
+        "Un éléphant que j'ai photographié en Thaïlande, dans un sanctuaire qui recueille des éléphants maltraités. On ne pouvait les observer que de loin, sauf s'ils choisissaient de venir vers nous.",
     },
   ] as LifeImage[],
 };
 
 export const contact = {
   sub:
-    "If you're hiring a Social Media Manager intern for six months from January 2027, or just want to chat about brands, content or trends, I'd love to hear from you.",
+    "Vous recherchez une stagiaire Social Media Manager pour six mois à partir de janvier 2027, ou vous voulez simplement parler marques, contenus ou tendances ? Écrivez-moi.",
 };

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col gap-1">
           <span className="text-paper">{personal.availability}</span>
           <span className="text-paper/60">
-            © {year} {personal.name}. All rights reserved.
+            © {year} {personal.name}. Tous droits réservés.
           </span>
         </div>
         <div className="flex items-center gap-6 text-paper/70">
@@ -24,10 +24,10 @@ export default function Footer() {
             href={`mailto:${personal.email}`}
             className="transition-colors duration-fast hover:text-accent"
           >
-            Email
+            E-mail
           </a>
           <a href="#top" className="transition-colors duration-fast hover:text-accent">
-            Back to top ↑
+            Haut de page ↑
           </a>
         </div>
       </div>

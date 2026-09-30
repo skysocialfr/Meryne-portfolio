@@ -88,7 +88,7 @@ function ProjectChapter({
       <Reveal>
         <div className="flex items-baseline gap-4 border-t-2 border-ink pt-4">
           <span className="label shrink-0 text-accent">
-            Project {String(index + 1).padStart(2, "0")}
+            Projet {String(index + 1).padStart(2, "0")}
           </span>
           <span className="label text-ink/70">{project.client}</span>
         </div>
@@ -207,7 +207,7 @@ function MediaTile({
         href={media.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${media.alt} (opens in a new tab)`}
+        aria-label={`${media.alt} (nouvel onglet)`}
         className="group block"
       >
         {tile}
@@ -222,7 +222,7 @@ function MediaTile({
       onClick={() =>
         onOpen({ src: media.src, alt: media.alt, title, placeholder: media.placeholder })
       }
-      aria-label={`Open ${media.alt}`}
+      aria-label={`Agrandir : ${media.alt}`}
       className="group block w-full"
     >
       <Media

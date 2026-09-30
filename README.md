@@ -1,7 +1,9 @@
 # Meryne Ndjeyi — Portfolio
 
 Personal portfolio of Meryne Ndjeyi, Social Media Manager, looking for a
-six-month internship from January 2027.
+six-month internship from January 2027. The site is in French
+(`<html lang="fr">`); all visible text lives in `src/data/content.ts`,
+plus a few interface labels (buttons, menu) in the components.
 Next.js 14 (App Router) · TypeScript · Tailwind CSS · Framer Motion.
 Deployed on Vercel.
 
@@ -38,7 +40,7 @@ section (and its nav link) only appears on production once at least one
 project no longer has `placeholder: true`.
 
 To fill a slot: drop the file at the path shown in the grey box, replace
-the `[Placeholder]` texts, then delete the `placeholder: true` line.
+the `[À compléter]` texts, then delete the `placeholder: true` line.
 Force the behaviour with the `SHOW_PLACEHOLDERS=true|false` environment
 variable in Vercel if needed.
 
@@ -63,13 +65,21 @@ section if it stays **under 10 MB** (H.264, 1080 px, no audio track if silent).
 
 ### International — one folder per project
 
-For each of `cdc`, `senate`, `private-events` in `public/images/international/<project>/`:
+Already in place: CDC (cover, photo, video), Parliamentary report (cover,
+photo), FEG × UDB (cover, folder `feg`), behind-the-scenes portrait.
+Still to provide, in `public/images/international/<project>/`:
+
+- `senate/video-poster.jpg` (2400 × 1350, 16:9) + the link to the 47-second video
+- `feg/photo-01.jpg`, `feg/photo-02.jpg` (optional extra photos)
+- everything for `private-events` (table below)
+
+Format of each slot:
 
 | File | Format | What |
 | --- | --- | --- |
 | `cover.jpg` | 2400 × 1350 px (16:9), subject centred | Opening visual (cropped to 4:3 on mobile) |
-| `photo-01.jpg` | 1600 × 2000 px (4:5) | Gallery photo |
-| `photo-02.jpg` | 1600 × 2000 px (4:5) | Gallery photo |
+| `photo-01.jpg` | 1600 × 2000 px (4:5), or 2400 × 1350 (16:9) with `orientation: "landscape"` | Gallery photo |
+| `photo-02.jpg` | same | Gallery photo |
 | `video-poster.jpg` | 1600 × 2000 px (4:5) | Still from the video + URL in `href` (or MP4 in `public/videos/<project>.mp4` via `file`) |
 
 ### Existing images (already in place, replace at the same path if needed)

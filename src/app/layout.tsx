@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: seo.title,
     description: seo.shareDescription,
     type: "website",
-    locale: "en_US",
+    locale: "fr_FR",
     siteName: personal.name,
   },
   twitter: {
@@ -65,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable} ${sans.variable}`}>
+    <html lang="fr" className={`${display.variable} ${serif.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   );
