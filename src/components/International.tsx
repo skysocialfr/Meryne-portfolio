@@ -24,21 +24,39 @@ export default function International() {
       <div className="container-x">
         <SectionHeading id="international" intro={international.context} />
 
-        <Reveal delay={0.1}>
-          <dl className="mt-stack-lg grid grid-cols-2 border-t-2 border-ink md:grid-cols-4">
-            {international.facts.map((f, i) => (
-              <div
-                key={f.label}
-                className={`border-b border-ink/15 py-4 md:border-b-0 md:py-5 ${
-                  i % 2 === 1 ? "pl-4" : "pr-4"
-                } ${i > 0 ? "md:border-l md:pl-4" : ""}`}
-              >
-                <dt className="label text-ink/60">{f.label}</dt>
-                <dd className="mt-1 font-display text-lg font-semibold">{f.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
+        {/* On-the-ground portrait + key facts */}
+        <div className="mt-stack-lg grid gap-stack-lg md:grid-cols-12 md:gap-grid">
+          <Reveal className="md:col-span-5">
+            <figure>
+              <Media
+                src={international.portrait.src}
+                alt={international.portrait.alt}
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="aspect-[3/4]"
+                spec="1800 × 2400 px (3:4) · JPG"
+              />
+              <figcaption className="label mt-3 text-ink/60">
+                {international.portrait.caption}
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal delay={0.1} className="md:col-span-6 md:col-start-7 md:self-end">
+            <dl className="grid grid-cols-2 border-t-2 border-ink">
+              {international.facts.map((f, i) => (
+                <div
+                  key={f.label}
+                  className={`border-b border-ink/15 py-5 ${
+                    i % 2 === 1 ? "border-l pl-4" : "pr-4"
+                  }`}
+                >
+                  <dt className="label text-ink/60">{f.label}</dt>
+                  <dd className="mt-1 font-display text-lg font-semibold">{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        </div>
 
         <div className="mt-stack-xl space-y-section">
           {projects.map((p, i) => (
@@ -85,7 +103,7 @@ function ProjectChapter({
       </Reveal>
 
       <div className="mt-stack-lg grid gap-stack-lg md:grid-cols-12 md:gap-grid">
-        <Reveal className="md:col-span-5">
+        <Reveal className={gallery.length ? "md:col-span-5" : "md:col-span-7"}>
           <p className="text-lead leading-relaxed text-ink/80">{project.summary}</p>
           <ul className="mt-stack-md border-t border-ink/15">
             {project.deliverables.map((d) => (
@@ -98,20 +116,22 @@ function ProjectChapter({
         </Reveal>
 
         {/* Gallery — swipe on mobile, 2-column grid from tablet up */}
-        <ul className="snap-row md:col-span-7 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0">
-          {gallery.map((m, i) => (
-            <li
-              key={i}
-              className={`shrink-0 snap-start md:w-auto ${
-                m.orientation === "landscape" ? "w-[88vw] md:col-span-2" : "w-[80vw]"
-              }`}
-            >
-              <Reveal delay={i * 0.05}>
-                <MediaTile media={m} title={project.title} onOpen={onOpen} />
-              </Reveal>
-            </li>
-          ))}
-        </ul>
+        {gallery.length > 0 && (
+          <ul className="snap-row md:col-span-7 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0">
+            {gallery.map((m, i) => (
+              <li
+                key={i}
+                className={`shrink-0 snap-start md:w-auto ${
+                  m.orientation === "landscape" ? "w-[88vw] md:col-span-2" : "w-[80vw]"
+                }`}
+              >
+                <Reveal delay={i * 0.05}>
+                  <MediaTile media={m} title={project.title} onOpen={onOpen} />
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </article>
   );
@@ -169,7 +189,7 @@ function MediaTile({
           alt={media.alt}
           placeholder={media.placeholder}
           sizes={sizes}
-          spec="Video poster 1600 × 2000 px · JPG + link or MP4"
+          spec={`Video poster ${landscape ? "2400 × 1350" : "1600 × 2000"} px · JPG + link or MP4`}
           className={aspect}
           imgClassName="transition-transform duration-slow ease-out-expo group-hover:scale-[1.03]"
         />

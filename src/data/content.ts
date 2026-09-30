@@ -440,6 +440,12 @@ export type InternationalProject = {
 export const international = {
   context:
     "[Placeholder] Two or three sentences of context: since when Sky Social has been working in Gabon, for what kind of clients (public institutions, elected officials, private clients), and what you handle on site, from event communication to photo and video coverage and social media recaps.",
+  // On-the-ground portrait shown next to the key facts.
+  portrait: {
+    src: "/images/international/behind-the-scenes.jpg",
+    alt: "Meryne setting up a handheld gimbal camera before an event in Gabon",
+    caption: "Behind the scenes, on site in Gabon.",
+  },
   facts: [
     { label: "Studio", value: "Sky Social" },
     { label: "Country", value: "Gabon" },
@@ -493,19 +499,48 @@ export const international = {
       cover: {
         kind: "image",
         src: "/images/international/senate/cover.jpg",
-        alt: "Parliamentary session coverage",
-        placeholder: true,
+        alt: "Senators at the head table during a parliamentary report meeting",
       },
       gallery: [
-        { kind: "image", src: "/images/international/senate/photo-01.jpg", alt: "Parliamentary report photo 1", placeholder: true },
-        { kind: "image", src: "/images/international/senate/photo-02.jpg", alt: "Parliamentary report photo 2", placeholder: true },
         {
+          kind: "image",
+          src: "/images/international/senate/photo-01.jpg",
+          alt: "Audience listening during the parliamentary report meeting",
+          orientation: "landscape",
+        },
+        {
+          // The 47-second video: paste its Instagram / LinkedIn / YouTube
+          // link in `href` and a still at video-poster.jpg, then remove
+          // `placeholder`.
           kind: "video",
           poster: "/images/international/senate/video-poster.jpg",
           alt: "Parliamentary report video",
           href: "",
+          orientation: "landscape",
           placeholder: true,
         },
+      ],
+      placeholder: true,
+    },
+    {
+      id: "feg",
+      client: "FEG",
+      title: "[Placeholder] Event title",
+      summary:
+        "[Placeholder] What the event was, who organised it, what you covered on site (panels, speakers, audience) and what you delivered afterwards.",
+      deliverables: [
+        "[Placeholder] Photo coverage of the panels",
+        "[Placeholder] Video capture",
+        "[Placeholder] Social media recap content",
+      ],
+      cover: {
+        kind: "image",
+        src: "/images/international/feg/cover.jpg",
+        alt: "Panel of speakers on stage in front of a large audience",
+      },
+      gallery: [
+        { kind: "image", src: "/images/international/feg/photo-01.jpg", alt: "FEG event photo 1", placeholder: true },
+        { kind: "image", src: "/images/international/feg/photo-02.jpg", alt: "FEG event photo 2", placeholder: true },
       ],
       placeholder: true,
     },
