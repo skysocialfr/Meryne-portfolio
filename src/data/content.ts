@@ -370,12 +370,6 @@ export type InternationalProject = {
 export const international = {
   context:
     "Avec Sky Social, j'accompagne au Gabon des institutions, des élus et des organisations dans la communication et la captation de leurs événements. Sur place, je couvre les prises de parole, les panels et l'ambiance en photo et en vidéo.",
-  // On-the-ground portrait shown next to the key facts.
-  portrait: {
-    src: "/images/international/behind-the-scenes.jpg",
-    alt: "Meryne prépare sa caméra stabilisée avant un événement au Gabon",
-    caption: "Dans les coulisses, sur le terrain au Gabon.",
-  },
   facts: [
     { label: "Studio", value: "Sky Social" },
     { label: "Pays", value: "Gabon" },
