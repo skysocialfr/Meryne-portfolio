@@ -28,6 +28,41 @@ export const seo = {
     "Social media, editorial strategy, content and community. Looking for a six-month Social Media Manager internship from January 2027.",
 };
 
+// Page sections, in order. Drives the navigation, the section numbers
+// ("02 / Selected work") and the section titles.
+export type SectionId =
+  | "about"
+  | "work"
+  | "international"
+  | "experience"
+  | "education"
+  | "skills"
+  | "projects"
+  | "life"
+  | "contact";
+
+export type Section = {
+  id: SectionId;
+  label: string;
+  // Large title under the label. The words wrapped in *asterisks* are set
+  // in the contrasting italic serif.
+  title: string;
+  // Show this section in the top navigation.
+  nav?: boolean;
+};
+
+export const sections: Section[] = [
+  { id: "about", label: "About", title: "Turning brands into *stories* on social.", nav: true },
+  { id: "work", label: "Selected work", title: "A glimpse at what I build, *day to day.*", nav: true },
+  { id: "international", label: "International", title: "Sky Social, on the ground in *Gabon.*", nav: true },
+  { id: "experience", label: "Experience", title: "Three years of learning, creating, *building.*", nav: true },
+  { id: "education", label: "Education", title: "Built between Paris and *California.*" },
+  { id: "skills", label: "Skills", title: "A toolkit, sharpened in *real conditions.*" },
+  { id: "projects", label: "Live projects", title: "Out in the *wild.*", nav: true },
+  { id: "life", label: "Life outside work", title: "Life outside *work.*", nav: true },
+  { id: "contact", label: "Contact", title: "Let's build something *memorable.*" },
+];
+
 export const hero = {
   // Eyebrow above the big title.
   eyebrow: "Portfolio 2026",
@@ -56,7 +91,6 @@ export const marqueeKeywords = [
 ];
 
 export const about = {
-  heading: "Turning brands into stories on social.",
   body: [
     "Curious, creative and bilingual (French / English), I love the craft of social media: reading a brief, shaping an editorial line, producing content, animating a community, then reading the numbers to sharpen the next round. I stay in constant watch on formats, trends and cultural moments to keep brands relevant.",
     "Outside work, sport, piano and painting keep me curious and balanced, three sides of the same instinct for craft, focus and progress.",
@@ -188,7 +222,16 @@ export type WorkItem = {
   linkType?: "video" | "post";
   // A few lines shown under the title when the image is opened full screen.
   description?: string;
+  // Placeholder slot waiting for your real media (hidden in production).
+  placeholder?: boolean;
 };
+
+// Order of the filter tabs in Selected work.
+export const workCategories: WorkCategory[] = [
+  "Event organized & Social media",
+  "Email & Newsletters",
+  "Pitch & Campaign Decks",
+];
 
 export const workItems: WorkItem[] = [
   // ------ Email & Newsletters ------
@@ -400,7 +443,6 @@ export type LifeImage = {
 };
 
 export const lifeOutsideWork = {
-  heading: "Life outside work.",
   intro:
     "Outside work I stay curious and hands-on: sport, piano, painting, pottery and cultural escapes all keep me balanced and inspired.",
   // Replace each photo by dropping a new one at the same path.
@@ -451,7 +493,6 @@ export const lifeOutsideWork = {
 };
 
 export const contact = {
-  heading: "Let's build something memorable.",
   sub:
     "If you're hiring a Social Media Manager intern for six months from January 2027, or just want to chat about brands, content or trends, I'd love to hear from you.",
 };

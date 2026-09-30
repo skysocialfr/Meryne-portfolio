@@ -1,57 +1,50 @@
 import Reveal from "./Reveal";
-import SafeImage from "./SafeImage";
+import Media from "./Media";
+import SectionHeading from "./SectionHeading";
 import { about } from "@/data/content";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 md:py-36">
-      <div className="container-x grid gap-16 md:grid-cols-12">
-        {/* Image + signature block */}
-        <div className="md:col-span-5">
-          <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2px] bg-line">
-              <SafeImage
-                src={about.image}
-                alt="Meryne Ndjeyi in motion"
-                className="h-full w-full object-cover transition-all duration-700"
-              />
-            </div>
-          </Reveal>
-        </div>
+    <section id="about" className="section">
+      <div className="container-x">
+        <SectionHeading id="about" />
 
-        {/* Text + stats */}
-        <div className="md:col-span-7 md:pl-8">
-          <Reveal>
-            <span className="eyebrow">About</span>
-            <h2 className="display mt-6 text-fluid-h2">{about.heading}</h2>
+        <div className="mt-stack-xl grid gap-stack-lg md:grid-cols-12 md:gap-grid">
+          <Reveal className="md:col-span-5">
+            <Media
+              src={about.image}
+              alt="Meryne Ndjeyi"
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="aspect-[4/5]"
+              spec="1600 × 2000 px · JPG"
+            />
           </Reveal>
 
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink/80 md:text-xl">
-            {about.body.map((p, i) => (
-              <Reveal key={i} delay={0.1 + i * 0.05}>
-                <p>{p}</p>
-              </Reveal>
-            ))}
-          </div>
-
-          {/* Stats grid */}
-          <Reveal delay={0.3}>
-            <ul className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-[2px] border border-line bg-line lg:grid-cols-4">
-              {about.stats.map((s) => (
-                <li
-                  key={s.label}
-                  className="flex flex-col gap-2 bg-paper p-6"
-                >
-                  <span className="font-display text-4xl font-semibold tracking-tighter text-ember">
-                    {s.value}
-                  </span>
-                  <span className="text-xs uppercase tracking-[0.15em] text-muted">
-                    {s.label}
-                  </span>
-                </li>
+          <div className="md:col-span-6 md:col-start-7 md:self-end">
+            <div className="space-y-5 text-lead leading-relaxed text-ink/80">
+              {about.body.map((p, i) => (
+                <Reveal key={i} delay={0.05 + i * 0.05}>
+                  <p>{p}</p>
+                </Reveal>
               ))}
-            </ul>
-          </Reveal>
+            </div>
+
+            <Reveal delay={0.15}>
+              <ul className="mt-stack-lg grid grid-cols-2 border-t border-ink/15">
+                {about.stats.map((s, i) => (
+                  <li
+                    key={s.label}
+                    className={`flex flex-col gap-2 border-b border-ink/15 py-6 ${
+                      i % 2 === 0 ? "pr-4" : "border-l pl-4"
+                    }`}
+                  >
+                    <span className="display text-h2 text-accent">{s.value}</span>
+                    <span className="label text-ink/70">{s.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

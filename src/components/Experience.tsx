@@ -4,41 +4,31 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { createPortal } from "react-dom";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
+import { DURATION, EASE_OUT } from "@/lib/motion";
 import { experiences, type Experience as Exp } from "@/data/content";
 
 export default function Experience() {
   const [open, setOpen] = useState<Exp | null>(null);
 
   return (
-    <section
-      id="experience"
-      className="relative bg-graphite py-24 text-paper md:py-36"
-    >
+    <section id="experience" className="section bg-ink text-paper">
       <div className="container-x">
-        <Reveal>
-          <span className="eyebrow text-paper/60 before:bg-paper/40">
-            Experience
-          </span>
-          <h2 className="display mt-6 max-w-3xl text-fluid-h2">
-            Three years of learning, creating, building.
-          </h2>
-        </Reveal>
+        <SectionHeading id="experience" tone="dark" />
 
-        <ul className="mt-16 md:mt-24">
+        <ul className="mt-stack-xl border-b border-paper/15">
           {experiences.map((exp, i) => (
             <Reveal key={exp.company} delay={i * 0.05} as="li">
               <button
                 onClick={() => setOpen(exp)}
                 aria-label={`View details for ${exp.company}`}
-                className="group block w-full border-t border-paper/15 py-10 text-left transition-colors hover:bg-paper/[0.03] md:py-12"
+                className="group block w-full border-t border-paper/15 py-stack-md text-left md:py-stack-lg"
               >
-                <div className="grid gap-6 md:grid-cols-12">
+                <div className="grid gap-4 md:grid-cols-12 md:gap-grid">
                   <div className="md:col-span-3">
-                    <div className="font-mono text-xs uppercase tracking-[0.2em] text-paper/50">
-                      {exp.period}
-                    </div>
+                    <div className="label text-accent">{exp.period}</div>
                     {exp.location && (
-                      <div className="mt-1 text-xs text-paper/40">
+                      <div className="mt-1 text-small text-paper/60">
                         {exp.location}
                       </div>
                     )}
@@ -46,7 +36,7 @@ export default function Experience() {
 
                   <div className="md:col-span-9">
                     <header className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="font-display text-3xl font-medium tracking-tight md:text-4xl">
+                      <h3 className="heading text-h2 transition-colors duration-fast group-hover:text-accent">
                         {exp.company}
                       </h3>
                       <span className="text-paper/70">{exp.role}</span>
@@ -58,14 +48,14 @@ export default function Experience() {
                           {exp.tags.map((t) => (
                             <li
                               key={t}
-                              className="rounded-full border border-paper/20 px-3 py-1 text-xs text-paper/70 transition-colors group-hover:border-ember/80 group-hover:text-ember"
+                              className="border border-paper/20 px-3 py-1 text-small text-paper/70"
                             >
                               {t}
                             </li>
                           ))}
                         </ul>
                       )}
-                      <span className="inline-flex items-center gap-2 text-sm text-paper/60 transition-colors group-hover:text-ember">
+                      <span className="inline-flex items-center gap-2 text-small text-paper/70 transition-colors duration-fast group-hover:text-accent">
                         View details
                         <Arrow />
                       </span>
@@ -111,7 +101,7 @@ function ExperienceModal({
     <AnimatePresence>
       {exp && (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-ink/85 px-4 py-16 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-ink/90 px-4 py-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -123,7 +113,7 @@ function ExperienceModal({
           <button
             onClick={onClose}
             aria-label="Close"
-            className="fixed right-6 top-6 z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-paper text-ink transition-transform hover:rotate-90"
+            className="fixed right-4 top-4 z-10 inline-flex h-12 w-12 items-center justify-center bg-paper text-ink transition-colors duration-fast hover:bg-accent hover:text-paper"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden>
               <path
@@ -136,20 +126,20 @@ function ExperienceModal({
           </button>
 
           <motion.div
-            className="relative my-auto w-full max-w-2xl rounded-[4px] bg-graphite p-8 text-paper shadow-2xl md:p-12"
+            className="relative my-auto w-full max-w-2xl bg-ink p-6 text-paper ring-1 ring-paper/15 md:p-12"
             initial={{ y: 24, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 24, opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: DURATION.base, ease: EASE_OUT }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-ember">
+            <div className="label text-accent">
               {exp.period}
               {exp.location && (
-                <span className="text-paper/40"> · {exp.location}</span>
+                <span className="text-paper/60"> · {exp.location}</span>
               )}
             </div>
-            <h3 className="display mt-3 text-3xl md:text-4xl">{exp.company}</h3>
+            <h3 className="display mt-3 text-h2">{exp.company}</h3>
             <div className="mt-1 text-paper/70">{exp.role}</div>
 
             <p className="mt-6 leading-relaxed text-paper/80">
@@ -160,7 +150,7 @@ function ExperienceModal({
               <ul className="mt-7 space-y-3 border-t border-paper/15 pt-7">
                 {exp.highlights.map((h) => (
                   <li key={h} className="flex gap-3 text-paper/85">
-                    <span className="mt-[0.5rem] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 bg-accent" />
                     <span className="leading-relaxed">{h}</span>
                   </li>
                 ))}
@@ -172,7 +162,7 @@ function ExperienceModal({
                 {exp.tags.map((t) => (
                   <li
                     key={t}
-                    className="rounded-full border border-paper/20 px-3 py-1 text-xs text-paper/70"
+                    className="border border-paper/20 px-3 py-1 text-small text-paper/70"
                   >
                     {t}
                   </li>

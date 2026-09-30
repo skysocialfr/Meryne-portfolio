@@ -1,46 +1,20 @@
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 import { contact, personal } from "@/data/content";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden bg-ink py-24 text-paper md:py-36"
-    >
-      {/* Big background word — adds depth, fades on small screens */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-display text-[28vw] font-bold leading-none tracking-tightest text-paper/[0.04] md:text-[20vw]"
-      >
-        Let&apos;s talk
-      </span>
+    <section id="contact" className="section bg-ink text-paper">
+      <div className="container-x">
+        <SectionHeading id="contact" tone="dark" intro={contact.sub} />
 
-      <div className="container-x relative">
-        <Reveal>
-          <span className="eyebrow text-paper/60 before:bg-paper/40">
-            Contact
-          </span>
-          <h2 className="display mt-6 max-w-4xl text-fluid-h1">
-            {contact.heading}
-          </h2>
-          <p className="mt-6 max-w-2xl text-paper/70 text-lg leading-relaxed">
-            {contact.sub}
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.15}>
+        <Reveal delay={0.1}>
           <a
             href={`mailto:${personal.email}`}
-            className="mt-12 inline-flex flex-wrap items-baseline gap-3 font-display text-2xl tracking-tighter text-ember sm:text-3xl md:mt-16 md:text-5xl"
+            className="mt-stack-lg inline-flex flex-wrap items-baseline gap-3 font-display text-h3 font-bold tracking-heading text-accent"
           >
             <span className="link-underline break-all pb-1">{personal.email}</span>
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 22 22"
-              fill="none"
-              aria-hidden
-            >
+            <svg width="28" height="28" viewBox="0 0 22 22" fill="none" aria-hidden>
               <path
                 d="M5 17L17 5M17 5H7M17 5V15"
                 stroke="currentColor"
@@ -52,16 +26,10 @@ export default function Contact() {
           </a>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 border-t border-paper/15 pt-12 text-sm md:grid-cols-3 md:mt-24">
-          <Reveal>
-            <ContactLine label="LinkedIn" value="meryne-ndjeyi" href={personal.linkedin} external />
-          </Reveal>
-          <Reveal delay={0.05}>
-            <ContactLine label="Location" value={personal.location} />
-          </Reveal>
-          <Reveal delay={0.1}>
-            <ContactLine label="Status" value={personal.availability} />
-          </Reveal>
+        <div className="mt-stack-xl grid gap-stack-md border-t border-paper/15 pt-stack-md md:grid-cols-3">
+          <ContactLine label="LinkedIn" value="meryne-ndjeyi" href={personal.linkedin} external />
+          <ContactLine label="Location" value={personal.location} />
+          <ContactLine label="Status" value={personal.availability} />
         </div>
       </div>
     </section>
@@ -81,10 +49,8 @@ function ContactLine({
 }) {
   const content = (
     <>
-      <div className="font-mono text-xs uppercase tracking-[0.2em] text-paper/50">
-        {label}
-      </div>
-      <div className="mt-2 font-display text-lg">{value}</div>
+      <div className="label text-paper/60">{label}</div>
+      <div className="mt-2 font-display text-lg font-semibold">{value}</div>
     </>
   );
   if (!href) return <div>{content}</div>;
@@ -93,7 +59,7 @@ function ContactLine({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="block transition-colors hover:text-ember"
+      className="block transition-colors duration-fast hover:text-accent"
     >
       {content}
     </a>

@@ -2,9 +2,10 @@
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
+import { DURATION, EASE_OUT, REVEAL_OFFSET } from "@/lib/motion";
 
 /**
- * Reveal — wraps children in a scroll-triggered fade + rise animation.
+ * Reveal — wraps children in a discreet scroll-triggered fade + rise.
  * Honors `prefers-reduced-motion` automatically.
  */
 type Props = {
@@ -18,7 +19,7 @@ type Props = {
 export default function Reveal({
   children,
   delay = 0,
-  y = 28,
+  y = REVEAL_OFFSET,
   className,
   as = "div",
 }: Props) {
@@ -29,11 +30,7 @@ export default function Reveal({
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      },
+      transition: { duration: DURATION.slow, delay, ease: EASE_OUT },
     },
   };
 
@@ -44,7 +41,7 @@ export default function Reveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-60px" }}
       variants={variants}
     >
       {children}

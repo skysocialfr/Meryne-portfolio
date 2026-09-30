@@ -1,42 +1,68 @@
 import type { Config } from "tailwindcss";
 
-// Tailwind config — design tokens centralized here so you can re-skin the
-// portfolio (palette, fonts, spacing) without touching components.
+// Tailwind is wired to the CSS design tokens declared in src/app/globals.css.
+// Change a value there (not here) to re-skin the site.
+const rgb = (name: string) => `rgb(var(${name}) / <alpha-value>)`;
+
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Warm off-white "paper" background, deep ink foreground,
-        // and a vibrant ember accent kept restrained across the site.
-        paper: "#F6F2EC",
-        ink: "#0E0E0E",
-        graphite: "#1A1A1A",
-        muted: "#6B6B6B",
-        ember: "#FF3D2E",
-        emberDark: "#D9301F",
-        chalk: "#FFFFFF",
-        line: "#E5E0D7",
+        paper: rgb("--color-paper"),
+        ink: rgb("--color-ink"),
+        accent: rgb("--color-accent"),
       },
       fontFamily: {
         // Loaded via next/font in app/layout.tsx — keep names in sync.
         display: ["var(--font-display)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-serif)", "ui-serif", "Georgia", "serif"],
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
-        mono: ["ui-monospace", "SFMono-Regular", "monospace"],
       },
       fontSize: {
-        // Fluid type scale using clamp() — works mobile-first up to desktop.
-        "fluid-hero": "clamp(3.5rem, 12vw, 11rem)",
-        "fluid-h1": "clamp(2.5rem, 7vw, 6rem)",
-        "fluid-h2": "clamp(2rem, 4.5vw, 3.5rem)",
-        "fluid-lead": "clamp(1.125rem, 1.6vw, 1.375rem)",
+        display: "var(--fs-display)",
+        h1: "var(--fs-h1)",
+        h2: "var(--fs-h2)",
+        h3: "var(--fs-h3)",
+        lead: "var(--fs-lead)",
+        body: "var(--fs-body)",
+        small: "var(--fs-small)",
+        label: "var(--fs-label)",
+      },
+      lineHeight: {
+        display: "var(--lh-display)",
+        heading: "var(--lh-heading)",
       },
       letterSpacing: {
-        tightest: "-0.04em",
-        tighter: "-0.025em",
+        display: "var(--tracking-display)",
+        heading: "var(--tracking-heading)",
+        label: "var(--tracking-label)",
+      },
+      spacing: {
+        gutter: "var(--gutter)",
+        section: "var(--section-y)",
+        "stack-xl": "var(--stack-xl)",
+        "stack-lg": "var(--stack-lg)",
+        "stack-md": "var(--stack-md)",
+        grid: "var(--grid-gap)",
+        nav: "var(--nav-h)",
+      },
+      gap: {
+        grid: "var(--grid-gap)",
+      },
+      maxWidth: {
+        page: "var(--page-max)",
+      },
+      borderRadius: {
+        DEFAULT: "var(--radius)",
       },
       transitionTimingFunction: {
-        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "out-expo": "var(--ease-out)",
+      },
+      transitionDuration: {
+        fast: "var(--dur-fast)",
+        base: "var(--dur-base)",
+        slow: "var(--dur-slow)",
       },
       keyframes: {
         marquee: {

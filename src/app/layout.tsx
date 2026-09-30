@@ -1,14 +1,23 @@
-import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Instrument_Serif, Inter } from "next/font/google";
 import { personal, seo } from "@/data/content";
 import "./globals.css";
 
-// Display font — Bricolage Grotesque, modern editorial sans with
-// enough character to avoid the generic AI-template feel.
+// Display font — Bricolage Grotesque, used heavy and tight for the large,
+// high-contrast titles.
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700", "800"],
+  axes: ["opsz"],
+  display: "swap",
+});
+
+// Italic serif for the contrasting accent word in titles.
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: "400",
+  style: "italic",
   display: "swap",
 });
 
@@ -16,9 +25,12 @@ const display = Bricolage_Grotesque({
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#F4EFE6",
+};
 
 // Absolute base URL so Open Graph / Twitter image links resolve when shared.
 // Vercel sets VERCEL_PROJECT_PRODUCTION_URL automatically; NEXT_PUBLIC_SITE_URL
@@ -53,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+    <html lang="en" className={`${display.variable} ${serif.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   );
