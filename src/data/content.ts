@@ -96,7 +96,7 @@ export const marqueeKeywords = [
 
 export const about = {
   body: [
-    "Curieuse, créative et bilingue (français / anglais), j'aime le métier du social media : décrypter un brief, construire une ligne éditoriale, produire du contenu, animer une communauté, puis lire les chiffres pour affiner la suite. Je fais une veille constante sur les formats, les tendances et les moments culturels pour garder les marques pertinentes.",
+    "Travailler dans les réseaux sociaux me passionne : décrypter un brief, construire une ligne éditoriale, produire du contenu, animer une communauté, puis analyser les résultats pour affiner la suite. Je fais une veille constante sur les formats, les tendances et les moments culturels pour que les marques restent pertinentes.",
     "En dehors du travail, le sport, le piano et la peinture me gardent curieuse et équilibrée : trois facettes d'un même goût pour le travail bien fait, la concentration et la progression.",
   ],
   // Optional secondary photo (candid / action shot).
