@@ -207,7 +207,6 @@ export const experiences: Experience[] = [
 export type WorkCategory =
   | "Emailing & newsletters"
   | "Événements & réseaux sociaux"
-  | "Photo & vidéo"
   | "Pitchs & présentations";
 
 export type WorkItem = {
@@ -234,13 +233,12 @@ export type WorkItem = {
 // Order of the filter tabs in Selected work.
 export const workCategories: WorkCategory[] = [
   "Événements & réseaux sociaux",
-  "Photo & vidéo",
   "Emailing & newsletters",
   "Pitchs & présentations",
 ];
 
-// Display order = order in "All": social & video first, then Photo & Video,
-// then email (kept to three pieces).
+// Display order = order in "Tout": social & video first, then email (kept
+// to three pieces).
 export const workItems: WorkItem[] = [
   // ------ Social media & event videos ------
   {
@@ -275,60 +273,6 @@ export const workItems: WorkItem[] = [
     aspect: "tall",
     href: "https://www.instagram.com/p/DPi18P0jTdx/",
     linkType: "post",
-  },
-
-  // ------ Photo & Video (placeholders — replace with your shoots & videos) ------
-  {
-    id: "photo-shoot-01",
-    category: "Photo & vidéo",
-    title: "[À compléter] Titre du shooting",
-    subtitle: "Direction artistique & shooting",
-    // Drop a 4:5 photo (1600 × 2000 px) at this path, then remove `placeholder`.
-    src: "/images/work/photo/shoot-01.jpg",
-    alt: "Photo d'un shooting dirigé par Meryne",
-    aspect: "tall",
-    description:
-      "[À compléter] Deux lignes sur le shooting : marque ou client, le brief, ton rôle (concept, stylisme, prise de vue, retouche) et l'utilisation des photos.",
-    placeholder: true,
-  },
-  {
-    id: "facecam-01",
-    category: "Photo & vidéo",
-    title: "[À compléter] Vidéo face caméra",
-    subtitle: "Voir sur Instagram",
-    // Thumbnail: a 4:5 still from the video (1600 × 2000 px).
-    src: "/images/work/video/facecam-01.jpg",
-    alt: "Meryne face caméra",
-    aspect: "tall",
-    // Paste the Instagram reel URL here.
-    href: "",
-    linkType: "video",
-    placeholder: true,
-  },
-  {
-    id: "photo-shoot-02",
-    category: "Photo & vidéo",
-    title: "[À compléter] Titre du shooting",
-    subtitle: "Direction artistique & shooting",
-    src: "/images/work/photo/shoot-02.jpg",
-    alt: "Photo d'un shooting dirigé par Meryne",
-    aspect: "tall",
-    description:
-      "[À compléter] Deux lignes sur le shooting : marque ou client, le brief, ton rôle et l'utilisation des photos.",
-    placeholder: true,
-  },
-  {
-    id: "facecam-02",
-    category: "Photo & vidéo",
-    title: "[À compléter] Vidéo face caméra",
-    subtitle: "Voir sur LinkedIn",
-    src: "/images/work/video/facecam-02.jpg",
-    alt: "Meryne face caméra",
-    aspect: "tall",
-    // Paste the LinkedIn post URL here.
-    href: "",
-    linkType: "video",
-    placeholder: true,
   },
 
   // ------ Email & Newsletters ------
@@ -366,6 +310,13 @@ export const workItems: WorkItem[] = [
       "Mailing annonçant la 4e édition des TECH_DAYS, un événement interne d'AFD.TECH (Accenture). Design éditorial et rédaction, envoyé via Mailjet.",
   },
 ];
+
+// Text shown under the Selected work grid: the photo & video work that
+// can't all be published.
+export const workNote = {
+  title: "Photo & vidéo",
+  body: "Au-delà de ces exemples, j'organise et je réalise des shootings photo et des vidéos, dont des formats où j'apparais face caméra, pour les marques que j'accompagne. Pour des raisons de confidentialité, je ne peux pas tout partager ici : je présente volontiers d'autres réalisations en entretien.",
+};
 
 // Pieces taken out of Selected work to rebalance it. Not displayed; move an
 // item back into `workItems` to show it again.
@@ -439,7 +390,7 @@ export type InternationalProject = {
 
 export const international = {
   context:
-    "Avec Sky Social, j'accompagne au Gabon des institutions, des élus et des clients privés dans la communication et la captation de leurs événements. Sur place, je couvre les prises de parole, les panels et l'ambiance en photo et en vidéo.",
+    "Avec Sky Social, j'accompagne au Gabon des institutions, des élus et des organisations dans la communication et la captation de leurs événements. Sur place, je couvre les prises de parole, les panels et l'ambiance en photo et en vidéo.",
   // On-the-ground portrait shown next to the key facts.
   portrait: {
     src: "/images/international/behind-the-scenes.jpg",
@@ -456,9 +407,9 @@ export const international = {
     {
       id: "cdc",
       client: "Caisse des Dépôts et Consignations",
-      title: "Communication & captation d'événement",
+      title: "Le Funel : communication & captation",
       summary:
-        "Du 2 au 4 septembre 2026, la Caisse des Dépôts et Consignations a organisé un événement consacré à un enjeu clé pour le pays : inciter les citoyens à épargner davantage et leur montrer comment s'y prendre, dans un contexte bancaire difficile. En présence du vice-président et de représentants du Maroc, j'ai assuré la communication et la captation de l'événement.",
+        "Du 2 au 4 septembre 2026, la Caisse des Dépôts et Consignations a organisé le Funel, un événement consacré à un enjeu clé pour le pays : inciter les citoyens à épargner davantage et leur montrer comment s'y prendre, dans un contexte bancaire difficile. En présence du vice-président et de représentants du Maroc, j'ai assuré la communication et la captation de l'événement.",
       deliverables: [
         "Communication autour de l'événement",
         "Captation photo des panels et des prises de parole",
@@ -506,17 +457,6 @@ export const international = {
           alt: "Le public écoute le compte rendu parlementaire",
           orientation: "landscape",
         },
-        {
-          // The 47-second video: paste its Instagram / LinkedIn / YouTube
-          // link in `href` and a still at video-poster.jpg, then remove
-          // `placeholder`.
-          kind: "video",
-          poster: "/images/international/senate/video-poster.jpg",
-          alt: "Vidéo du compte rendu parlementaire",
-          href: "",
-          orientation: "landscape",
-          placeholder: true,
-        },
       ],
     },
     {
@@ -531,60 +471,12 @@ export const international = {
         src: "/images/international/feg/cover.jpg",
         alt: "Panel d'intervenants sur scène devant le public, à l'événement FEG × UDB",
       },
-      gallery: [
-        { kind: "image", src: "/images/international/feg/photo-01.jpg", alt: "Photo de l'événement FEG × UDB", placeholder: true },
-        { kind: "image", src: "/images/international/feg/photo-02.jpg", alt: "Photo de l'événement FEG × UDB", placeholder: true },
-      ],
-    },
-    {
-      id: "private-events",
-      client: "Clients privés",
-      title: "Événements privés",
-      summary:
-        "[À compléter] Le type d'événements privés (mariages, anniversaires, soirées de marque…), ce que tu as livré et comment les contenus ont été utilisés ensuite.",
-      deliverables: [
-        "[À compléter] Captation photo & vidéo",
-        "[À compléter] Contenus réseaux sociaux le jour même",
-        "[À compléter] Aftermovie monté",
-      ],
-      cover: {
-        kind: "image",
-        src: "/images/international/private-events/cover.jpg",
-        alt: "Événement privé au Gabon",
-        placeholder: true,
-      },
-      gallery: [
-        { kind: "image", src: "/images/international/private-events/photo-01.jpg", alt: "Photo d'un événement privé", placeholder: true },
-        { kind: "image", src: "/images/international/private-events/photo-02.jpg", alt: "Photo d'un événement privé", placeholder: true },
-        {
-          kind: "video",
-          poster: "/images/international/private-events/video-poster.jpg",
-          alt: "Vidéo d'un événement privé",
-          href: "",
-          placeholder: true,
-        },
-      ],
-      placeholder: true,
+      gallery: [],
     },
   ] as InternationalProject[],
 };
 
 export const education = [
-  {
-    school: "ISCOM Paris",
-    degree: "MBA",
-    field: "Communication digitale, social media & community management",
-    period: "2026 — 2027",
-    location: "Paris, France",
-    courses: [
-      "Social media content management & stratégie éditoriale",
-      "Social media & community management",
-      "Marketing d'influence & social listening",
-      "Social ads, trafic & performance digitale",
-      "Production audio & vidéo",
-      "CRM, UX/UI & fidélisation",
-    ],
-  },
   {
     school: "ISC Paris",
     degree: "Master (Programme Grande École)",

@@ -4,8 +4,15 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Lightbox from "./Lightbox";
 import Media from "./Media";
+import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { workCategories, workItems, type WorkCategory, type WorkItem } from "@/data/content";
+import {
+  workCategories,
+  workItems,
+  workNote,
+  type WorkCategory,
+  type WorkItem,
+} from "@/data/content";
 import { visible } from "@/lib/placeholders";
 import { DURATION, EASE_OUT } from "@/lib/motion";
 
@@ -92,6 +99,16 @@ export default function Work() {
             ))}
           </AnimatePresence>
         </motion.ul>
+
+        {/* Photo & video work that can't all be published */}
+        <Reveal className="mt-stack-xl grid gap-stack-md border-t-2 border-ink pt-stack-md md:grid-cols-12 md:gap-grid">
+          <h3 className="heading text-h3 md:col-span-4">
+            <span className="serif-accent text-accent">{workNote.title}</span>
+          </h3>
+          <p className="text-lead leading-relaxed text-ink/80 md:col-span-7 md:col-start-6">
+            {workNote.body}
+          </p>
+        </Reveal>
       </div>
 
       <Lightbox item={open} onClose={() => setOpen(null)} />

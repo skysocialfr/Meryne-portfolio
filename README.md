@@ -33,7 +33,7 @@ All text, links and media paths live in **one file**: `src/data/content.ts`.
 
 ### Placeholders
 
-Items with `placeholder: true` are slots waiting for your media. They are
+None are used right now. Items with `placeholder: true` are slots waiting for your media. They are
 shown locally and on Vercel **preview** deployments, and **hidden on
 production**, so recruiters never see an empty box. The International
 section (and its nav link) only appears on production once at least one
@@ -46,41 +46,26 @@ variable in Vercel if needed.
 
 ---
 
-## 3. Media to provide
+## 3. Media
 
-Export photos as **JPG, sRGB, quality 80–85, under 1 MB**. Images are
-resized and converted to AVIF/WebP automatically by Next.js, but a
-reasonable source keeps the repository light. Videos are **links**
-(Instagram / LinkedIn); an MP4 file is possible for the International
-section if it stays **under 10 MB** (H.264, 1080 px, no audio track if silent).
+Every media slot is filled; nothing is waiting to be provided. To add or
+replace media later, export photos as **JPG, sRGB, quality 80–85, under
+1 MB** (Next.js then serves AVIF/WebP at the right size). Videos are
+**links** (Instagram / LinkedIn); an MP4 in `public/videos/` is fine for
+the International section if it stays **under 10 MB** (H.264).
 
-### Selected work — Photo & Video
+### International (`public/images/international/`)
 
-| File | Format | What |
-| --- | --- | --- |
-| `public/images/work/photo/shoot-01.jpg` | 1600 × 2000 px (4:5) | Photo shoot #1 |
-| `public/images/work/photo/shoot-02.jpg` | 1600 × 2000 px (4:5) | Photo shoot #2 |
-| `public/images/work/video/facecam-01.jpg` | 1600 × 2000 px (4:5) | Still from face-to-camera video #1 + Instagram URL in `href` |
-| `public/images/work/video/facecam-02.jpg` | 1600 × 2000 px (4:5) | Still from face-to-camera video #2 + LinkedIn URL in `href` |
+| Project | Files |
+| --- | --- |
+| On-site portrait | `behind-the-scenes.jpg` (3:4) |
+| CDC — Funel | `cdc/cover.jpg` (16:9), `cdc/photo-01.jpg` (16:9), `public/videos/cdc-event.mp4` |
+| Compte rendu parlementaire | `senate/cover.jpg` (16:9), `senate/photo-01.jpg` (16:9) |
+| FEG × UDB | `feg/cover.jpg` (3:2) |
 
-### International — one folder per project
-
-Already in place: CDC (cover, photo, video), Parliamentary report (cover,
-photo), FEG × UDB (cover, folder `feg`), behind-the-scenes portrait.
-Still to provide, in `public/images/international/<project>/`:
-
-- `senate/video-poster.jpg` (2400 × 1350, 16:9) + the link to the 47-second video
-- `feg/photo-01.jpg`, `feg/photo-02.jpg` (optional extra photos)
-- everything for `private-events` (table below)
-
-Format of each slot:
-
-| File | Format | What |
-| --- | --- | --- |
-| `cover.jpg` | 2400 × 1350 px (16:9), subject centred | Opening visual (cropped to 4:3 on mobile) |
-| `photo-01.jpg` | 1600 × 2000 px (4:5), or 2400 × 1350 (16:9) with `orientation: "landscape"` | Gallery photo |
-| `photo-02.jpg` | same | Gallery photo |
-| `video-poster.jpg` | 1600 × 2000 px (4:5) | Still from the video + URL in `href` (or MP4 in `public/videos/<project>.mp4` via `file`) |
+A new project goes in `international.projects` in `src/data/content.ts`:
+`cover` at 2400 × 1350 (16:9, cropped to 4:3 on mobile), gallery photos
+at 1600 × 2000 (4:5) or 2400 × 1350 with `orientation: "landscape"`.
 
 ### Existing images (already in place, replace at the same path if needed)
 
