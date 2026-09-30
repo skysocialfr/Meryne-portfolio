@@ -203,6 +203,7 @@ export const experiences: Experience[] = [
 export type WorkCategory =
   | "Email & Newsletters"
   | "Event organized & Social media"
+  | "Photo & Video"
   | "Pitch & Campaign Decks";
 
 export type WorkItem = {
@@ -229,11 +230,103 @@ export type WorkItem = {
 // Order of the filter tabs in Selected work.
 export const workCategories: WorkCategory[] = [
   "Event organized & Social media",
+  "Photo & Video",
   "Email & Newsletters",
   "Pitch & Campaign Decks",
 ];
 
+// Display order = order in "All": social & video first, then Photo & Video,
+// then email (kept to three pieces).
 export const workItems: WorkItem[] = [
+  // ------ Social media & event videos ------
+  {
+    id: "video-techdays",
+    category: "Event organized & Social media",
+    title: "TECH_DAYS event video",
+    subtitle: "Watch on LinkedIn",
+    src: "/images/work/social/video-techdays.jpg",
+    alt: "TECH_DAYS event video post",
+    aspect: "wide",
+    href: "https://www.linkedin.com/posts/afd-technologies_techdays-afdtech-accenture-activity-7452298867443855360-7ieb",
+    linkType: "video",
+  },
+  {
+    id: "video-sfa2025",
+    category: "Event organized & Social media",
+    title: "End-of-year party in Paris",
+    subtitle: "Watch on Instagram",
+    src: "/images/work/social/video-SFA2025.jpg",
+    alt: "End-of-year party event video",
+    aspect: "wide",
+    href: "https://www.instagram.com/reel/DSUn2JKEom2/",
+    linkType: "video",
+  },
+  {
+    id: "social-02",
+    category: "Event organized & Social media",
+    title: "Instagram carousel",
+    subtitle: "View on Instagram",
+    src: "/images/work/social/social-02.png",
+    alt: "Instagram carousel preview",
+    aspect: "tall",
+    href: "https://www.instagram.com/p/DPi18P0jTdx/",
+    linkType: "post",
+  },
+
+  // ------ Photo & Video (placeholders — replace with your shoots & videos) ------
+  {
+    id: "photo-shoot-01",
+    category: "Photo & Video",
+    title: "[Placeholder] Photo shoot title",
+    subtitle: "Art direction & shooting",
+    // Drop a 4:5 photo (1600 × 2000 px) at this path, then remove `placeholder`.
+    src: "/images/work/photo/shoot-01.jpg",
+    alt: "Photo from a shoot directed by Meryne",
+    aspect: "tall",
+    description:
+      "[Placeholder] Two lines on the shoot: brand or client, the brief, your role (concept, styling, shooting, editing) and where the photos were used.",
+    placeholder: true,
+  },
+  {
+    id: "facecam-01",
+    category: "Photo & Video",
+    title: "[Placeholder] Face-to-camera video",
+    subtitle: "Watch on Instagram",
+    // Thumbnail: a 4:5 still from the video (1600 × 2000 px).
+    src: "/images/work/video/facecam-01.jpg",
+    alt: "Meryne speaking to camera",
+    aspect: "tall",
+    // Paste the Instagram reel URL here.
+    href: "",
+    linkType: "video",
+    placeholder: true,
+  },
+  {
+    id: "photo-shoot-02",
+    category: "Photo & Video",
+    title: "[Placeholder] Photo shoot title",
+    subtitle: "Art direction & shooting",
+    src: "/images/work/photo/shoot-02.jpg",
+    alt: "Photo from a shoot directed by Meryne",
+    aspect: "tall",
+    description:
+      "[Placeholder] Two lines on the shoot: brand or client, the brief, your role and where the photos were used.",
+    placeholder: true,
+  },
+  {
+    id: "facecam-02",
+    category: "Photo & Video",
+    title: "[Placeholder] Face-to-camera video",
+    subtitle: "Watch on LinkedIn",
+    src: "/images/work/video/facecam-02.jpg",
+    alt: "Meryne speaking to camera",
+    aspect: "tall",
+    // Paste the LinkedIn post URL here.
+    href: "",
+    linkType: "video",
+    placeholder: true,
+  },
+
   // ------ Email & Newsletters ------
   {
     id: "newsletter",
@@ -268,6 +361,11 @@ export const workItems: WorkItem[] = [
     description:
       "Mailing announcing the 4th edition of TECH_DAYS, an internal AFD.TECH (Accenture) event. Editorial design and copywriting, sent via Mailjet.",
   },
+];
+
+// Pieces taken out of Selected work to rebalance it. Not displayed; move an
+// item back into `workItems` to show it again.
+export const archivedWorkItems: WorkItem[] = [
   {
     id: "email-03",
     category: "Email & Newsletters",
@@ -289,41 +387,6 @@ export const workItems: WorkItem[] = [
     aspect: "tall",
     description:
       "Newsletter announcing the sports activities coming up in June for Accenture colleagues: climbing, pilates, yoga, boxing and running.",
-  },
-
-  // ------ Social Media ------
-  {
-    id: "social-02",
-    category: "Event organized & Social media",
-    title: "Instagram carousel",
-    subtitle: "View on Instagram",
-    src: "/images/work/social/social-02.png",
-    alt: "Instagram carousel preview",
-    aspect: "tall",
-    href: "https://www.instagram.com/p/DPi18P0jTdx/",
-    linkType: "post",
-  },
-  {
-    id: "video-techdays",
-    category: "Event organized & Social media",
-    title: "TECH_DAYS event video",
-    subtitle: "Watch on LinkedIn",
-    src: "/images/work/social/video-techdays.jpg",
-    alt: "TECH_DAYS event video post",
-    aspect: "tall",
-    href: "https://www.linkedin.com/posts/afd-technologies_techdays-afdtech-accenture-activity-7452298867443855360-7ieb",
-    linkType: "video",
-  },
-  {
-    id: "video-sfa2025",
-    category: "Event organized & Social media",
-    title: "End-of-year party in Paris",
-    subtitle: "Watch on Instagram",
-    src: "/images/work/social/video-SFA2025.jpg",
-    alt: "End-of-year party event video",
-    aspect: "tall",
-    href: "https://www.instagram.com/reel/DSUn2JKEom2/",
-    linkType: "video",
   },
 ];
 

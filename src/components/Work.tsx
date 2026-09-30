@@ -74,7 +74,7 @@ export default function Work() {
           })}
         </div>
 
-        <motion.ul layout className="mt-stack-lg grid grid-cols-1 gap-x-grid gap-y-stack-lg md:grid-cols-2">
+        <motion.ul layout className="mt-stack-lg grid grid-flow-dense grid-cols-1 gap-x-grid gap-y-stack-lg md:grid-cols-2">
           <AnimatePresence mode="popLayout" initial={false}>
             {filtered.map((item, i) => (
               <motion.li
