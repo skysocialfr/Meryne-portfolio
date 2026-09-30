@@ -1,6 +1,7 @@
 import Reveal from "./Reveal";
 import RichTitle from "./RichTitle";
 import { sections, type SectionId } from "@/data/content";
+import { sectionNumber } from "@/lib/sections";
 
 /**
  * Section opener: "02 — Selected work" in the accent colour, a hairline,
@@ -18,8 +19,7 @@ export default function SectionHeading({
   intro?: string;
   className?: string;
 }) {
-  const index = sections.findIndex((s) => s.id === id);
-  const section = sections[index];
+  const section = sections.find((s) => s.id === id)!;
   const muted = tone === "dark" ? "text-paper/70" : "text-ink/70";
   const rule = tone === "dark" ? "bg-paper/20" : "bg-ink/15";
 
@@ -28,7 +28,7 @@ export default function SectionHeading({
       <Reveal>
         <div className="flex items-center gap-4">
           <span className="label text-accent">
-            {String(index + 1).padStart(2, "0")}
+            {sectionNumber(id)}
           </span>
           <span className={`label ${muted}`}>{section.label}</span>
           <span aria-hidden className={`h-px flex-1 ${rule}`} />

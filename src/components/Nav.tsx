@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { personal, sections } from "@/data/content";
+import { personal } from "@/data/content";
+import { activeSections, sectionNumber as number } from "@/lib/sections";
 
-const links = sections.filter((s) => s.nav);
+const links = activeSections.filter((s) => s.nav);
 
 /**
  * Top navigation. The accent colour marks the section currently in view
@@ -29,7 +30,7 @@ export default function Nav() {
       },
       { rootMargin: "-30% 0px -65% 0px" }
     );
-    sections.forEach((s) => {
+    activeSections.forEach((s) => {
       const el = document.getElementById(s.id);
       if (el) observer.observe(el);
     });
@@ -45,9 +46,6 @@ export default function Nav() {
       document.body.style.overflow = "";
     };
   }, [open]);
-
-  const number = (id: string) =>
-    String(sections.findIndex((s) => s.id === id) + 1).padStart(2, "0");
 
   return (
     <header

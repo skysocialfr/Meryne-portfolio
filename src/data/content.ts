@@ -390,6 +390,148 @@ export const archivedWorkItems: WorkItem[] = [
   },
 ];
 
+// ---------------------------------------------------------------------------
+// International — Sky Social in Gabon, presented as a case study.
+// Everything marked [Placeholder] / `placeholder: true` is waiting for your
+// real text and media. Placeholders show locally and on Vercel previews but
+// are hidden on the production site (see src/lib/placeholders.ts): replace
+// the content, then delete the `placeholder: true` line.
+// ---------------------------------------------------------------------------
+
+export type CaseMedia =
+  | {
+      kind: "image";
+      src: string;
+      alt: string;
+      placeholder?: boolean;
+    }
+  | {
+      kind: "video";
+      // Still image shown before playing (a frame from the video).
+      poster: string;
+      alt: string;
+      // Either a link to the video on Instagram / LinkedIn / YouTube…
+      href?: string;
+      // …or an MP4 file in /public/videos (keep it under 10 MB).
+      file?: string;
+      placeholder?: boolean;
+    };
+
+export type InternationalProject = {
+  id: string;
+  client: string;
+  title: string;
+  summary: string;
+  deliverables: string[];
+  // Large opening visual, shown full width.
+  cover: CaseMedia;
+  gallery: CaseMedia[];
+  placeholder?: boolean;
+};
+
+export const international = {
+  context:
+    "[Placeholder] Two or three sentences of context: since when Sky Social has been working in Gabon, for what kind of clients (public institutions, elected officials, private clients), and what you handle on site, from event communication to photo and video coverage and social media recaps.",
+  facts: [
+    { label: "Studio", value: "Sky Social" },
+    { label: "Country", value: "Gabon" },
+    { label: "Since", value: "[Placeholder] 2025" },
+    { label: "Role", value: "[Placeholder] Founder, content & coverage" },
+  ],
+  projects: [
+    {
+      id: "cdc",
+      client: "Caisse des Dépôts et Consignations",
+      title: "Event communication & coverage",
+      summary:
+        "[Placeholder] The brief, the events covered, your role before, during and after each event (communication plan, on-site photo and video capture, editing, publication) and one result if you have it.",
+      deliverables: [
+        "[Placeholder] Event communication plan",
+        "[Placeholder] Photo & video coverage on site",
+        "[Placeholder] Social media recap content",
+      ],
+      cover: {
+        kind: "image",
+        src: "/images/international/cdc/cover.jpg",
+        alt: "Caisse des Dépôts et Consignations event",
+        placeholder: true,
+      },
+      gallery: [
+        { kind: "image", src: "/images/international/cdc/photo-01.jpg", alt: "CDC event photo 1", placeholder: true },
+        { kind: "image", src: "/images/international/cdc/photo-02.jpg", alt: "CDC event photo 2", placeholder: true },
+        {
+          kind: "video",
+          poster: "/images/international/cdc/video-poster.jpg",
+          alt: "CDC event video",
+          href: "",
+          placeholder: true,
+        },
+      ],
+      placeholder: true,
+    },
+    {
+      id: "senate",
+      client: "Senators",
+      title: "Parliamentary reports",
+      summary:
+        "[Placeholder] What these reports are, who they were for, how you captured and turned parliamentary work into content (photo, video, written recap) and where it was published.",
+      deliverables: [
+        "[Placeholder] Coverage of parliamentary sessions",
+        "[Placeholder] Written & video reports",
+        "[Placeholder] Publication on the senators' channels",
+      ],
+      cover: {
+        kind: "image",
+        src: "/images/international/senate/cover.jpg",
+        alt: "Parliamentary session coverage",
+        placeholder: true,
+      },
+      gallery: [
+        { kind: "image", src: "/images/international/senate/photo-01.jpg", alt: "Parliamentary report photo 1", placeholder: true },
+        { kind: "image", src: "/images/international/senate/photo-02.jpg", alt: "Parliamentary report photo 2", placeholder: true },
+        {
+          kind: "video",
+          poster: "/images/international/senate/video-poster.jpg",
+          alt: "Parliamentary report video",
+          href: "",
+          placeholder: true,
+        },
+      ],
+      placeholder: true,
+    },
+    {
+      id: "private-events",
+      client: "Private clients",
+      title: "Private events",
+      summary:
+        "[Placeholder] The kind of private events (weddings, celebrations, brand evenings…), what you delivered and how the content was used afterwards.",
+      deliverables: [
+        "[Placeholder] Photo & video capture",
+        "[Placeholder] Same-day social media content",
+        "[Placeholder] Edited aftermovie",
+      ],
+      cover: {
+        kind: "image",
+        src: "/images/international/private-events/cover.jpg",
+        alt: "Private event in Gabon",
+        placeholder: true,
+      },
+      gallery: [
+        { kind: "image", src: "/images/international/private-events/photo-01.jpg", alt: "Private event photo 1", placeholder: true },
+        { kind: "image", src: "/images/international/private-events/photo-02.jpg", alt: "Private event photo 2", placeholder: true },
+        {
+          kind: "video",
+          poster: "/images/international/private-events/video-poster.jpg",
+          alt: "Private event video",
+          href: "",
+          placeholder: true,
+        },
+      ],
+      placeholder: true,
+    },
+  ] as InternationalProject[],
+};
+
 export const education = [
   {
     school: "ISCOM Paris",
