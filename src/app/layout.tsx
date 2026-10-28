@@ -29,7 +29,7 @@ const sans = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#F4EFE6",
+  themeColor: "#F3EDE3",
 };
 
 // Absolute base URL so Open Graph / Twitter image links resolve when shared.

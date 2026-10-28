@@ -9,10 +9,10 @@ export const personal = {
   role: "Social Media & Content Creator",
   location: "Paris, France",
   // Short status line (hero badge, contact "Status", footer).
-  availability: "Disponible · Stage de 6 mois dès janvier 2027",
+  availability: "Candidate V.I.E · Assouline New York · janvier 2027",
   // Full sentence version, reused in page metadata.
   availabilityLong:
-    "Je recherche un stage de six mois à partir de janvier 2027.",
+    "Je candidate à un V.I.E de 24 mois chez Assouline, à New York, à partir de janvier 2027.",
   email: "meryne.ndjeyi@outlook.com",
   linkedin: "https://www.linkedin.com/in/meryne-ndjeyi-bb5169198",
   // To update the CV, overwrite /public/cv/meryne-ndjeyi-cv.pdf with the new
@@ -25,11 +25,11 @@ export const personal = {
 
 // Page title and meta description (browser tab, Google, Open Graph, Twitter).
 export const seo = {
-  title: "Meryne Ndjeyi — Social Media & Content Creator, stage de 6 mois dès janvier 2027",
+  title: "Meryne Ndjeyi — Social Media & Content Creator, candidate V.I.E Assouline New York",
   description:
-    "Portfolio de Meryne Ndjeyi, Social Media & Content Creator : réseaux sociaux, vidéo et événementiel, bilingue français / anglais. Diplômée du Master Marketing & Communication Digitale de l'ISC Paris, je recherche un stage de six mois à partir de janvier 2027.",
+    "Portfolio de Meryne Ndjeyi, Social Media & Content Creator : réseaux sociaux, vidéo et événementiel, bilingue français / anglais. Diplômée du Master Marketing & Communication Digitale de l'ISC Paris, je candidate à un V.I.E de 24 mois chez Assouline, à New York, à partir de janvier 2027.",
   shareDescription:
-    "Réseaux sociaux, vidéo et événementiel. Je recherche un stage de six mois à partir de janvier 2027.",
+    "Réseaux sociaux, vidéo et événementiel. Candidate à un V.I.E de 24 mois chez Assouline, à New York, à partir de janvier 2027.",
 };
 
 // Page sections, in order. Drives the navigation, the section numbers
@@ -73,7 +73,7 @@ export const hero = {
   // Each word becomes a separately animated line. Keep 2 lines max for impact.
   title: ["Des contenus", "qui engagent."],
   lead:
-    "Bonjour ! Je suis Meryne, diplômée du Master Marketing & Communication Digitale de l'ISC Paris. Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH part of Accenture, de la ligne éditoriale à l'analyse des performances, en plus d'une cinquantaine d'événements par an. En parallèle, je crée du contenu photo et vidéo pour des institutions, en France et à l'international. Je recherche un stage de six mois à partir de janvier 2027.",
+    "Bonjour ! Je suis Meryne, diplômée du Master Marketing & Communication Digitale de l'ISC Paris. Pendant deux ans, j'ai géré les réseaux sociaux d'AFD.TECH part of Accenture, de la ligne éditoriale à l'analyse des performances, en plus d'une cinquantaine d'événements par an. En parallèle, je crée du contenu photo et vidéo pour des institutions, en France et à l'international. Je candidate aujourd'hui à un V.I.E de 24 mois chez Assouline, à New York, à partir de janvier 2027.",
   // Image shown on the right of the hero on desktop.
   // To replace: drop your portrait at /public/images/hero/portrait.jpg (3:4)
   // then change this path to "/images/hero/portrait.jpg".
@@ -601,5 +601,5 @@ export const lifeOutsideWork = {
 
 export const contact = {
   sub:
-    "Vous recherchez une stagiaire en social media et création de contenu pour six mois à partir de janvier 2027, ou vous voulez simplement parler marques, contenus ou tendances ? Écrivez-moi.",
+    "Disponible pour un V.I.E de 24 mois chez Assouline à New York à partir de janvier 2027, je serai ravie d'en parler avec vous. Écrivez-moi.",
 };

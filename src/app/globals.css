@@ -9,10 +9,12 @@
    Tailwind opacity modifiers (bg-ink/10, text-paper/60…) keep working.
    ========================================================================== */
 :root {
-  /* Palette — three colours only. Tints are opacity variations of these. */
-  --color-paper: 244 239 230; /* #F4EFE6 cream background */
-  --color-ink: 17 17 17; /* #111111 text & dark sections */
-  --color-accent: 255 61 46; /* #FF3D2E accent: navigation, numbers, CTAs */
+  /* Palette — cream, dark wood, lacquer red, and gold. Tints are opacity
+     variations of these. */
+  --color-paper: 243 237 227; /* #F3EDE3 cream background */
+  --color-ink: 59 36 24; /* #3B2418 dark wood: text & dark sections */
+  --color-accent: 181 18 27; /* #B5121B lacquer red: navigation, numbers, CTAs */
+  --color-gold: 184 151 90; /* #B8975A gold: accent text on dark sections (red is unreadable there) */
 
   /* Layout */
   --page-max: 1440px;

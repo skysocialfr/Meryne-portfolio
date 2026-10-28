@@ -12,6 +12,7 @@ const config: Config = {
         paper: rgb("--color-paper"),
         ink: rgb("--color-ink"),
         accent: rgb("--color-accent"),
+        gold: rgb("--color-gold"),
       },
       fontFamily: {
         // Loaded via next/font in app/layout.tsx — keep names in sync.

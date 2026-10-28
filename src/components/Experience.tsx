@@ -26,7 +26,7 @@ export default function Experience() {
               >
                 <div className="grid gap-4 md:grid-cols-12 md:gap-grid">
                   <div className="md:col-span-3">
-                    <div className="label text-accent">{exp.period}</div>
+                    <div className="label text-gold">{exp.period}</div>
                     {exp.location && (
                       <div className="mt-1 text-small text-paper/60">
                         {exp.location}
@@ -36,7 +36,7 @@ export default function Experience() {
 
                   <div className="md:col-span-9">
                     <header className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="heading text-h2 transition-colors duration-fast group-hover:text-accent">
+                      <h3 className="heading text-h2 transition-colors duration-fast group-hover:text-gold">
                         {exp.company}
                       </h3>
                       <span className="text-paper/70">{exp.role}</span>
@@ -55,7 +55,7 @@ export default function Experience() {
                           ))}
                         </ul>
                       )}
-                      <span className="inline-flex items-center gap-2 text-small text-paper/70 transition-colors duration-fast group-hover:text-accent">
+                      <span className="inline-flex items-center gap-2 text-small text-paper/70 transition-colors duration-fast group-hover:text-gold">
                         Voir le détail
                         <Arrow />
                       </span>
@@ -133,7 +133,7 @@ function ExperienceModal({
             transition={{ duration: DURATION.base, ease: EASE_OUT }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="label text-accent">
+            <div className="label text-gold">
               {exp.period}
               {exp.location && (
                 <span className="text-paper/60"> · {exp.location}</span>
@@ -150,7 +150,7 @@ function ExperienceModal({
               <ul className="mt-7 space-y-3 border-t border-paper/15 pt-7">
                 {exp.highlights.map((h) => (
                   <li key={h} className="flex gap-3 text-paper/85">
-                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 bg-accent" />
+                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 bg-gold" />
                     <span className="leading-relaxed">{h}</span>
                   </li>
                 ))}

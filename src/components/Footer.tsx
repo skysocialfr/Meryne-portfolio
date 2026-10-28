@@ -16,17 +16,17 @@ export default function Footer() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors duration-fast hover:text-accent"
+            className="transition-colors duration-fast hover:text-gold"
           >
             LinkedIn
           </a>
           <a
             href={`mailto:${personal.email}`}
-            className="transition-colors duration-fast hover:text-accent"
+            className="transition-colors duration-fast hover:text-gold"
           >
             E-mail
           </a>
-          <a href="#top" className="transition-colors duration-fast hover:text-accent">
+          <a href="#top" className="transition-colors duration-fast hover:text-gold">
             Haut de page ↑
           </a>
         </div>

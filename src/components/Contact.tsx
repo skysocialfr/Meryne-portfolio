@@ -11,7 +11,7 @@ export default function Contact() {
         <Reveal delay={0.1}>
           <a
             href={`mailto:${personal.email}`}
-            className="mt-stack-lg inline-flex flex-wrap items-baseline gap-3 font-display text-h3 font-bold tracking-heading text-accent"
+            className="mt-stack-lg inline-flex flex-wrap items-baseline gap-3 font-display text-h3 font-bold tracking-heading text-gold"
           >
             <span className="link-underline break-all pb-1">{personal.email}</span>
             <svg width="28" height="28" viewBox="0 0 22 22" fill="none" aria-hidden>
@@ -68,7 +68,7 @@ function ContactLine({
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       download={download}
-      className="block transition-colors duration-fast hover:text-accent"
+      className="block transition-colors duration-fast hover:text-gold"
     >
       {content}
     </a>

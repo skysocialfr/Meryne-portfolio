@@ -18,8 +18,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "#F4EFE6",
-          color: "#111111",
+          background: "#F3EDE3",
+          color: "#3B2418",
         }}
       >
         <div style={{ display: "flex", fontSize: 28, letterSpacing: 4, textTransform: "uppercase" }}>
@@ -29,7 +29,7 @@ export default function OpengraphImage() {
           <div style={{ fontSize: 128, fontWeight: 800, lineHeight: 0.95, letterSpacing: -4 }}>
             Meryne
           </div>
-          <div style={{ fontSize: 128, fontWeight: 800, lineHeight: 0.95, letterSpacing: -4, color: "#FF3D2E" }}>
+          <div style={{ fontSize: 128, fontWeight: 800, lineHeight: 0.95, letterSpacing: -4, color: "#B5121B" }}>
             Ndjeyi.
           </div>
         </div>

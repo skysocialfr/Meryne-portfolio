@@ -27,7 +27,7 @@ export default function SectionHeading({
     <header className={className}>
       <Reveal>
         <div className="flex items-center gap-4">
-          <span className="label text-accent">
+          <span className={`label ${tone === "dark" ? "text-gold" : "text-accent"}`}>
             {sectionNumber(id)}
           </span>
           <span className={`label ${muted}`}>{section.label}</span>
